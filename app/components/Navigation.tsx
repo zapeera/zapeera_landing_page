@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { Menu, X, ChevronDown, CheckCircle } from "lucide-react";
+import { Menu, X, ChevronDown, CheckCircle, ShoppingBag, Pill, UtensilsCrossed, Package, Store, Truck } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
 import Container from "./ui/container";
 import {
@@ -21,6 +21,7 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSolutionsHovered, setIsSolutionsHovered] = useState(false);
+  const [isMobileSolutionsOpen, setIsMobileSolutionsOpen] = useState(false);
   const [solutionsTimeout, setSolutionsTimeout] = useState<NodeJS.Timeout | null>(null);
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
   const [isQuoteSubmitted, setIsQuoteSubmitted] = useState(false);
@@ -37,33 +38,45 @@ const Navigation = () => {
   const solutions = [
     {
       title: "Retail",
-      description: "Complete retail management with multi-branch sync",
-      slug: "retail"
+      description: "Complete retail management with multi-branch sync, inventory tracking, POS integration, and real-time sales analytics for seamless operations",
+      slug: "retail",
+      icon: ShoppingBag,
+      color: "text-blue-600"
     },
     {
       title: "Pharmacy",
-      description: "Specialized pharmacy management with medication tracking",
-      slug: "pharmacy"
+      description: "Specialized pharmacy management with medication tracking, prescription management, expiry alerts, and regulatory compliance features",
+      slug: "pharmacy",
+      icon: Pill,
+      color: "text-green-600"
     },
     {
       title: "Restaurant",
-      description: "Manage menus, kitchen orders, and tables",
-      slug: "restaurant"
+      description: "Manage menus, kitchen orders, tables, reservations, and staff scheduling with integrated payment processing and reporting",
+      slug: "restaurant",
+      icon: UtensilsCrossed,
+      color: "text-orange-600"
     },
     {
       title: "Wholesale",
-      description: "Bulk order processing and flexible pricing",
-      slug: "wholesale"
+      description: "Bulk order processing and flexible pricing with customer management, credit limits, and automated invoicing for wholesale businesses",
+      slug: "wholesale",
+      icon: Package,
+      color: "text-purple-600"
     },
     {
       title: "Departmental Store",
-      description: "Multi-category management and promotions",
-      slug: "departmental-store"
+      description: "Multi-category management and promotions with advanced inventory control, staff management, and comprehensive sales reporting",
+      slug: "departmental-store",
+      icon: Store,
+      color: "text-indigo-600"
     },
     {
       title: "Distribution",
-      description: "Comprehensive distribution and logistics",
-      slug: "distribution"
+      description: "Comprehensive distribution and logistics management with route optimization, delivery tracking, and warehouse management systems",
+      slug: "distribution",
+      icon: Truck,
+      color: "text-red-600"
     },
   ];
 
@@ -81,8 +94,9 @@ const Navigation = () => {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
+      setIsMobileSolutionsOpen(false); // Close solutions dropdown when menu closes
     }
-    
+
     return () => {
       document.body.style.overflow = 'unset';
     };
@@ -150,7 +164,9 @@ const Navigation = () => {
   return (
     <>
     <nav
-      className={`fixed bg-white border-b border-gray-200 shadow-lg top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent `}
+      className={`fixed bg-white top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'shadow-sm' : 'shadow-none'
+      }`}
     >
       <Container size="xl" padding="none">
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-4">
@@ -180,7 +196,7 @@ const Navigation = () => {
             <div className="hidden lg:flex items-center gap-4 xl:gap-5 2xl:gap-6 flex-1 justify-center min-w-0 px-2">
               {navLinks.map((link) => (
                 link.name === "Solutions" ? (
-                  <div 
+                  <div
                     key={link.path}
                     className="relative group"
                     onMouseEnter={handleSolutionsMouseEnter}
@@ -198,22 +214,36 @@ const Navigation = () => {
                       {link.name}
                       <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180 flex-shrink-0" />
                     </Link>
-                    
+
                     {/* Dropdown Menu */}
                     {isSolutionsHovered && (
                       <div className="absolute top-full left-0 pt-2 z-50" onMouseEnter={handleSolutionsMouseEnter} onMouseLeave={handleSolutionsMouseLeave}>
-                        <div className="w-64 bg-white border border-gray-200 rounded-lg shadow-lg py-2 animate-fade-in">
-                          {solutions.map((solution) => (
-                            <Link
-                              key={solution.slug}
-                              href={`/solutions/${solution.slug}`}
-                              className="block px-4 py-2 hover:bg-gray-50 transition-colors"
-                              prefetch={true}
-                            >
-                              <div className="font-medium text-sm text-gray-900">{solution.title}</div>
-                              <div className="text-xs text-gray-600 line-clamp-1">{solution.description}</div>
-                            </Link>
-                          ))}
+                        <div className="w-[600px] bg-white border border-gray-200 rounded-xl shadow-xl py-4 animate-fade-in">
+                          <div className="grid grid-cols-2 gap-3 px-2">
+                            {solutions.map((solution) => {
+                              const IconComponent = solution.icon;
+                              return (
+                                <Link
+                                  key={solution.slug}
+                                  href={`/solutions/${solution.slug}`}
+                                  className="flex items-start gap-3 px-4 py-3.5 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-200 group rounded-lg mx-1"
+                                  prefetch={true}
+                                >
+                                  <div className={`flex-shrink-0 w-10 h-10 rounded-lg ${solution.color} bg-gradient-to-br from-white to-gray-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-200 border border-gray-100`}>
+                                    <IconComponent className="w-5 h-5" />
+                                  </div>
+                                  <div className="flex-1 min-w-0">
+                                    <div className="font-semibold text-sm text-gray-900 group-hover:text-[#1732BD] transition-colors mb-1">
+                                      {solution.title}
+                                    </div>
+                                    <div className="text-xs text-gray-600 leading-relaxed">
+                                      {solution.description}
+                                    </div>
+                                  </div>
+                                </Link>
+                              );
+                            })}
+                          </div>
                         </div>
                       </div>
                     )}
@@ -237,31 +267,31 @@ const Navigation = () => {
 
             {/* Contact Us and Login Buttons - Right side */}
             <div className="hidden lg:flex items-center gap-3 z-10 flex-shrink-0 ml-auto">
-             
-              <Button 
-                size="sm" 
+
+              <Button
+                size="sm"
                 variant="outline"
                 asChild
-                className="bg-white border-gray-300 text-gray-700 hover:bg-gradient-to-r hover:from-[#29CDCF] hover:to-[#1947C4] hover:text-white hover:border-transparent whitespace-nowrap rounded-full px-5 font-medium text-sm transition-all duration-300" 
+                className="bg-white border-gray-300 text-gray-700 hover:bg-gradient-to-r hover:from-[#29CDCF] hover:to-[#1947C4] hover:text-white hover:border-transparent whitespace-nowrap rounded-full px-5 font-medium text-sm transition-all duration-300"
               >
                 <Link href="/login">Login</Link>
               </Button>
-              <Button 
-                size="sm" 
+              <Button
+                size="sm"
                 variant="outline"
                 asChild
-                className=" border-gray-300 text-white bg-gradient-to-r from-[#29CDCF] to-[#1947C4] hover:text-white hover:border-transparent whitespace-nowrap rounded-full px-5 font-medium text-sm transition-all duration-300" 
+                className=" border-gray-300 text-white bg-gradient-to-r from-[#29CDCF] to-[#1947C4] hover:text-white hover:border-transparent whitespace-nowrap rounded-full px-5 font-medium text-sm transition-all duration-300"
               >
                 <Link href="/contact-us">Contact Us</Link>
               </Button>
             </div>
 
-            {/* Mobile Menu Button */}           
+            {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2 -mr-2 flex-shrink-0 text-gray-700 z-10"
+              className="lg:hidden p-2 -mr-2 flex-shrink-0 text-gray-700 z-10 ml-auto"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
-              aria-expanded={isMobileMenuOpen}
+              aria-expanded={isMobileMenuOpen ? "true" : "false"}
             >
               {isMobileMenuOpen ? (
                 <X className="w-6 h-6" />
@@ -277,12 +307,12 @@ const Navigation = () => {
 
     {/* Mobile Menu - Outside nav to avoid z-index issues */}
     {isMobileMenuOpen && (
-      <div 
+      <div
         className="lg:hidden fixed top-16 left-0 right-0 bottom-0 bg-white z-[100] overflow-y-auto shadow-2xl"
       >
-        <div 
+        <div
           className="w-full min-h-full bg-white animate-fade-in"
-          style={{ 
+          style={{
             paddingTop: '1.5rem',
             paddingBottom: '2rem'
           }}
@@ -292,30 +322,39 @@ const Navigation = () => {
                 {navLinks.map((link) => (
                   link.name === "Solutions" ? (
                     <div key={link.path} className="w-full">
-                      <div className={`text-base sm:text-lg font-semibold mb-3 px-2 sm:px-4 py-2 ${
-                        pathname === link.path || pathname?.startsWith("/solutions/")
-                          ? "text-[#1732BD]"
-                          : "text-gray-900"
-                      }`}>
-                        {link.name}
-                      </div>
-                      <div className="flex flex-col gap-1.5 sm:gap-2 ml-4 sm:ml-6">
-                        {solutions.map((solution) => (
-                          <Link
-                            key={solution.slug}
-                            href={`/solutions/${solution.slug}`}
-                            prefetch={true}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className={`px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base transition-all duration-200 rounded-lg ${
-                              pathname === `/solutions/${solution.slug}`
-                                ? "text-[#1732BD] bg-[#1732BD]/10 font-semibold"
-                                : "text-gray-700 hover:text-[#1732BD] hover:bg-gray-100"
-                            }`}
-                          >
-                            {solution.title}
-                          </Link>
-                        ))}
-                      </div>
+                      <button
+                        onClick={() => setIsMobileSolutionsOpen(!isMobileSolutionsOpen)}
+                        className={`w-full flex items-center justify-between text-base sm:text-lg font-semibold px-2 sm:px-4 py-3 sm:py-3.5 transition-all duration-200 rounded-lg ${
+                          pathname === link.path || pathname?.startsWith("/solutions/")
+                            ? "text-[#1732BD] bg-[#1732BD]/10"
+                            : "text-gray-900 hover:text-[#1732BD] hover:bg-gray-100"
+                        }`}
+                      >
+                        <span>{link.name}</span>
+                        <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isMobileSolutionsOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                      {isMobileSolutionsOpen && (
+                        <div className="flex flex-col gap-1.5 sm:gap-2 ml-4 sm:ml-6 mt-2">
+                          {solutions.map((solution) => (
+                            <Link
+                              key={solution.slug}
+                              href={`/solutions/${solution.slug}`}
+                              prefetch={true}
+                              onClick={() => {
+                                setIsMobileMenuOpen(false);
+                                setIsMobileSolutionsOpen(false);
+                              }}
+                              className={`px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base transition-all duration-200 rounded-lg ${
+                                pathname === `/solutions/${solution.slug}`
+                                  ? "text-[#1732BD] bg-[#1732BD]/10 font-semibold"
+                                  : "text-gray-700 hover:text-[#1732BD] hover:bg-gray-100"
+                              }`}
+                            >
+                              {solution.title}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <Link
@@ -333,19 +372,19 @@ const Navigation = () => {
                     </Link>
                   )
                 ))}
-                
+
                 {/* Mobile CTA Buttons */}
                 <div className="px-2 sm:px-4 pt-4 sm:pt-6 mt-4 border-t border-gray-200 flex flex-col gap-3">
-                  <Button 
-                    variant="outline" 
-                    size="lg" 
+                  <Button
+                    variant="outline"
+                    size="lg"
                     className="w-full text-base sm:text-lg rounded-full border-gray-300"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Login
                   </Button>
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="w-full bg-gradient-to-r from-[#22D5C7] to-[#1732BD] hover:opacity-90 text-white text-base sm:text-lg rounded-full"
                     asChild
                     onClick={() => setIsMobileMenuOpen(false)}
@@ -370,7 +409,7 @@ const Navigation = () => {
                 Fill out the form below and we'll get back to you with a customized quote for your business.
               </DialogDescription>
             </DialogHeader>
-          <form 
+          <form
             onSubmit={(e) => {
               e.preventDefault();
               // Handle form submission here
