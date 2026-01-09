@@ -4,16 +4,16 @@ import Link from "next/link";
 
 const CTASection = () => {
   return (
-    <section className="relative  overflow-hidden py-12 lg:py-16 bg-white">
+    <section className="relative overflow-hidden bg-white pb-6 lg:pb-20">
       {/* Background gradient */}
       <div className="absolute " />
-      
+
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 relative">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 font-montserrat">
+          <h2 className="section-heading">
             Ready to Simplify Your Business?
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="section-paragraph max-w-3xl mx-auto">
             Join over 500 Pakistani businesses already growing smarter with Zapeera's cloud-based POS and inventory management software. Start your 14-day free trial today and see the difference Zapeera makes (no credit card needed)!
           </p>
 

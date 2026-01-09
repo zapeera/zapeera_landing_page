@@ -33,12 +33,12 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="relative bg-white overflow-hidden py-12 lg:py-16">
+    <section className="relative bg-white py-0 lg:py-12 overflow-hidden">
       <Container className="relative z-10" size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}
-          <div className="text-center max-w-4xl mx-auto mb-12">
-            <h2 className="text-[48px] font-bold text-gray-900 mb-4 lg:mb-6 font-montserrat">
+          <div className="text-center max-w-4xl mx-auto mb-6 lg:mb-10">
+            <h2 className="section-heading">
               Frequently Asked Questions
             </h2>
           </div>
@@ -56,7 +56,7 @@ const FAQSection = () => {
                     <div className="flex items-start gap-4 w-full">
                       <div className="w-3 h-3 rounded-full bg-[#1947C4] mt-2 flex-shrink-0" />
                       <div className="flex-1">
-                        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#1947C4] transition-colors">
+                        <h3 className="card-heading group-hover:text-[#1947C4] transition-colors">
                           {faq.question}
                         </h3>
                       </div>

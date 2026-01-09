@@ -14,7 +14,7 @@ const ClientLogos = () => {
   ];
 
   return (
-    <section className="py-12 lg:py-16  ">
+    <section className="py-12 lg:py-16 bg-gray-50">
       <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <p className="text-center text-sm text-muted-foreground mb-8 font-medium tracking-wide">
         Trusted by Businesses Across Pakistan
@@ -25,7 +25,7 @@ const ClientLogos = () => {
             {[...industries, ...industries].map(({ label, logo }, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center min-w-[180px] h-20 px-6 bg-white rounded-lg  shadow-sm flex-shrink-0"
+                className="flex items-center justify-center min-w-[180px] h-20 px-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow flex-shrink-0"
               >
                 <img
                   src={logo}

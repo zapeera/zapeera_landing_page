@@ -1,3 +1,5 @@
+"use client";
+
 'use client';
 
 import { useState } from "react";
@@ -79,23 +81,23 @@ const PricingSection = ({ showHeading = true }: PricingSectionProps) => {
   ];
 
   return (
-    <section className="py-12 lg:py-16 bg-[#F9FEFE] gradient-to-br from-[#26D2C6]/10 to-[white]/10">
+    <section className="bg-[#F9FEFE] py-[40px] md:py-[80px] gradient-to-br from-[#26D2C6]/10 to-[white]/10">
      <Container size="full" padding="none">
      <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         {/* Header Section */}
         {showHeading && (
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 font-montserrat">
+          <div className="text-center max-w-3xl mx-auto ">
+            <h2 className="section-heading">
               Simple,Transparent Pricing
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="section-paragraph">
               Choose the plan that's right for your business. All plans include a 14-day free trial.
             </p>
           </div>
         )}
 
         {/* Billing Toggle */}
-        <div className="flex items-center justify-center mb-[80px] gap-4">
+        <div className="flex items-center justify-center gap-4 mb-6 lg:mb-16">
           <span className={`text-sm ${!isYearly ? "font-semibold text-black" : "text-gray-500"}`}>
             Monthly
           </span>
@@ -131,7 +133,7 @@ const PricingSection = ({ showHeading = true }: PricingSectionProps) => {
 
               {/* Plan Header */}
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-2 text-gray-900">{plan.name}</h3>
+                <h3 className="card-heading">{plan.name}</h3>
                 <p className="text-sm text-gray-500 mb-4">{plan.description}</p>
 
                 {plan.monthlyPrice ? (

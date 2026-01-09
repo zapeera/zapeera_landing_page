@@ -29,21 +29,21 @@ const SolutionsSection = () => {
   ];
 
   return (
-    <section className="py-12 lg:py-16 bg-[#ff] gradient-to-br from-[#26D2C6]/10 via-white to-[#1C22AA]/10">
+    <section className="bg-[#ff] gradient-to-br from-[#26D2C6]/10 via-white to-[#1C22AA]/10">
       <Container size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}
-          <div className="text-center mb-10 lg:mb-12">
-            <h2 className="text-[48px] font-bold text-gray-900 mb-4 lg:mb-6 font-montserrat">
+          <div className="text-center mx-auto">
+            <h2 className="section-heading max-w-[950px] mx-auto">
               Business Tools to Run Everything in One Place
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="section-paragraph max-w-3xl mx-auto">
               Powerful, easy-to-use tools built into Zapeera's cloud-based POS and business management software to simplify daily operations and scale with your growth.
             </p>
           </div>
-      
+
           {/* Solutions Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {solutions.map((solution, index) => (
               <div
                 key={index}
@@ -60,7 +60,7 @@ const SolutionsSection = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg font-bold text-gray-900 mb-1">
+                <h3 className="card-heading">
                   {solution.title}
                 </h3>
                 <p className="text-sm text-gray-600 leading-relaxed">

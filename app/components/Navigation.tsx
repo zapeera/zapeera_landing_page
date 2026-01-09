@@ -1,3 +1,5 @@
+"use client";
+
 'use client'
 
 import { useState, useEffect } from "react";
@@ -38,42 +40,42 @@ const Navigation = () => {
   const solutions = [
     {
       title: "Retail",
-      description: "Complete retail management with multi-branch sync, inventory tracking, POS integration, and real-time sales analytics for seamless operations",
+      description: "Complete retail management with multi-branch sync and real-time inventory tracking",
       slug: "retail",
       icon: ShoppingBag,
       color: "text-blue-600"
     },
     {
       title: "Pharmacy",
-      description: "Specialized pharmacy management with medication tracking, prescription management, expiry alerts, and regulatory compliance features",
+      description: "Specialized pharmacy management with medication tracking and expiry alerts",
       slug: "pharmacy",
       icon: Pill,
       color: "text-green-600"
     },
     {
       title: "Restaurant",
-      description: "Manage menus, kitchen orders, tables, reservations, and staff scheduling with integrated payment processing and reporting",
+      description: "Manage menus, kitchen orders, tables, and staff scheduling efficiently",
       slug: "restaurant",
       icon: UtensilsCrossed,
       color: "text-orange-600"
     },
     {
       title: "Wholesale",
-      description: "Bulk order processing and flexible pricing with customer management, credit limits, and automated invoicing for wholesale businesses",
+      description: "Bulk order processing with flexible pricing and automated invoicing",
       slug: "wholesale",
       icon: Package,
       color: "text-purple-600"
     },
     {
       title: "Departmental Store",
-      description: "Multi-category management and promotions with advanced inventory control, staff management, and comprehensive sales reporting",
+      description: "Multi-category management with advanced inventory control and reporting",
       slug: "departmental-store",
       icon: Store,
       color: "text-indigo-600"
     },
     {
       title: "Distribution",
-      description: "Comprehensive distribution and logistics management with route optimization, delivery tracking, and warehouse management systems",
+      description: "Comprehensive distribution with route optimization and warehouse management",
       slug: "distribution",
       icon: Truck,
       color: "text-red-600"
@@ -164,14 +166,16 @@ const Navigation = () => {
   return (
     <>
     <nav
-      className={`fixed bg-white top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'shadow-sm' : 'shadow-none'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white shadow-sm' : 'bg-transparent shadow-none'
       }`}
     >
       <Container size="xl" padding="none">
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-4">
         {/* White pill-shaped navigation bar with soft shadow */}
-        <div className="bg-white rounded- px-6 lg:px-8 xl:px-10 py-3 h-14 lg:h-14 relative max-w-[2000px] mx-auto pb-[20px] ">
+        <div className={`rounded- px-6 lg:px-8 xl:px-10 py-3 h-14 lg:h-14 relative max-w-[2000px] mx-auto pb-[20px] transition-all duration-300 ${
+          isScrolled ? 'bg-white' : 'bg-transparent'
+        }`}>
           <div className="flex items-center h-full gap-4 lg:gap-6">
             {/* Logo - Pill-shaped button with gradient background */}
             <Link href="/" className="flex items-center group gap-2 z-10 flex-shrink-0">
@@ -217,9 +221,9 @@ const Navigation = () => {
 
                     {/* Dropdown Menu */}
                     {isSolutionsHovered && (
-                      <div className="absolute top-full left-0 pt-2 z-50" onMouseEnter={handleSolutionsMouseEnter} onMouseLeave={handleSolutionsMouseLeave}>
-                        <div className="w-[600px] bg-white border border-gray-200 rounded-xl shadow-xl py-4 animate-fade-in">
-                          <div className="grid grid-cols-2 gap-3 px-2">
+                      <div className="absolute top-[20px] left-[200px] pt-2 z-50 -translate-x-1/2" onMouseEnter={handleSolutionsMouseEnter} onMouseLeave={handleSolutionsMouseLeave}>
+                        <div className="w-[calc(100vw-4rem)] max-w-[1000px] bg-white border border-gray-200 rounded-xl shadow-xl py-4 animate-fade-in">
+                          <div className="grid grid-cols-3 gap-3 px-2">
                             {solutions.map((solution) => {
                               const IconComponent = solution.icon;
                               return (
@@ -236,7 +240,7 @@ const Navigation = () => {
                                     <div className="font-semibold text-sm text-gray-900 group-hover:text-[#1732BD] transition-colors mb-1">
                                       {solution.title}
                                     </div>
-                                    <div className="text-xs text-gray-600 leading-relaxed">
+                                    <div className="text-xs text-gray-600 leading-relaxed line-clamp-2">
                                       {solution.description}
                                     </div>
                                   </div>
@@ -288,6 +292,7 @@ const Navigation = () => {
 
             {/* Mobile Menu Button */}
             <button
+              type="button"
               className="lg:hidden p-2 -mr-2 flex-shrink-0 text-gray-700 z-10 ml-auto"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
@@ -325,7 +330,7 @@ const Navigation = () => {
                       <button
                         onClick={() => setIsMobileSolutionsOpen(!isMobileSolutionsOpen)}
                         className={`w-full flex items-center justify-between text-base sm:text-lg font-semibold px-2 sm:px-4 py-3 sm:py-3.5 transition-all duration-200 rounded-lg ${
-                          pathname === link.path || pathname?.startsWith("/solutions/")
+                        pathname === link.path || pathname?.startsWith("/solutions/")
                             ? "text-[#1732BD] bg-[#1732BD]/10"
                             : "text-gray-900 hover:text-[#1732BD] hover:bg-gray-100"
                         }`}
@@ -335,25 +340,25 @@ const Navigation = () => {
                       </button>
                       {isMobileSolutionsOpen && (
                         <div className="flex flex-col gap-1.5 sm:gap-2 ml-4 sm:ml-6 mt-2">
-                          {solutions.map((solution) => (
-                            <Link
-                              key={solution.slug}
-                              href={`/solutions/${solution.slug}`}
-                              prefetch={true}
+                        {solutions.map((solution) => (
+                          <Link
+                            key={solution.slug}
+                            href={`/solutions/${solution.slug}`}
+                            prefetch={true}
                               onClick={() => {
                                 setIsMobileMenuOpen(false);
                                 setIsMobileSolutionsOpen(false);
                               }}
-                              className={`px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base transition-all duration-200 rounded-lg ${
-                                pathname === `/solutions/${solution.slug}`
-                                  ? "text-[#1732BD] bg-[#1732BD]/10 font-semibold"
-                                  : "text-gray-700 hover:text-[#1732BD] hover:bg-gray-100"
-                              }`}
-                            >
-                              {solution.title}
-                            </Link>
-                          ))}
-                        </div>
+                            className={`px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base transition-all duration-200 rounded-lg ${
+                              pathname === `/solutions/${solution.slug}`
+                                ? "text-[#1732BD] bg-[#1732BD]/10 font-semibold"
+                                : "text-gray-700 hover:text-[#1732BD] hover:bg-gray-100"
+                            }`}
+                          >
+                            {solution.title}
+                          </Link>
+                        ))}
+                      </div>
                       )}
                     </div>
                   ) : (

@@ -31,37 +31,37 @@ export const metadata: Metadata = {
 
 const About = memo(() => {
   const team = [
-    { 
-      name: "Muhammad Majid", 
-      role: "CEO & Founder", 
+    {
+      name: "Muhammad Majid",
+      role: "CEO & Founder",
       image: "/images/mjid.png",//images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=fac",
       bio: "Visionary leader with 15+ years in business management",
       linkedin: "#"
     },
-    { 
-      name: "Muhammad Khan", 
-      role: "CTO & Co-Founder", 
+    {
+      name: "Muhammad Khan",
+      role: "CTO & Co-Founder",
       image: "",
       bio: "Tech innovator specializing in scalable solutions",
       linkedin: "#"
     },
-    { 
-      name: "Muhammad Bilal", 
-      role: "Head of Product", 
+    {
+      name: "Muhammad Bilal",
+      role: "Head of Product",
       image: "/images/don.jpeg",
       bio: "Product strategist focused on user experience",
       linkedin: "#"
     },
-    { 
-      name: "Muhammad Umair", 
-      role: "Full Stack Developer", 
+    {
+      name: "Muhammad Umair",
+      role: "Full Stack Developer",
       image: "/images/umair.jpeg",
       bio: "Engineering excellence and team leadership",
       linkedin: "#"
     },
-    { 
-      name: "Ali Mahtab", 
-      role: "Head of Design", 
+    {
+      name: "Ali Mahtab",
+      role: "Head of Design",
       image: "/images/ali.jpeg",
       bio: "Creative director with passion for beautiful interfaces",
       linkedin: "#"
@@ -177,7 +177,7 @@ const About = memo(() => {
           <section>
             <Container>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-16 text-center">Our Journey</h2>
-              
+
               <div className="max-w-4xl mx-auto relative">
                 {/* Timeline line */}
                 <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-border" />
@@ -235,7 +235,7 @@ const About = memo(() => {
                 <div className="bg-gradient-to-r from-primary to-secondary rounded-3xl p-8 lg:p-12 text-white relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
                   <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
-                  
+
                   <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8">
                     <div className="w-32 h-32 rounded-full overflow-hidden flex-shrink-0 ring-4 ring-white/30">
                       <Image
@@ -272,11 +272,11 @@ const About = memo(() => {
                   >
                     {/* Background Gradient */}
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    
+
                     {/* Decorative Elements */}
                     <div className="absolute top-4 right-4 w-8 h-8 bg-primary/10 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110"></div>
                     <div className="absolute bottom-4 left-4 w-6 h-6 bg-secondary/20 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-125"></div>
-                    
+
                     {/* Main Content */}
                     <div className="relative z-10 p-8">
                       {/* Profile Image with Enhanced Styling */}
@@ -290,38 +290,38 @@ const About = memo(() => {
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        
+
                         {/* Status Indicator */}
                         <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center shadow-lg">
                           <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
                         </div>
-                        
+
                         {/* Floating Elements */}
                         <div className="absolute -top-4 -left-4 w-6 h-6 bg-primary/20 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:animate-bounce"></div>
                         <div className="absolute -top-2 -right-6 w-4 h-4 bg-secondary/30 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:animate-pulse"></div>
                       </div>
-                      
+
                       {/* Name with Enhanced Typography */}
                       <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors duration-300 group-hover:scale-105 transform">
                         {member.name}
                       </h3>
-                      
+
                       {/* Role Badge with Gradient */}
                       <div className="inline-block bg-gradient-to-r from-primary/10 to-secondary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4 group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300 shadow-sm group-hover:shadow-md">
                         {member.role}
                       </div>
-                      
+
                       {/* Bio with Better Styling */}
                       <p className="text-muted-foreground text-sm leading-relaxed mb-6 group-hover:text-foreground transition-colors duration-300">
                         {member.bio}
                       </p>
-                      
+
                       {/* Enhanced Connect Button */}
                       <button className="bg-gradient-to-r from-primary/10 to-secondary/10 hover:from-primary hover:to-secondary text-primary hover:text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 group-hover:shadow-lg group-hover:scale-105 transform border border-primary/20 group-hover:border-transparent">
                         Connect on LinkedIn
                       </button>
                     </div>
-                    
+
                     {/* Hover Border Effect */}
                     <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-primary/30 transition-all duration-500"></div>
                   </Card>
@@ -350,7 +350,7 @@ const About = memo(() => {
           <section>
             <Container>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-16 text-center">Our Values</h2>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {[
                   { icon: Users, title: "Customer First", desc: "Every decision starts with our users" },

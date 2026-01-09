@@ -7,33 +7,34 @@ import Container from "../ui/container";
 const HeroSection = () => {
 
   return (
-    <section className="relative min-h-[90h] pt-[40px] sm:min-h-screen flex flex-col items-center overflow-hidden bg-gradient-to-br from-[#26D2C6]/10 via-white to-[#1C22AA]/10">
-      {/* Subtle texture background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.03)_1px,transparent_0)] bg-[length:20px_20px]"></div>
+    <section className="relative min-h-[90h] pt-[40px] sm:min-h-screen flex flex-col items-center overflow-hidden bg-white">
+      {/* Base background */}
+      <div className="absolute inset-0 bg-white"></div>
 
-      {/* Soft gradient effects in corners */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#29CDCF]/8 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#1947C4]/8 rounded-full blur-3xl"></div>
+      {/* Single unified circular gradient - Left to Right with both colors mixed - Complete coverage with proper bottom circle */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[10%] w-[2200px] h-[1100px]">
+        <div className="w-full h-full rounded-full bg-[radial-gradient(ellipse_110%_85%_at_center,rgba(41,205,207,0.35)_0%,rgba(41,205,207,0.28)_10%,rgba(41,205,207,0.22)_20%,rgba(38,210,198,0.2)_32%,rgba(25,71,196,0.19)_45%,rgba(25,71,196,0.26)_58%,rgba(25,71,196,0.24)_70%,rgba(25,71,196,0.18)_80%,rgba(25,71,196,0.11)_88%,rgba(25,71,196,0.06)_94%,rgba(25,71,196,0.03)_98%,transparent_100%)] blur-lg pointer-events-none"></div>
       </div>
+
+      {/* Subtle texture background */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.02)_1px,transparent_0)] bg-[length:20px_20px] pointer-events-none opacity-40"></div>
 
       <Container className="relative z-10" size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
           <div className="flex flex-col items-center justify-center pt-16  sm:pt-20  md:pt-24  lg:pt-24 xl:pt-24 2xl:pt-28 ">
             {/* Centered Content */}
-            <div className="text-center max-w-6xl mx-auto mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-12">
+            <div className="text-center  mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-12">
               {/* Main Heading */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-bold leading-tight tracking-tight text-gray-900 font-montserrat mb-4 sm:mb-5 md:mb-6 lg:mb-6 xl:mb-6">
-                Zapeera – Pakistan's Leading Cloud-Based Business Management Software
-
+              <h1 className="text-3xl sm:text-4xl max-w-6xl mx-auto md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-bold leading-tight tracking-tight text-gray-900 font-montserrat mb-4 sm:mb-5 md:mb-6 lg:mb-6 xl:mb-6">
+              A business management platform you can depend on
               </h1>
 
-              <p className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-gray-600 max-w-5xl mx-auto leading-relaxed font-montserrat font-normal mb-6 sm:mb-7 md:mb-8 lg:mb-8 xl:mb-8">
-                Empower your store or chain with our all-in-one platform. Zapeera’s cloud-based POS and inventory management software is built for Pakistani businesses, easy to use, fully scalable, and designed to save you time and money. Whether you run a retail shop, pharmacy, restaurant, or wholesale operation, Zapeera streamlines sales, stock control, and reporting in one intuitive solution.
+              <p className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-gray-600 max-w-6xl mx-auto leading-relaxed font-montserrat font-normal mb-6 sm:mb-7 md:mb-8 lg:mb-8 xl:mb-8">
+              Zapeera is a powerful cloud-based business management and POS system designed for pharmacies, retail stores, restaurants, and wholesalers. Manage inventory, branches, staff, and sales effortlessly online or offline and keep your operations running smoothly
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+              <div className="flex flex-row gap-3 sm:gap-4 justify-center items-center">
                 <Button
                   size="default"
                   className="bg-gradient-to-r from-[#29CDCF] to-[#1947C4] hover:opacity-90 text-white shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-base px-4 sm:px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-6 py-2.5 sm:py-2.5 md:py-2.5 lg:py-2.5 xl:py-2.5 2xl:py-3 rounded-full font-semibold"

@@ -157,48 +157,63 @@ const WhyChooseUs = () => {
   const activeContent = tabContent[activeTab as keyof typeof tabContent];
 
   return (
-    <section className="relative bg-[#F9FEFE] overflow-hidden py-12 lg:py-16 ">
+    <section className="relative bg-[#F9FEFE] lg:py-[80px] py-[40px] overflow-hidden">
       <Container size="xl" padding="none">
         <div className="relative z-10 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}
-          <div className="text-center mb-10 lg:mb-12">
-            <h2 className="text-[48px] font-bold text-gray-900 mb-4 lg:mb-6 font-montserrat">
+          <div className="text-center">
+            <h2 className="section-heading">
               Built for Modern Business
-            </h2> 
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-6 lg:mb-8 leading-relaxed">
+            </h2>
+            <p className="section-paragraph max-w-3xl mx-auto">
               Zapeera adapts to your business model with industry-specific tools designed to simplify operations, improve efficiency, and support growth.
             </p>
-            
+
             {/* Tab Navigation */}
-            <div className="flex flex-wrap justify-center gap-4 lg:gap-6 mb-10 lg:mb-12">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`text-lg font-medium transition-colors pb-2 relative ${
-                    activeTab === tab.id
-                      ? "text-[#1947C4]"
-                      : "text-gray-600 hover:text-gray-900"
-                  }`}
-                >
-                  {tab.label}
-                  {activeTab === tab.id && (
-                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#1947C4]"></span>
-                  )}
-                </button>
-              ))}
-            </div>
+            <div
+  className="
+    flex
+    flex-nowrap
+    md:flex-wrap
+    justify-start
+    md:justify-center
+    gap-4
+    lg:gap-6
+    mb-[20px]
+    overflow-x-auto
+    md:overflow-visible
+    scrollbar-hide
+  "
+>
+  {tabs.map((tab) => (
+    <button
+      key={tab.id}
+      onClick={() => setActiveTab(tab.id)}
+      className={`text-lg font-medium transition-colors pb-2 relative whitespace-nowrap ${
+        activeTab === tab.id
+          ? "text-[#1947C4]"
+          : "text-gray-600 hover:text-gray-900"
+      }`}
+    >
+      {tab.label}
+      {activeTab === tab.id && (
+        <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#1947C4]" />
+      )}
+    </button>
+  ))}
+</div>
+
           </div>
 
           {/* Content with Image Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Left Side - Content */}
             <div className="space-y-4">
               {/* Title */}
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
                 {activeContent.title}
               </h3>
-              
+
               {/* Description */}
               <p className="text-base text-gray-600 leading-relaxed">
                 {activeContent.description}
@@ -215,12 +230,12 @@ const WhyChooseUs = () => {
                     <div className="w-10 h-10 rounded-lg bg-[#1947C4]/10 flex items-center justify-center mb-2">
                       <feature.icon className="w-5 h-5 text-[#1947C4]" strokeWidth={2} />
                     </div>
-                    
+
                     {/* Title */}
-                    <h4 className="text-sm font-bold text-gray-900 mb-1">
+                    <h4 className="card-heading">
                       {feature.title}
                     </h4>
-                    
+
                     {/* Description */}
                     <p className="text-xs text-gray-600 leading-relaxed">
                       {feature.description}

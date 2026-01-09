@@ -120,16 +120,36 @@ export default function Home() {
           <FloatingCTA />
           <main>
             <HeroSection />
-            <ClientLogos />
-            <AboutSection />
-            <WhyChooseUs />
-            <SolutionsSection />
-            <FeaturesOverview />
-            <HowItWorks />
-            <PricingSection />
-            <Testimonials />
-            <FAQSection />
-            <CTASection />
+            <div className="">
+              <ClientLogos />
+            </div>
+            <div className="">
+              <AboutSection />
+            </div>
+            <div className="py-10 lg:py-12">
+              <WhyChooseUs />
+            </div>
+            <div className="py-2 lg:py-12">
+              <SolutionsSection />
+            </div>
+            <div className="py-10 lg:py-12">
+              <FeaturesOverview />
+            </div>
+            <div className="py-2 lg:py-12">
+              <HowItWorks />
+            </div>
+            <div className="py-10 lg:py-12">
+              <PricingSection />
+            </div>
+            <div className="py-2 lg:py-12">
+              <Testimonials />
+            </div>
+            <div className="py-14 lg:py-12">
+              <FAQSection />
+            </div>
+            <div className="py-6 lg:py-12">
+              <CTASection />
+            </div>
           </main>
           <Footer />
         </div>

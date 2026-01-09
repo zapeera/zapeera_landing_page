@@ -41,10 +41,10 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-12 lg:py-16 bg-white">
+    <section className="bg-white ">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-        <div className="text-center max-w-3xl mx-auto  md:mb-16 mb-8 animate-fade-in-up">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-montserrat">
+        <div className="text-center max-w-3xl mx-auto animate-fade-in-up mb-6 lg:mb-10">
+          <h2 className="section-heading">
             Testimonials
           </h2>
         </div>

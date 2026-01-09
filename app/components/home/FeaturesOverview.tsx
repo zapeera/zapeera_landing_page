@@ -4,66 +4,66 @@ import Image from "next/image";
 import Container from "../ui/container";
 
 const FeaturesOverview = () => {
-  
+
   const features = [
     {
       title: "Product & Category Management",
       description: "Organize products by category, brand, or type for faster billing and better inventory control.",
-      image: "/images/inventory.jpeg",
+      image: "/icon-image/product-and-category-management.png",
     },
     {
       title: "Supplier & Manufacturer Management",
       description: "Maintain supplier records, purchase history, and pricing to streamline procurement.",
-      image: "/images/multibranch.jpeg",
+      image: "/icon-image/suppliers-and-manufacturers.png",
     },
     {
       title: "Purchase Order Automation",
       description: "Generate and track purchase orders automatically based on stock levels and demand.",
-      image: "/feature/Branch Menagement.webp",
+      image: "/icon-image/purchase-order-automation.png",
     },
     {
       title: "Batch & Expiry Tracking",
       description: "Monitor batch numbers and expiry dates to reduce losses and ensure compliance.",
-      image: "/images/inventory.jpeg",
+      image: "/icon-image/batch-and-expiry-tracking.png",
     },
     {
       title: "Customer Management (CRM)",
       description: "Store customer details, track purchase history, and manage returns and refunds easily.",
-      image: "/images/staff.jpeg",
+      image: "/icon-image/customer-management.png",
     },
     {
       title: "Smart Billing & Invoicing",
       description: "Create accurate invoices instantly with taxes, discounts, and multiple payment options.",
-      image: "/images/smart_invoice.jpeg",
+      image: "/icon-image/smart-billing-and-invoicing.png",
     },
     {
       title: "Role-Based Access Control",
       description: "Control system access by assigning permissions based on staff roles and responsibilities.",
-      image: "/images/staff.jpeg",
+      image: "/icon-image/role-base-access-control.png",
     },
     {
       title: "Business Insights Dashboard",
       description: "View real-time sales, inventory, and performance metrics from a single dashboard.",
-      image: "/images/Retail POS.jpeg",
+      image: "/icon-image/business-insights-and-dashboard.png",
     },
   ];
 
   return (
-    <section className="py-12 lg:py-16 bg-[#F9FEFE] gradient-to-br from-[#26D2C6]/10 via-white to-[#1C22AA]/10">
+    <section className="bg-[#F9FEFE] py-[40px] md:py-[80px] gradient-to-br from-[#26D2C6]/10 via-white to-[#1C22AA]/10">
       <Container size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}
-          <div className="text-center mb-10 lg:mb-12">
-            <h2 className="text-[48px] font-bold text-gray-900 mb-4 lg:mb-6 font-montserrat">
+          <div className="text-center max-w-4xl mx-auto">
+            <h2 className="section-heading">
               Powerful Features That Simplify Business Management
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="section-paragraph max-w-3xl mx-auto">
               Everything you need to manage inventory, billing, suppliers, staff, and reporting — all built into one cloud-based POS and business management platform.
             </p>
           </div>
 
-          {/* Features Grid - 3 Columns Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {/* Features Grid - 4 Columns Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <div
                 key={index}
@@ -75,15 +75,15 @@ const FeaturesOverview = () => {
                     src={feature.image}
                     alt={feature.title}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
-                
+
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="card-heading">
                   {feature.title}
                 </h3>
-                
+
                 {/* Description */}
                 <p className="text-sm text-gray-600 leading-relaxed">
                   {feature.description}
