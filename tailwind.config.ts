@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['var(--font-montserrat)', 'system-ui', '-apple-system', 'sans-serif'],
         poppins: ['var(--font-poppins)', 'system-ui', '-apple-system', 'sans-serif'],
         montserrat: ['var(--font-montserrat)', 'system-ui', '-apple-system', 'sans-serif'],
       },
@@ -30,7 +30,7 @@ export default {
           light: "hsl(var(--primary-light))",
           dark: "hsl(var(--primary-dark))",
           50: "#f0f4ff",
-          100: "#e0e7ff", 
+          100: "#e0e7ff",
           200: "#c7d2fe",
           300: "#a5b4fc",
           400: "#818cf8",

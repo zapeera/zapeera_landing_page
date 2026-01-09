@@ -33,7 +33,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="relative bg-white py-0 lg:py-12 overflow-hidden">
+    <section className="relative bg-[#E8F5F5] lg:py-[80px] py-[40px] overflow-hidden gradient-to-br from-[#26D2C6]/15 to-[white]/15">
       <Container className="relative z-10" size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}
@@ -50,13 +50,13 @@ const FAQSection = () => {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="group border border-gray-200 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300"
+                  className="group border border-gray-200 rounded-xl shadow-sm transition-all duration-300"
                 >
                   <AccordionTrigger className="p-6 text-left hover:no-underline">
                     <div className="flex items-start gap-4 w-full">
                       <div className="w-3 h-3 rounded-full bg-[#1947C4] mt-2 flex-shrink-0" />
                       <div className="flex-1">
-                        <h3 className="card-heading group-hover:text-[#1947C4] transition-colors">
+                        <h3 className="card-heading">
                           {faq.question}
                         </h3>
                       </div>

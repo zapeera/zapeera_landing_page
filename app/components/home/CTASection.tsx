@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const CTASection = () => {
   return (
-    <section className="relative overflow-hidden bg-white pb-6 lg:pb-20">
+    <section className="relative overflow-hidden bg-white lg:py-[80px] py-[40px]">
       {/* Background gradient */}
       <div className="absolute " />
 

@@ -81,7 +81,7 @@ const PricingSection = ({ showHeading = true }: PricingSectionProps) => {
   ];
 
   return (
-    <section className="bg-[#F9FEFE] py-[40px] md:py-[80px] gradient-to-br from-[#26D2C6]/10 to-[white]/10">
+    <section className="bg-[#E8F5F5] py-[40px] md:py-[80px] gradient-to-br from-[#26D2C6]/15 to-[white]/15">
      <Container size="full" padding="none">
      <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         {/* Header Section */}

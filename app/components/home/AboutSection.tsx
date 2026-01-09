@@ -23,7 +23,7 @@ const AboutSection = () => {
             </div>
 
             {/* Right Side - Content */}
-            <div className="space-y-6">
+            <div className="space-y-6 md:pb-0 pb-[50px]">
               <div>
                 <h2 className="section-heading">
                   About Zapeera

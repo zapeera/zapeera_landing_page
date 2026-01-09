@@ -14,7 +14,7 @@ const ClientLogos = () => {
   ];
 
   return (
-    <section className="py-12 lg:py-16 bg-gray-50">
+    <section className="py-12 lg:py-16 bg-gray-100">
       <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <p className="text-center text-sm text-muted-foreground mb-8 font-medium tracking-wide">
         Trusted by Businesses Across Pakistan

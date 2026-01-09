@@ -29,12 +29,12 @@ const SolutionsSection = () => {
   ];
 
   return (
-    <section className="bg-[#ff] gradient-to-br from-[#26D2C6]/10 via-white to-[#1C22AA]/10">
+    <section className="bg-white lg:py-[80px] py-[40px]">
       <Container size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}
           <div className="text-center mx-auto">
-            <h2 className="section-heading max-w-[950px] mx-auto">
+            <h2 className="section-heading max-w-[1000px] mx-auto">
               Business Tools to Run Everything in One Place
             </h2>
             <p className="section-paragraph max-w-3xl mx-auto">

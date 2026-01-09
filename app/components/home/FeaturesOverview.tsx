@@ -49,11 +49,11 @@ const FeaturesOverview = () => {
   ];
 
   return (
-    <section className="bg-[#F9FEFE] py-[40px] md:py-[80px] gradient-to-br from-[#26D2C6]/10 via-white to-[#1C22AA]/10">
+    <section className="bg-[#E8F5F5] lg:py-[80px] py-[40px] gradient-to-br from-[#26D2C6]/15 via-white to-[#1C22AA]/15">
       <Container size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}
-          <div className="text-center max-w-4xl mx-auto">
+          <div className="text-center max-w-5xl mx-auto">
             <h2 className="section-heading">
               Powerful Features That Simplify Business Management
             </h2>
@@ -70,12 +70,13 @@ const FeaturesOverview = () => {
                 className="bg-white rounded-xl border border-gray-200 p-4 hover:border-[#1947C4]/50 hover:shadow-md transition-all duration-300 flex flex-col"
               >
                 {/* Image */}
-                <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden bg-gray-100">
+                <div className="relative w-full h-12 sm:h-14 md:h-16 lg:h-[72px] xl:h-[72px] 2xl:h-[72px] mb-4 flex items-center justify-start">
                   <Image
                     src={feature.image}
                     alt={feature.title}
-                    fill
-                    className="object-contain"
+                    width={72}
+                    height={72}
+                    className="object-contain w-auto h-full"
                   />
                 </div>
 

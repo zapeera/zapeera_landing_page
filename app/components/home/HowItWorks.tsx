@@ -25,7 +25,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="relative overflow-hidden bg-white">
+    <section className="relative overflow-hidden bg-white lg:py-[80px] py-[40px]">
       <Container size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Section Heading */}
@@ -36,40 +36,35 @@ const HowItWorks = () => {
           </div>
 
           {/* Steps Timeline */}
-          <div className="relative">
-            {/* Connecting Line */}
-            <div className="hidden lg:block absolute top-8 h-0.5 bg-gray-200" style={{ top: '2rem', left: 'calc(12.5% + 32px)', right: 'calc(12.5% + 32px)' }}></div>
-
-            {/* Steps Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {steps.map((step, index) => (
-                <div
-                  key={index}
-                  className="relative text-center"
-                >
-                  {/* Step Number Circle */}
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 relative z-10 ${
-                    index === 0
-                      ? "bg-[#E9FAF9] border-2 border-[#1947C4]/30"
-                      : "bg-[#E9FAF9] border-2 border-[#1947C4]/30"
-                  }`}>
-                    <span className={`text-xl font-bold ${
-                      index === 0 ? "text-black" : "text-black"
-                    }`}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
+            {steps.map((step, index) => (
+              <div
+                key={index}
+                className="flex flex-row md:flex-col items-start md:items-center gap-3 md:gap-4 text-left md:text-center"
+              >
+                {/* Step Number - Simple on mobile, Circle on desktop */}
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full hidden md:flex items-center justify-center mx-auto mb-4 bg-[#E9FAF9] border-2 border-[#1947C4]/30">
+                    <span className="md:text-xl text-sm md:font-bold font-medium text-black">
                       {step.number}
                     </span>
                   </div>
+                  <span className="text-lg md:text-2xl font-bold text-black md:hidden">
+                    {step.number}
+                  </span>
+                </div>
 
-                  {/* Content */}
+                {/* Content */}
+                <div className="flex-1">
                   <h3 className="card-heading">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-xs md:text-sm text-gray-600">
                     {step.description}
                   </p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </Container>

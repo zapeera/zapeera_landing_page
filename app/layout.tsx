@@ -11,15 +11,15 @@ import GoogleVerification from './components/GoogleVerification'
 import GoogleAnalytics from './components/GoogleAnalytics'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const poppins = Poppins({ 
-  subsets: ['latin'], 
+const poppins = Poppins({
+  subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800', '900'],
-  variable: '--font-poppins' 
+  variable: '--font-poppins'
 })
-const montserrat = Montserrat({ 
-  subsets: ['latin'], 
+const montserrat = Montserrat({
+  subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800', '900'],
-  variable: '--font-montserrat' 
+  variable: '--font-montserrat'
 })
 
 export const metadata: Metadata = {
@@ -105,7 +105,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${poppins.variable} ${montserrat.variable} ${inter.className} bg-gradient-to-br from-[#26D2C6]/5 via-white to-[#1C22AA]/5`} suppressHydrationWarning>
+      <body className={`${inter.variable} ${poppins.variable} ${montserrat.variable} font-montserrat bg-gradient-to-br from-[#26D2C6]/5 via-white to-[#1C22AA]/5`} suppressHydrationWarning>
         <GoogleAnalytics />
         <GoogleVerification />
         <ReactQueryProvider>
