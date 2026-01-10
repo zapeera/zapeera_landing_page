@@ -49,15 +49,15 @@ const FeaturesOverview = () => {
   ];
 
   return (
-    <section className="bg-[#E8F5F5] lg:py-[80px] py-[40px] gradient-to-br from-[#26D2C6]/15 via-white to-[#1C22AA]/15">
+    <section className="lg:pt-[80px] pt-[40px] md:pb-[85px] pb-[45px] gradient-to-br from-[#26D2C6]/15 via-white to-[#1C22AA]/15" style={{ backgroundColor: 'rgb(239 246 255)' }}>
       <Container size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}
-          <div className="text-center max-w-5xl mx-auto">
+          <div className="text-center ">
             <h2 className="section-heading">
-              Powerful Features That Simplify Business Management
+              Powerful Features That Simplify <br/> Business Management
             </h2>
-            <p className="section-paragraph max-w-3xl mx-auto">
+            <p className="section-paragraph max-w-4xl mx-auto">
               Everything you need to manage inventory, billing, suppliers, staff, and reporting — all built into one cloud-based POS and business management platform.
             </p>
           </div>

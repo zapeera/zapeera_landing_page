@@ -29,16 +29,16 @@ const SolutionsSection = () => {
   ];
 
   return (
-    <section className="bg-white lg:py-[80px] py-[40px]">
+    <section className="bg-white lg:pt-[85px] pt-[40px] md:pb-[90px] pb-[45px]">
       <Container size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}
           <div className="text-center mx-auto">
-            <h2 className="section-heading max-w-[1000px] mx-auto">
-              Business Tools to Run Everything in One Place
+            <h2 className="section-heading ">
+              Business Tools to Run Everything <br/> in One Place
             </h2>
-            <p className="section-paragraph max-w-3xl mx-auto">
-              Powerful, easy-to-use tools built into Zapeera's cloud-based POS and business management software to simplify daily operations and scale with your growth.
+            <p className="section-paragraph max-w-4xl mx-auto">
+              Powerful, easy-to-use tools built into Zapeera's cloud-based POS and business management software  to simplify daily operations and scale with your growth.
             </p>
           </div>
 

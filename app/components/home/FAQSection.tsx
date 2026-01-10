@@ -33,7 +33,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="relative bg-[#E8F5F5] lg:py-[80px] py-[40px] overflow-hidden gradient-to-br from-[#26D2C6]/15 to-[white]/15">
+    <section className="relative lg:pt-[80px] pt-[40px] md:pb-[90px] pb-[45px]  overflow-hidden gradient-to-br from-[#26D2C6]/15 to-[white]/15" style={{ backgroundColor: 'rgb(239 246 255)' }}>
       <Container className="relative z-10" size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}

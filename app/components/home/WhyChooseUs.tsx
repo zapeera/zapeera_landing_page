@@ -12,11 +12,11 @@ const WhyChooseUs = () => {
     Pharmacy: {
       title: "Pharmacy Management Software",
       description: "A complete pharmacy POS and inventory solution. Handle drug batches and expiry dates, scan prescriptions, and comply with regulations. Zapeera is among the best pharmacy software in Pakistan for keeping inventory accurate and patients safe.",
-      image: "/images/performance.jpeg",
+      image: "/whychose/pharmacy-management-software.webp",
       features: [
         {
           icon: Package,
-          title: "Medicine Inventory Control",
+          title: "Medicine Inventory",
           description: "Track medicine stock, batches, and quantities in real time across counters and branches.",
         },
         {
@@ -31,7 +31,7 @@ const WhyChooseUs = () => {
         },
         {
           icon: Shield,
-          title: "Regulatory-Friendly System",
+          title: "Regulatory-Friendly",
           description: "Designed to support pharmacy workflows and compliance needs in Pakistan.",
         },
       ],
@@ -39,11 +39,11 @@ const WhyChooseUs = () => {
     Departmental: {
       title: "Departmental Store Management",
       description: "Powerful business management software for high-volume, multi-category stores.",
-      image: "/images/security.jpeg",
+      image: "/whychose/departmental-store-software.webp",
       features: [
         {
           icon: Boxes,
-          title: "Centralized Inventory Management",
+          title: "Centralized Inventory ",
           description: "Manage thousands of products with real-time stock visibility.",
         },
         {
@@ -53,7 +53,7 @@ const WhyChooseUs = () => {
         },
         {
           icon: FolderTree,
-          title: "Category & Shelf Management",
+          title: "Category & Shelf ",
           description: "Organize products by category, brand, or shelf for better control.",
         },
         {
@@ -66,7 +66,7 @@ const WhyChooseUs = () => {
     Retail: {
       title: "Retail POS System",
       description: "Manage products, pricing, and promotions easily. Accept payments at multiple counters or devices and track stock levels across all outlets. Zapeera's cloud POS system syncs inventory in real time, so you never run out of popular items.",
-      image: "/images/support.jpeg",
+      image: "/whychose/retail-tore-software-2.webp",
       features: [
         {
           icon: RefreshCw,
@@ -85,7 +85,7 @@ const WhyChooseUs = () => {
         },
         {
           icon: TrendingUp,
-          title: "Retail Analytics Dashboard",
+          title: "Retail Analytics ",
           description: "Monitor sales trends and business performance in real time.",
         },
       ],
@@ -93,7 +93,7 @@ const WhyChooseUs = () => {
     Wholesale: {
       title: "Wholesale & Distribution Management",
       description: "Streamline your wholesale or distribution business with powerful inventory and order features. Create bulk purchase orders, set tiered pricing, and manage multiple warehouses. Zapeera's cloud POS ensures stock and sales sync across branches in real time, so your supply chain never skips a beat.",
-      image: "/images/performance.jpeg",
+      image: "/whychose/whoresale-and-distributors.webp",
       features: [
         {
           icon: FileText,
@@ -102,7 +102,7 @@ const WhyChooseUs = () => {
         },
         {
           icon: Users,
-          title: "Supplier & Manufacturer Management",
+          title: "Supplier & Manufacturer ",
           description: "Maintain supplier records, pricing, and purchase history.",
         },
         {
@@ -120,7 +120,7 @@ const WhyChooseUs = () => {
     Restaurant: {
       title: "Restaurant Management Software",
       description: "Speed up service with an intuitive restaurant POS system. Manage tables, customize menus, split bills, and send orders to the kitchen instantly. Mobile order entry and offline mode keep your restaurant running smoothly, even when the internet is slow.",
-      image: "/images/security.jpeg",
+      image: "/whychose/restaurant-software.webp",
       features: [
         {
           icon: UtensilsCrossed,
@@ -157,7 +157,7 @@ const WhyChooseUs = () => {
   const activeContent = tabContent[activeTab as keyof typeof tabContent];
 
   return (
-    <section className="relative bg-[#E8F5F5] lg:py-[80px] py-[40px] overflow-hidden">
+    <section className="relative lg:pt-[80px] md:pb-[90px] pb-[45px] pt-[40px] overflow-hidden" style={{ backgroundColor: 'rgb(239 246 255)' }}>
       <Container size="xl" padding="none">
         <div className="relative z-10 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}
@@ -189,7 +189,7 @@ const WhyChooseUs = () => {
     <button
       key={tab.id}
       onClick={() => setActiveTab(tab.id)}
-      className={`text-lg font-medium transition-colors pb-2 relative whitespace-nowrap ${
+      className={`text-lg  transition-colors pb-2 relative whitespace-nowrap ${
         activeTab === tab.id
           ? "text-[#1947C4]"
           : "text-gray-600 hover:text-gray-900"
@@ -203,14 +203,14 @@ const WhyChooseUs = () => {
   ))}
 </div>
 
-          </div>
+          </div>Ç
 
           {/* Content with Image Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Left Side - Content */}
-            <div className="space-y-4">
+            <div className="md:space-y-4 space-y-2">
               {/* Title */}
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
+              <h3 className="text-[22px] md:text-[28px] lg:text-[32px] font-medium text-gray-900">
                 {activeContent.title}
               </h3>
 
@@ -237,7 +237,7 @@ const WhyChooseUs = () => {
                     </h4>
 
                     {/* Description */}
-                    <p className="text-xs text-gray-600 leading-relaxed">
+                    <p className="text-[14px] text-gray-600 leading-relaxed">
                       {feature.description}
                     </p>
                   </div>

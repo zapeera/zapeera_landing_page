@@ -9,22 +9,22 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-[90h] pt-[40px] sm:min-h-screen flex flex-col items-center overflow-hidden bg-white">
       {/* Full section gradient background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_110%_85%_at_center,rgba(41,205,207,0.35)_0%,rgba(41,205,207,0.28)_10%,rgba(41,205,207,0.22)_20%,rgba(38,210,198,0.2)_32%,rgba(25,71,196,0.19)_45%,rgba(25,71,196,0.26)_58%,rgba(25,71,196,0.24)_70%,rgba(25,71,196,0.18)_80%,rgba(25,71,196,0.11)_88%,rgba(25,71,196,0.06)_94%,rgba(25,71,196,0.03)_98%,transparent_100%)] blur-lg pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_110%_85%_at_center,rgba(41,205,207,0.18)_0%,rgba(41,205,207,0.14)_10%,rgba(41,205,207,0.11)_20%,rgba(38,210,198,0.10)_32%,rgba(25,71,196,0.09)_45%,rgba(25,71,196,0.13)_58%,rgba(25,71,196,0.12)_70%,rgba(25,71,196,0.09)_80%,rgba(25,71,196,0.05)_88%,rgba(25,71,196,0.03)_94%,rgba(25,71,196,0.015)_98%,transparent_100%)] blur-lg pointer-events-none"></div>
 
       {/* Subtle texture background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.02)_1px,transparent_0)] bg-[length:20px_20px] pointer-events-none opacity-40"></div>
 
       <Container className="relative z-10" size="xl" padding="none">
-        <div className="px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
+        <div className=" ">
           <div className="flex flex-col items-center justify-center pt-16  sm:pt-20  md:pt-24  lg:pt-24 xl:pt-24 2xl:pt-28 ">
             {/* Centered Content */}
-            <div className="text-center  mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-12">
+            <div className="text-center px-2  mb-8 sm:mb-10 md:mb-12 lg:mb-14 xl:mb-12">
               {/* Main Heading */}
-              <h1 className="text-3xl sm:text-4xl max-w-6xl mx-auto md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-bold leading-tight tracking-tight text-gray-900 font-montserrat  mb-2 ">
-              A Business Management Platform You Can Depend On
+              <h1 className=" section-heading-h1 tracking-tight text-gray-900 font-montserrat  md:mb-4 mb-2 ">
+              A Business Management Platform <br className="hidden md:block"/> You Can Depend On
               </h1>
 
-              <p className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-gray-600 max-w-[1080px] mx-auto leading-relaxed font-montserrat font-normal mb-6 sm:mb-7 md:mb-8 lg:mb-8 xl:mb-8">
+              <p className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-gray-600 max-w-[1040px] mx-auto md:leading-[2rem] leading-[1.5rem] font-montserrat font-normal mb-6 sm:mb-7 md:mb-8 lg:mb-8 xl:mb-8">
               Zapeera is a powerful cloud-based business management and POS system designed for pharmacies, retail stores, restaurants, and wholesalers. Manage inventory, branches, staff, and sales effortlessly online or offline and keep your operations running smoothly
               </p>
 
@@ -53,7 +53,7 @@ const HeroSection = () => {
             </div>
 
             {/* Dashboard Image */}
-            <div className="w-full max-w-4xl xl:max-w-5xl mx-auto mt-4 sm:mt-6 md:mt-8 lg:mt-8 xl:mt-8">
+            <div className="w-full max-w-4xl xl:max-w-5xl mx-auto ">
               <div className="relative w-full aspect-video  bg-transparent overflow-hidden ">
                 <Image
                   src="/images/hero.jpeg"

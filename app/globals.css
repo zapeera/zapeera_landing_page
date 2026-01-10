@@ -116,10 +116,41 @@ All colors MUST be HSL.
     @apply bg-background text-foreground font-montserrat;
   }
 
+  .section-heading-h1 {
+    font-size: 56px; /* 56px */
+    font-weight: 700;
+    line-height: 1.2;
+    color: rgb(17, 24, 39); /* gray-900 */
+    margin-bottom: 0.5rem; /* 24px - spacing between heading and paragraph */
+    font-family: var(--font-montserrat), system-ui, -apple-system, sans-serif;
+  }
+
+  @media (max-width: 1024px) {
+    .section-heading-h1 {
+      font-size: 42px; /* 40px */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-heading-h1 {
+      font-size: 32px; /* 32px */
+    }
+  }
+
+  @media (max-width: 640px) {
+    .section-heading-h1 {
+      font-size: 25px;
+      margin-bottom: 0rem;
+      /* 28px */
+    }
+  }
+
+
+
   /* Global Section Heading Styles */
   .section-heading {
-    font-size: 3.5rem; /* 56px */
-    font-weight: 700;
+    font-size: 42px; /* 56px */
+    font-weight: 600;
     line-height: 1.2;
     color: rgb(17, 24, 39); /* gray-900 */
     margin-bottom: 0.5rem; /* 24px - spacing between heading and paragraph */
@@ -135,13 +166,15 @@ All colors MUST be HSL.
   @media (max-width: 768px) {
     .section-heading {
       font-size: 2rem; /* 32px */
+      font-weight: 500;
     }
   }
 
   @media (max-width: 640px) {
     .section-heading {
       font-size: 1.75rem;
-      margin-bottom: 0rem;
+      font-weight: 500;
+      margin-bottom: 8px;
       /* 28px */
     }
   }
@@ -149,7 +182,7 @@ All colors MUST be HSL.
   /* Global Section Paragraph Styles */
   .section-paragraph {
     font-size: 1.125rem; /* 18px */
-    line-height: 1.75;
+    line-height: 1.5;
     color: rgb(75, 85, 99); /* gray-600 */
     margin-bottom: 2rem; /* 32px - spacing below paragraph */
   }
@@ -163,7 +196,7 @@ All colors MUST be HSL.
   /* Global Card/Sub-Heading Styles */
   .card-heading {
     font-size: 1.25rem; /* 20px */
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.3;
     color: rgb(17, 24, 39); /* gray-900 */
     margin-bottom: 0.5rem; /* 8px - spacing between heading and description */

@@ -14,9 +14,9 @@ const ClientLogos = () => {
   ];
 
   return (
-    <section className="py-12 lg:py-16 bg-gray-100">
+    <section className="py-8 md:py-12 border-b" style={{ backgroundColor: 'rgb(239 246 255)' }}>
       <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-        <p className="text-center text-sm text-muted-foreground mb-8 font-medium tracking-wide">
+        <p className="text-center text-md mb-4 text-black font-bold tracking-wide">
         Trusted by Businesses Across Pakistan
         </p>
 
