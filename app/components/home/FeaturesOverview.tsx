@@ -70,13 +70,14 @@ const FeaturesOverview = () => {
                 className="bg-white rounded-xl border border-gray-200 p-4 hover:border-[#1947C4]/50 hover:shadow-md transition-all duration-300 flex flex-col"
               >
                 {/* Image */}
-                <div className="relative w-full h-12 sm:h-14 md:h-16 lg:h-[72px] xl:h-[72px] 2xl:h-[72px] mb-4 flex items-center justify-start">
+                <div className="w-full h-12 sm:h-14 md:h-16 lg:h-[60px] xl:h-[60px] 2xl:h-[60px] mb-4 flex items-center justify-start">
                   <Image
                     src={feature.image}
                     alt={feature.title}
-                    width={72}
-                    height={72}
-                    className="object-contain w-auto h-full"
+                    width={60}
+                    height={60}
+                    className="object-contain"
+                    unoptimized
                   />
                 </div>
 
