@@ -81,7 +81,7 @@ const Testimonials = () => {
               )}
 
               {/* Quote */}
-              <blockquote className="text-xl lg:text-2xl font-medium mb-6 leading-relaxed">
+              <blockquote className="text-[14px] lg:text-2xl font-medium mb-6 leading-relaxed">
                 "{testimonials[currentIndex].quote}"
               </blockquote>
 

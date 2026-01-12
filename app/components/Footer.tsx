@@ -38,49 +38,86 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-muted/30 border-t border-border">
+    <footer className="border-t border-gray-300" style={{ backgroundColor: 'rgb(239 246 255)' }}>
      <Container size="xl" padding="none">
      <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center group gap-2 sm:gap-2.5 mb-4">
-              <div className="relative w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 transition-transform group-hover:scale-110 flex-shrink-0">
+              <div className="relative w-[100px] h-16 sm:w-[100px] sm:h-16 lg:w-[152px] lg:h-32 transition-transform group-hover:scale-110 flex-shrink-0">
                 <Image
-                  src="/logo.png"
+                  src="/logos.png"
                   alt="Zapeera Logo"
                   fill
                   className="object-contain"
-                  sizes="(max-width: 640px) 32px, (max-width: 1024px) 40px, 48px"
+                  sizes="(max-width: 640px) 48px, (max-width: 1024px) 56px, 64px"
                   priority
                 />
               </div>
-              <span className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                Zapeera
-              </span>
             </Link>
             <p className="text-muted-foreground mb-6 text-sm">
               The all-in-one business management and POS solution. Built to help businesses grow smarter and faster.
             </p>
             <div className="flex gap-4">
-              <a href="https://web.facebook.com/profile.php?id=61582397802995" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-colors flex items-center justify-center">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="https://www.linkedin.com/company/zapeera/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-colors flex items-center justify-center">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="https://www.instagram.com/zapeera.official/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-colors flex items-center justify-center">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="https://www.youtube.com/@zapeera" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-colors flex items-center justify-center">
-                <Youtube className="w-5 h-5" />
-              </a>
-              <a href="https://www.tiktok.com/@zapeera" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-colors flex items-center justify-center">
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-                </svg>
-              </a>
-            </div>
+  <a
+    href="https://web.facebook.com/profile.php?id=61582397802995"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-lg border border-gray-200 hover:border-[#1947C4]/50 hover:shadow-md transition-all duration-300 flex items-center justify-center"
+    style={{ backgroundColor: 'rgb(218 227 249)' }}
+  >
+    <Facebook className="w-5 h-5 text-[#1947C4]" />
+  </a>
+
+  <a
+    href="https://www.linkedin.com/company/zapeera/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-lg border border-gray-200 hover:border-[#1947C4]/50 hover:shadow-md transition-all duration-300 flex items-center justify-center"
+    style={{ backgroundColor: 'rgb(218 227 249)' }}
+  >
+    <Linkedin className="w-5 h-5 text-[#1947C4]" />
+  </a>
+
+  <a
+    href="https://www.instagram.com/zapeera.official/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-lg border border-gray-200 hover:border-[#1947C4]/50 hover:shadow-md transition-all duration-300 flex items-center justify-center"
+    style={{ backgroundColor: 'rgb(218 227 249)' }}
+  >
+    <Instagram className="w-5 h-5 text-[#1947C4]" />
+  </a>
+
+  <a
+    href="https://www.youtube.com/@zapeera"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-lg border border-gray-200 hover:border-[#1947C4]/50 hover:shadow-md transition-all duration-300 flex items-center justify-center"
+    style={{ backgroundColor: 'rgb(218 227 249)' }}
+  >
+    <Youtube className="w-5 h-5 text-[#1947C4]" />
+  </a>
+
+  <a
+    href="https://www.tiktok.com/@zapeera"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 rounded-lg border border-gray-200 hover:border-[#1947C4]/50 hover:shadow-md transition-all duration-300 flex items-center justify-center"
+    style={{ backgroundColor: 'rgb(218 227 249)' }}
+  >
+    <svg
+      className="w-5 h-5 text-[#1947C4]"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+    </svg>
+  </a>
+</div>
+
           </div>
 
           {/* Desktop Links Columns */}
@@ -117,7 +154,7 @@ const Footer = () => {
               {/* Dropdown Header */}
               <button
                 onClick={() => toggleDropdown(category)}
-                className="flex items-center justify-between w-full py-3 border-b border-border"
+                className="flex items-center justify-between w-full md:py-2 py-0 border-b border-border"
               >
                 <h3 className="font-semibold text-left">{category}</h3>
                 {openDropdown === category ? (
@@ -129,13 +166,13 @@ const Footer = () => {
 
               {/* Dropdown Content */}
               {openDropdown === category && (
-                <ul className="space-y-3 py-3 animate-fade-in">
+                <ul className="space-y-3 py-2 animate-fade-in">
                   {links.map((link) => (
                     <li key={link.name}>
                       {link.path.startsWith('tel:') ? (
                         <a
                           href={link.path}
-                          className="text-sm text-muted-foreground hover:text-primary transition-colors block py-1"
+                          className="text-sm text-muted-foreground hover:text-primary transition-colors block"
                           onClick={() => setOpenDropdown(null)}
                         >
                           {link.name}
@@ -143,7 +180,7 @@ const Footer = () => {
                       ) : (
                         <Link
                           href={link.path}
-                          className="text-sm text-muted-foreground hover:text-primary transition-colors block py-1"
+                          className="text-sm text-muted-foreground hover:text-primary transition-colors block"
                           onClick={() => setOpenDropdown(null)}
                         >
                           {link.name}
@@ -157,22 +194,16 @@ const Footer = () => {
           ))}
         </div>
         {/* Bottom Bar */}
-        <div className="mt-8 pt-8 border-t border-border hidden md:flex flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Zapeera. All rights reserved .
-          </p>
-          <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <span>Trusted by 5,000+ businesses worldwide</span>
-          </div>
-        </div>
-        {/* Mobile Bottom Bar - No Border */}
-        <div className="mt-8 pt-8 flex md:hidden flex-col justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
+        <div className="mt-8 pt-12 border-t border-gray-300 hidden md:flex flex-row justify-center items-center gap-4">
+          <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} Zapeera. All rights reserved.
           </p>
-          <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <span>Trusted by 5,000+ businesses worldwide</span>
-          </div>
+        </div>
+        {/* Mobile Bottom Bar */}
+        <div className="mt-8  flex md:hidden flex-col justify-center items-center gap-4">
+          <p className="text-sm text-muted-foreground text-center">
+            © {new Date().getFullYear()} Zapeera. All rights reserved.
+          </p>
         </div>
       </div>
      </Container>

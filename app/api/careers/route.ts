@@ -8,7 +8,7 @@ export const runtime = 'nodejs';
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData();
-    
+
     const firstName = formData.get('firstName') as string;
     const lastName = formData.get('lastName') as string;
     const email = formData.get('email') as string;
@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
 
     // Prepare attachments array
     const attachments: any[] = [];
-    
+
     if (resumeFile && resumeFile.size > 0) {
       // Validate file size on server (max 5MB)
       const maxSize = 5 * 1024 * 1024; // 5MB
@@ -54,11 +54,11 @@ export async function POST(request: NextRequest) {
       try {
         const bytes = await resumeFile.arrayBuffer();
         const buffer = Buffer.from(bytes);
-        
+
         // Get file extension
         const fileName = resumeFile.name || 'resume.pdf';
         const fileExtension = fileName.split('.').pop()?.toLowerCase() || 'pdf';
-        
+
         // Determine content type based on extension
         let contentType = resumeFile.type || 'application/pdf';
         if (!resumeFile.type) {
@@ -70,13 +70,13 @@ export async function POST(request: NextRequest) {
             contentType = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
           }
         }
-        
+
         attachments.push({
           filename: fileName,
           content: buffer,
           contentType: contentType,
         });
-        
+
         console.log(`Resume file attached: ${fileName}, Size: ${resumeFile.size} bytes, Type: ${contentType}`);
       } catch (error) {
         console.error('Error processing resume file:', error);
@@ -115,7 +115,7 @@ export async function POST(request: NextRequest) {
                   <tr>
                     <td style="background: linear-gradient(135deg, #0C2C8A 0%, #1a4dcc 100%); padding: 40px 30px; text-align: center;">
                       <div style="margin-bottom: 20px;">
-                        <img src="https://zapeera.com/logo.png" alt="Zapeera Logo" style="height: 50px; width: auto; max-width: 200px;" />
+                        <img src="https://zapeera.com/logos.png" alt="Zapeera Logo" style="height: 50px; width: auto; max-width: 200px;" />
                       </div>
                       <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700; letter-spacing: -0.5px;">
                         💼 New Job Application
@@ -125,7 +125,7 @@ export async function POST(request: NextRequest) {
                       </p>
                     </td>
                   </tr>
-                  
+
                   <!-- Content -->
                   <tr>
                     <td style="padding: 40px 30px;">
@@ -140,14 +140,14 @@ export async function POST(request: NextRequest) {
                         </p>
                         ` : ''}
                       </div>
-                      
+
                       <!-- Applicant Information -->
                       <div style="background-color: #f8fafc; border-radius: 8px; padding: 25px; margin-bottom: 25px; border: 1px solid #e2e8f0;">
                         <h2 style="margin: 0 0 20px 0; color: #1e293b; font-size: 20px; font-weight: 600; display: flex; align-items: center;">
                           <span style="display: inline-block; width: 4px; height: 20px; background-color: #0C2C8A; margin-right: 12px; border-radius: 2px;"></span>
                           Applicant Information
                         </h2>
-                        
+
                         <table width="100%" cellpadding="0" cellspacing="0">
                           <tr>
                             <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0;">
@@ -163,7 +163,7 @@ export async function POST(request: NextRequest) {
                               </table>
                             </td>
                           </tr>
-                          
+
                           <tr>
                             <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0;">
                               <table width="100%" cellpadding="0" cellspacing="0">
@@ -178,7 +178,7 @@ export async function POST(request: NextRequest) {
                               </table>
                             </td>
                           </tr>
-                          
+
                           <tr>
                             <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0;">
                               <table width="100%" cellpadding="0" cellspacing="0">
@@ -193,7 +193,7 @@ export async function POST(request: NextRequest) {
                               </table>
                             </td>
                           </tr>
-                          
+
                           ${linkedin ? `
                           <tr>
                             <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0;">
@@ -210,7 +210,7 @@ export async function POST(request: NextRequest) {
                             </td>
                           </tr>
                           ` : ''}
-                          
+
                           ${portfolio ? `
                           <tr>
                             <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0;">
@@ -227,7 +227,7 @@ export async function POST(request: NextRequest) {
                             </td>
                           </tr>
                           ` : ''}
-                          
+
                           ${resumeFile && resumeFile.size > 0 ? `
                           <tr>
                             <td style="padding: 12px 0;">
@@ -248,7 +248,7 @@ export async function POST(request: NextRequest) {
                           ` : ''}
                         </table>
                       </div>
-                      
+
                       ${coverLetter ? `
                       <!-- Cover Letter Section -->
                       <div style="background-color: #f8fafc; border-radius: 8px; padding: 25px; border: 1px solid #e2e8f0;">
@@ -263,7 +263,7 @@ export async function POST(request: NextRequest) {
                       ` : ''}
                     </td>
                   </tr>
-                  
+
                   <!-- Footer -->
                   <tr>
                     <td style="background-color: #f8fafc; padding: 25px 30px; border-top: 1px solid #e2e8f0; text-align: center;">
@@ -273,7 +273,7 @@ export async function POST(request: NextRequest) {
                       </p>
                       <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e2e8f0;">
                         <div style="margin-bottom: 12px;">
-                          <img src="https://zapeera.com/logo.png" alt="Zapeera Logo" style="height: 35px; width: auto; max-width: 150px;" />
+                          <img src="https://zapeera.com/logos.png" alt="Zapeera Logo" style="height: 35px; width: auto; max-width: 150px;" />
                         </div>
                         <p style="margin: 0; color: #0C2C8A; font-size: 14px; font-weight: 600;">
                           Zapeera - Unified Business Management Solutions
@@ -323,7 +323,7 @@ This job application was submitted from your website careers page at ${new Date(
     );
   } catch (error: any) {
     console.error('Error sending careers application email:', error);
-    
+
     // Provide more specific error messages
     let errorMessage = 'Failed to submit application. Please try again later.';
     if (error.code === 'EAUTH') {
@@ -331,11 +331,10 @@ This job application was submitted from your website careers page at ${new Date(
     } else if (error.code === 'ECONNECTION') {
       errorMessage = 'Connection error. Please try again later.';
     }
-    
+
     return NextResponse.json(
       { error: errorMessage },
       { status: 500 }
     );
   }
 }
-

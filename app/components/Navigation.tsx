@@ -163,26 +163,28 @@ const Navigation = () => {
     { name: "Careers", path: "/careers" },
   ];
 
+  const isAboutPage = pathname === '/about-us';
+
   return (
     <>
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-sm' : 'bg-transparent shadow-none'
+        isScrolled || isAboutPage ? 'bg-white shadow-sm' : 'bg-transparent shadow-none'
       }`}
     >
       <Container size="xl" padding="none">
-      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-4">
+      <div className="w-full  pt-4">
         {/* White pill-shaped navigation bar with soft shadow */}
         <div className={`rounded- px-6 lg:px-8 xl:px-10 py-3 h-14 lg:h-14 relative max-w-[2000px] mx-auto pb-[20px] transition-all duration-300 ${
-          isScrolled ? 'bg-white' : 'bg-transparent'
+          isScrolled || isAboutPage ? 'bg-white' : 'bg-transparent'
         }`}>
           <div className="flex items-center h-full gap-4 lg:gap-6">
             {/* Logo - Pill-shaped button with gradient background */}
             <Link href="/" className="flex items-center group gap-2 z-10 flex-shrink-0">
               <div className="px-3 lg:px-4 py-2 rounded-full border-white/10 flex items-center gap-2">
-                <div className="relative w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9 flex-shrink-0">
+                <div className="relative w-[100px] h-16 sm:w-[100px] sm:h-16 lg:w-[152px] lg:h-32 flex-shrink-0">
                   <Image
-                    src="/logo.png"
+                    src="/logos.png"
                     alt="Zapeera Logo"
                     fill
                     className="object-contain"
@@ -190,9 +192,7 @@ const Navigation = () => {
                     priority
                   />
                 </div>
-                <span className="text-base sm:text-lg lg:text-xl font-semibold text-black whitespace-nowrap">
-                  Zapeera
-                </span>
+
               </div>
             </Link>
 
@@ -276,15 +276,19 @@ const Navigation = () => {
                 size="sm"
                 variant="outline"
                 asChild
-                className="bg-white border-gray-300 text-gray-700 hover:bg-gradient-to-r hover:from-[#29CDCF] hover:to-[#1947C4] hover:text-white hover:border-transparent whitespace-nowrap rounded-full px-5 font-medium text-sm transition-all duration-300"
+                className={`whitespace-nowrap rounded-full px-5 font-medium text-sm transition-all duration-300 ${
+                  isAboutPage && !isScrolled
+                    ? "bg-white/10 border-white/30 text-white hover:bg-white/20 hover:border-white/50"
+                    : "bg-white border-gray-300 text-gray-700 hover:bg-gradient-to-r hover:from-[#29CDCF] hover:to-[#1947C4] hover:text-white hover:border-transparent"
+                }`}
               >
-                <Link href="/login">Login</Link>
+                <a href="https://app.zapeera.com/" target="_blank" rel="noopener noreferrer">Login</a>
               </Button>
               <Button
                 size="sm"
                 variant="outline"
                 asChild
-                className=" border-gray-300 text-white bg-gradient-to-r from-[#29CDCF] to-[#1947C4] hover:text-white hover:border-transparent whitespace-nowrap rounded-full px-5 font-medium text-sm transition-all duration-300"
+                className={`border-gray-300 text-white bg-gradient-to-r from-[#29CDCF] to-[#1947C4] hover:text-white hover:border-transparent whitespace-nowrap rounded-full px-5 font-medium text-sm transition-all duration-300`}
               >
                 <Link href="/contact-us">Contact Us</Link>
               </Button>
@@ -293,7 +297,9 @@ const Navigation = () => {
             {/* Mobile Menu Button */}
             <button
               type="button"
-              className="lg:hidden p-2 -mr-2 flex-shrink-0 text-gray-700 z-10 ml-auto"
+              className={`lg:hidden p-2 -mr-2 flex-shrink-0 z-10 ml-auto ${
+                isAboutPage && !isScrolled ? "text-white" : "text-gray-700"
+              }`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
               aria-expanded={isMobileMenuOpen ? "true" : "false"}
@@ -369,9 +375,10 @@ const Navigation = () => {
                       onClick={() => setIsMobileMenuOpen(false)}
                       className={`px-2 sm:px-4 py-3 sm:py-3.5 text-base sm:text-lg font-semibold transition-all duration-200 rounded-lg ${
                         pathname === link.path
-                          ? "text-[#1732BD] bg-[#1732BD]/10 border-l-4 border-[#1732BD]"
+                          ? "text-[#1732BD] bg-[#1732BD]/10 border-l-4"
                           : "text-gray-900 hover:text-[#1732BD] hover:bg-gray-100"
                       }`}
+                      style={pathname === link.path ? { borderLeftColor: '#0f1f7a' } : {}}
                     >
                       {link.name}
                     </Link>
@@ -384,7 +391,10 @@ const Navigation = () => {
                     variant="outline"
                     size="lg"
                     className="w-full text-base sm:text-lg rounded-full border-gray-300"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      window.open('https://app.zapeera.com/', '_blank', 'noopener,noreferrer');
+                    }}
                   >
                     Login
                   </Button>
@@ -394,7 +404,7 @@ const Navigation = () => {
                     asChild
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <Link href="/contact-us" className="w-full">Start Free Trial</Link>
+                    <Link href="/contact-us" className="w-full">Contact Us </Link>
                   </Button>
                 </div>
             </div>

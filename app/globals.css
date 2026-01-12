@@ -117,7 +117,7 @@ All colors MUST be HSL.
   }
 
   .section-heading-h1 {
-    font-size: 56px; /* 56px */
+    font-size: 48px; /* 56px */
     font-weight: 700;
     line-height: 1.2;
     color: rgb(17, 24, 39); /* gray-900 */
@@ -151,7 +151,7 @@ All colors MUST be HSL.
   .section-heading {
     font-size: 42px; /* 56px */
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1;
     color: rgb(17, 24, 39); /* gray-900 */
     margin-bottom: 0.5rem; /* 24px - spacing between heading and paragraph */
     font-family: var(--font-montserrat), system-ui, -apple-system, sans-serif;

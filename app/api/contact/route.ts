@@ -57,7 +57,7 @@ export async function POST(request: NextRequest) {
                   <tr>
                     <td style="background: linear-gradient(135deg, #0C2C8A 0%, #1a4dcc 100%); padding: 40px 30px; text-align: center;">
                       <div style="margin-bottom: 20px;">
-                        <img src="https://zapeera.com/logo.png" alt="Zapeera Logo" style="height: 50px; width: auto; max-width: 200px;" />
+                        <img src="https://zapeera.com/logos.png" alt="Zapeera Logo" style="height: 50px; width: auto; max-width: 200px;" />
                       </div>
                       <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700; letter-spacing: -0.5px;">
                         📧 New Contact Form Submission
@@ -67,7 +67,7 @@ export async function POST(request: NextRequest) {
                       </p>
                     </td>
                   </tr>
-                  
+
                   <!-- Content -->
                   <tr>
                     <td style="padding: 40px 30px;">
@@ -77,14 +77,14 @@ export async function POST(request: NextRequest) {
                           ${subject}
                         </p>
                       </div>
-                      
+
                       <!-- Contact Information -->
                       <div style="background-color: #f8fafc; border-radius: 8px; padding: 25px; margin-bottom: 25px; border: 1px solid #e2e8f0;">
                         <h2 style="margin: 0 0 20px 0; color: #1e293b; font-size: 20px; font-weight: 600; display: flex; align-items: center;">
                           <span style="display: inline-block; width: 4px; height: 20px; background-color: #0C2C8A; margin-right: 12px; border-radius: 2px;"></span>
                           Contact Information
                         </h2>
-                        
+
                         <table width="100%" cellpadding="0" cellspacing="0">
                           <tr>
                             <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0;">
@@ -100,7 +100,7 @@ export async function POST(request: NextRequest) {
                               </table>
                             </td>
                           </tr>
-                          
+
                           <tr>
                             <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0;">
                               <table width="100%" cellpadding="0" cellspacing="0">
@@ -115,7 +115,7 @@ export async function POST(request: NextRequest) {
                               </table>
                             </td>
                           </tr>
-                          
+
                           ${phone ? `
                           <tr>
                             <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0;">
@@ -132,7 +132,7 @@ export async function POST(request: NextRequest) {
                             </td>
                           </tr>
                           ` : ''}
-                          
+
                           ${company ? `
                           <tr>
                             <td style="padding: 12px 0; border-bottom: 1px solid #e2e8f0;">
@@ -151,7 +151,7 @@ export async function POST(request: NextRequest) {
                           ` : ''}
                         </table>
                       </div>
-                      
+
                       <!-- Message Section -->
                       <div style="background-color: #f8fafc; border-radius: 8px; padding: 25px; border: 1px solid #e2e8f0;">
                         <h2 style="margin: 0 0 20px 0; color: #1e293b; font-size: 20px; font-weight: 600; display: flex; align-items: center;">
@@ -164,7 +164,7 @@ export async function POST(request: NextRequest) {
                       </div>
                     </td>
                   </tr>
-                  
+
                   <!-- Footer -->
                   <tr>
                     <td style="background-color: #f8fafc; padding: 25px 30px; border-top: 1px solid #e2e8f0; text-align: center;">
@@ -174,7 +174,7 @@ export async function POST(request: NextRequest) {
                       </p>
                       <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e2e8f0;">
                         <div style="margin-bottom: 12px;">
-                          <img src="https://zapeera.com/logo.png" alt="Zapeera Logo" style="height: 35px; width: auto; max-width: 150px;" />
+                          <img src="https://zapeera.com/logos.png" alt="Zapeera Logo" style="height: 35px; width: auto; max-width: 150px;" />
                         </div>
                         <p style="margin: 0; color: #0C2C8A; font-size: 14px; font-weight: 600;">
                           Zapeera - Unified Business Management Solutions
@@ -216,7 +216,7 @@ This email was sent from your website contact form at ${new Date().toLocaleStrin
     );
   } catch (error: any) {
     console.error('Error sending contact form email:', error);
-    
+
     // Provide more specific error messages
     let errorMessage = 'Failed to send email. Please try again later.';
     if (error.code === 'EAUTH') {
@@ -224,11 +224,10 @@ This email was sent from your website contact form at ${new Date().toLocaleStrin
     } else if (error.code === 'ECONNECTION') {
       errorMessage = 'Connection error. Please try again later.';
     }
-    
+
     return NextResponse.json(
       { error: errorMessage },
       { status: 500 }
     );
   }
 }
-
