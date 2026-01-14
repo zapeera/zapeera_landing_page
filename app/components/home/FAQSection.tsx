@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react';
 import {
   Accordion,
   AccordionContent,
@@ -9,6 +10,7 @@ import {
 import Container from "@/app/components/ui/container";
 
 const FAQSection = () => {
+  const [openItem, setOpenItem] = useState<string>("item-0");
   const faqs = [
     {
       question: "What can Zapeera do for my business?",
@@ -45,7 +47,7 @@ const FAQSection = () => {
 
           {/* FAQ Accordion */}
           <div className="max-w-4xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-4">
+            <Accordion type="single" collapsible value={openItem} onValueChange={setOpenItem} className="space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
@@ -63,7 +65,7 @@ const FAQSection = () => {
                     </div>
                   </AccordionTrigger>
 
-                  <AccordionContent className="px-6 pb-6 bg-white">
+                  <AccordionContent className="px-6 pb-6" style={{ backgroundColor: 'rgb(239 246 255)' }}>
                     <div className="pl-7 border-l-2 border-[#1947C4]/20">
                       <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                     </div>

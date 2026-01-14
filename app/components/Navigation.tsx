@@ -1,7 +1,5 @@
 "use client";
 
-'use client'
-
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -180,16 +178,17 @@ const Navigation = () => {
         }`}>
           <div className="flex items-center h-full gap-4 lg:gap-6">
             {/* Logo - Pill-shaped button with gradient background */}
-            <Link href="/" className="flex items-center group gap-2 z-10 flex-shrink-0">
-              <div className="px-3 lg:px-4 py-2 rounded-full border-white/10 flex items-center gap-2">
-                <div className="relative w-[100px] h-16 sm:w-[100px] sm:h-16 lg:w-[152px] lg:h-32 flex-shrink-0">
+            <Link href="/" className="flex items-center group gap-2 z-10 flex-shrink-0 h-full">
+              <div className="px-3 lg:px-4 py-2 rounded-full border-white/10 flex items-center gap-2 h-full">
+                <div className="relative w-[150px] h-full sm:w-[170px] md:w-[190px] lg:w-[220px] xl:w-[250px] 2xl:w-[280px] flex-shrink-0">
                   <Image
                     src="/logos.png"
                     alt="Zapeera Logo"
                     fill
                     className="object-contain"
-                    sizes="(max-width: 640px) 28px, (max-width: 1024px) 32px, 36px"
+                    sizes="(max-width: 640px) 150px, (max-width: 768px) 170px, (max-width: 1024px) 190px, (max-width: 1280px) 220px, (max-width: 1536px) 250px, 280px"
                     priority
+                    quality={100}
                   />
                 </div>
 
@@ -302,7 +301,7 @@ const Navigation = () => {
               }`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
-              aria-expanded={isMobileMenuOpen ? "true" : "false"}
+              {...(isMobileMenuOpen ? { 'aria-expanded': 'true' } : { 'aria-expanded': 'false' })}
             >
               {isMobileMenuOpen ? (
                 <X className="w-6 h-6" />
@@ -322,11 +321,7 @@ const Navigation = () => {
         className="lg:hidden fixed top-16 left-0 right-0 bottom-0 bg-white z-[100] overflow-y-auto shadow-2xl"
       >
         <div
-          className="w-full min-h-full bg-white animate-fade-in"
-          style={{
-            paddingTop: '1.5rem',
-            paddingBottom: '2rem'
-          }}
+          className="w-full min-h-full bg-white animate-fade-in pt-6 pb-8"
         >
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex flex-col gap-3 sm:gap-4">
@@ -375,10 +370,9 @@ const Navigation = () => {
                       onClick={() => setIsMobileMenuOpen(false)}
                       className={`px-2 sm:px-4 py-3 sm:py-3.5 text-base sm:text-lg font-semibold transition-all duration-200 rounded-lg ${
                         pathname === link.path
-                          ? "text-[#1732BD] bg-[#1732BD]/10 border-l-4"
+                          ? "text-[#1732BD] bg-[#1732BD]/10"
                           : "text-gray-900 hover:text-[#1732BD] hover:bg-gray-100"
                       }`}
-                      style={pathname === link.path ? { borderLeftColor: '#0f1f7a' } : {}}
                     >
                       {link.name}
                     </Link>

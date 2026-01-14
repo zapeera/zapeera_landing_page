@@ -10,7 +10,7 @@ const CTASection = () => {
 
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 relative">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
-          <h2 className="section-heading">
+          <h2 className="section-heading md:mb-[26px] mb-[16px]">
             Ready to Simplify Your Business?
           </h2>
           <p className="section-paragraph max-w-3xl mx-auto">

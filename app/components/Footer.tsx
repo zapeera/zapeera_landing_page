@@ -45,14 +45,15 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center group gap-2 sm:gap-2.5 mb-4">
-              <div className="relative w-[100px] h-16 sm:w-[100px] sm:h-16 lg:w-[152px] lg:h-32 transition-transform group-hover:scale-110 flex-shrink-0">
+              <div className="relative w-[150px] h-16 sm:w-[170px] sm:h-16 md:w-[190px] lg:w-[220px] lg:h-32 xl:w-[250px] 2xl:w-[280px] transition-transform group-hover:scale-110 flex-shrink-0">
                 <Image
                   src="/logos.png"
                   alt="Zapeera Logo"
                   fill
                   className="object-contain"
-                  sizes="(max-width: 640px) 48px, (max-width: 1024px) 56px, 64px"
+                  sizes="(max-width: 640px) 150px, (max-width: 768px) 170px, (max-width: 1024px) 190px, (max-width: 1280px) 220px, (max-width: 1536px) 250px, 280px"
                   priority
+                  quality={100}
                 />
               </div>
             </Link>

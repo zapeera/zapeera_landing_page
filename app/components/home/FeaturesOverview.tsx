@@ -55,7 +55,7 @@ const FeaturesOverview = () => {
           {/* Header */}
           <div className="text-center ">
             <h2 className="section-heading">
-              Powerful Features That Simplify <br/> Business Management
+              Powerful Features That Simplify <br className="hidden md:inline"/> Business Management
             </h2>
             <p className="section-paragraph max-w-4xl mx-auto">
               Everything you need to manage inventory, billing, suppliers, staff, and reporting — all built into one cloud-based POS and business management platform.

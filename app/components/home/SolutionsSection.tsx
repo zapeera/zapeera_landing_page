@@ -35,7 +35,7 @@ const SolutionsSection = () => {
           {/* Header */}
           <div className="text-center mx-auto">
             <h2 className="section-heading ">
-              Business Tools to Run Everything <br/> in One Place
+              Business Tools to Run Everything <br className="hidden md:inline"/> in One Place
             </h2>
             <p className="section-paragraph max-w-4xl mx-auto">
               Powerful, easy-to-use tools built into Zapeera's cloud-based POS and business management software  to simplify daily operations and scale with your growth.
