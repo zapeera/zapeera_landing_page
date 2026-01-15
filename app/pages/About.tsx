@@ -31,30 +31,30 @@ const About = memo(() => {
 
   const leadership = [
     {
-      name: "Muhammad Majid",
+      name: "Mr. Muhammad Majid",
       role: "CEO & Co-Founder",
-      image: "/images/mjid.png",
+      image: "/team-images/Mr Muhammad Majid.jpeg",
       bio: "With over 15 years in enterprise software, Muhammad leads our strategic vision and fosters a culture of innovation and inclusivity.",
       linkedin: "#"
     },
     {
-      name: "Muhammad Khan",
+      name: "Mr. Muhammad Umair",
       role: "CTO & Co-Founder",
-      image: "/images/umair.jpeg",
+      image: "/team-images/Mr. Muhammad Umair.png",
       bio: "Muhammad is the architect behind our core platform, specializing in scalable cloud infrastructures and distributed systems.",
       linkedin: "#"
     },
     {
-      name: "Muhammad Bilal",
+      name: "Mr. Muhammad Bilal",
       role: "Head of Product",
-      image: "/images/don.jpeg",
+      image: "/team-images/Muhammad Bilal.jpeg",
       bio: "Product strategist focused on user experience and delivering solutions that truly make a difference.",
       linkedin: "#"
     },
     {
-      name: "Ali Mahtab",
+      name: "Mr. Ali Mahtab",
       role: "Head of Design",
-      image: "/images/ali.jpeg",
+      image: "/team-images/Mr. Ali Mehtab.png",
       bio: "Creative director with passion for beautiful interfaces and exceptional user experiences.",
       linkedin: "#"
     },
@@ -110,29 +110,23 @@ const About = memo(() => {
         <FloatingCTA />
 
         <main>
-          {/* Hero Section with Background Image */}
-          <section className="relative min-h-[500px] lg:min-h-[600px] flex items-center justify-center overflow-hidden">
-            {/* Background Image */}
-            <div className="absolute inset-0 z-0">
-              <Image
-                src="/images/hero.jpeg"
-                alt="Business Operations"
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-black/40"></div>
-            </div>
+          {/* Hero Section with Gradient Background */}
+          <section className="relative min-h-[500px] lg:min-h-[600px] flex items-center justify-center overflow-hidden bg-white">
+            {/* Full section gradient background */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_110%_85%_at_center,rgba(41,205,207,0.18)_0%,rgba(41,205,207,0.14)_10%,rgba(41,205,207,0.11)_20%,rgba(38,210,198,0.10)_32%,rgba(25,71,196,0.09)_45%,rgba(25,71,196,0.13)_58%,rgba(25,71,196,0.12)_70%,rgba(25,71,196,0.09)_80%,rgba(25,71,196,0.05)_88%,rgba(25,71,196,0.03)_94%,rgba(25,71,196,0.015)_98%,transparent_100%)] blur-lg pointer-events-none"></div>
+
+            {/* Subtle texture background */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.02)_1px,transparent_0)] bg-[length:20px_20px] pointer-events-none opacity-40"></div>
 
             {/* Content */}
             <Container className="relative z-10" size="xl" padding="none">
               <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
                 <div className="text-center max-w-4xl mx-auto">
-                  <h1 className="section-heading-h1 tracking-tight text-white font-montserrat mb-6">
-                    Modernizing How Businesses Operate
+                  <h1 className="section-heading-h1 tracking-tight text-gray-900 font-montserrat mb-6">
+                    About Zapeera
                   </h1>
-                  <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-                    Modernising how Businesses operate and Immersive, full business solutions
+                  <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    Empowering businesses with intelligent solutions. We're building the future of business management, one innovation at a time.
                   </p>
                 </div>
               </div>

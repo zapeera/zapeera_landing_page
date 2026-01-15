@@ -171,39 +171,47 @@ const WhyChooseUs = () => {
 
             {/* Tab Navigation */}
             <div
-  className="
-    flex
-    flex-nowrap
-    md:flex-wrap
-    justify-start
-    md:justify-center
-    gap-4
-    lg:gap-6
-    mb-[20px]
-    overflow-x-auto
-    md:overflow-visible
-    scrollbar-hide
-  "
->
-  {tabs.map((tab) => (
-    <button
-      key={tab.id}
-      onClick={() => setActiveTab(tab.id)}
-      className={`text-lg  transition-colors pb-2 relative whitespace-nowrap ${
-        activeTab === tab.id
-          ? "text-[#1947C4]"
-          : "text-gray-600 hover:text-gray-900"
-      }`}
-    >
-      {tab.label}
-      {activeTab === tab.id && (
-        <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#1947C4]" />
-      )}
-    </button>
-  ))}
-</div>
+              className="
+                flex
+                flex-nowrap
+                md:flex-wrap
+                justify-start
+                md:justify-center
+                gap-3
+                lg:gap-4
+                mb-[20px]
+                overflow-x-auto
+                md:overflow-visible
+                scrollbar-hide
+              "
+            >
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`
+                    px-4
+                    py-2.5
+                    rounded-lg
+                    text-sm
+                    md:text-base
+                    font-medium
+                    transition-all
+                    duration-200
+                    whitespace-nowrap
+                    ${
+                      activeTab === tab.id
+                        ? "bg-[#1947C4] text-white shadow-md shadow-[#1947C4]/20"
+                        : "bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 border border-gray-200"
+                    }
+                  `}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
 
-          </div>Ç
+          </div>
 
           {/* Content with Image Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
