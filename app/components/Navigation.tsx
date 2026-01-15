@@ -178,20 +178,19 @@ const Navigation = () => {
         }`}>
           <div className="flex items-center h-full gap-4 lg:gap-6">
             {/* Logo - Pill-shaped button with gradient background */}
-            <Link href="/" className="flex items-center group gap-2 z-10 flex-shrink-0 h-full">
-              <div className="px-3 lg:px-4 py-2 rounded-full border-white/10 flex items-center gap-2 h-full">
-                <div className="relative w-[150px] h-full sm:w-[170px] md:w-[190px] lg:w-[220px] xl:w-[250px] 2xl:w-[280px] flex-shrink-0">
+            <Link href="/" className="flex items-center group gap-2 z-10 flex-shrink-0">
+              <div className="px-3 lg:px-4 py-2 rounded-full border-white/10 flex items-center gap-2">
+                <div className="relative h-9 sm:h-10 md:h-11 lg:h-11 xl:h-12 w-[140px] sm:w-[160px] md:w-[180px] lg:w-[200px] xl:w-[220px] 2xl:w-[240px] flex-shrink-0">
                   <Image
                     src="/logos.png"
                     alt="Zapeera Logo"
                     fill
-                    className="object-contain"
-                    sizes="(max-width: 640px) 150px, (max-width: 768px) 170px, (max-width: 1024px) 190px, (max-width: 1280px) 220px, (max-width: 1536px) 250px, 280px"
+                    className="object-contain object-left"
+                    sizes="(max-width: 640px) 140px, (max-width: 768px) 160px, (max-width: 1024px) 180px, (max-width: 1280px) 200px, (max-width: 1536px) 220px, 240px"
                     priority
                     quality={100}
                   />
                 </div>
-
               </div>
             </Link>
 
