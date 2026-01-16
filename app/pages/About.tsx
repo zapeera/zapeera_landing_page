@@ -60,6 +60,7 @@ const About = memo(() => {
     },
   ];
 
+  // milestones of success
   const milestones = [
     {
       year: "2023",
