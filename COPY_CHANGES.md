@@ -234,3 +234,230 @@ A scan of `app/` for the specific banned terms after this pass:
 | "500+" claim | 7 instances | 0 instances |
 
 The home page and About page are clean. The /solutions/[slug] pages still use these phrases and are out of scope.
+
+---
+
+# Task 3 — extension to remaining pages (2026-05-07)
+
+The cleanup that started on the home and About page was extended to every other page route. Decisions taken and confirmed before destructive edits:
+
+- **Solutions A/B:** Option B (firm language). Pharmacy fully supported; other industry slugs kept on the site but explicitly marked "not currently supported — message us."
+- **Blog, product-update, careers:** delete all dummy/fabricated content; replace with honest empty states.
+- **Phone number:** canonical is `+92 310 7100663`. The `+92 313 1670125` previously in legal pages was wrong and was replaced everywhere it appeared.
+
+---
+
+## /blog and /blog/[slug]
+
+**Removed entirely (6 fabricated posts):**
+
+| # | Title | Why it had to go |
+|---|---|---|
+| 1 | "The Future of Business Management: How AI is Revolutionizing POS Systems" | AI-generated SaaS filler. No pharmacy context. |
+| 2 | "5 Essential Features Every Modern Business Management Platform Should Have" | Generic listicle, off-topic. |
+| 3 | **"From Startup to Success: How Zapeera Helped 1000+ Businesses Scale"** | **Explicit fabrication.** Pre-revenue startup with zero paying customers. |
+| 4 | "Inventory Management Best Practices: A Complete Guide" | Generic, off-topic. |
+| 5 | "The Psychology of Customer Experience in Modern Retail" | Generic retail filler. |
+| 6 | "Data-Driven Decision Making: Turning Analytics into Action" | Generic analytics filler. |
+
+[app/pages/Blog.tsx](app/pages/Blog.tsx) — fully rewritten as an empty-state page (heading, single icon, 2-sentence honest description, WhatsApp CTA, link back home). The 290 LOC of search/filter/category logic and the 6-post array are gone.
+
+[app/blog/[slug]/page.tsx](app/blog/[slug]/page.tsx) — was 830 LOC of full blog post HTML for the six posts. Now 7 lines: a `notFound()` call. Any inbound `/blog/<old-slug>` URL gets a 404.
+
+[app/blog/page.tsx](app/blog/page.tsx) — metadata rewritten:
+> Before: "Blog - Business Management Insights & Tips | Zapeera" / "Read the latest articles, insights, and tips about business management, POS systems…"
+> After: "Blog | Zapeera" / "Practical pieces for Pakistani pharmacy owners — coming soon. Notify me on WhatsApp when the first article ships."
+
+---
+
+## /product-update
+
+**Removed entirely:** The fabricated 16-entry timeline from Early-2020 → December-2024 with invented user counts (`100+ users` → `2,500+ users`), invented revenue (`$2K` → `$2M+`), and an invented funding story (`$50K from angel investors`, `Series A Funding of $2M`). Plus the page-bottom "Current Success" stats (**5,000+ Active Users / Series A $2M / $2M+ Revenue / 12-person team**) which directly contradicted the new About page.
+
+The entire 913 LOC `Updates.tsx` was replaced with ~100 LOC. New content:
+
+| | Copy |
+|---|---|
+| **Hero h1** | "Updates" |
+| **Hero body** | "What we are building right now. We post in small honest steps and we tell you when something is actually ready, not before." |
+| **Section: In progress** | Three real items currently being built (matches the new About page's "What we are building next"): Roman Urdu/Urdu interface, better expiry analytics (per-supplier waste reports), WhatsApp ordering for repeat customers. |
+| **Section: Recently shipped** | Honest empty state — "We ship updates often, but we have not started a public changelog yet. Until then, message us on WhatsApp — we will tell you what is new." |
+
+[app/product-update/page.tsx](app/product-update/page.tsx) metadata also rewritten:
+> Before: "Product Updates & Release Notes - Zapeera" / "Stay updated with the latest Zapeera product updates, new features, improvements, and release notes."
+> After: "Updates | Zapeera" / "What we are building right now and what we shipped recently. We post in small honest steps."
+
+[app/components/Footer.tsx](app/components/Footer.tsx) — Footer's "Resources" column had `{ name: "API Docs", path: "/product-update" }`. Renamed to `{ name: "Updates", path: "/product-update" }` to match what the route actually is.
+
+---
+
+## /careers
+
+**Removed entirely:** Six invented job listings (Senior Frontend Engineer, Product Designer, Customer Success Manager, Backend Engineer, Marketing Manager, SDR) — all listed as **"San Francisco, CA / Remote"** for a Lahore-based Pakistani startup. Backend Engineer description literally said "Build scalable, reliable backend systems that **power thousands of businesses worldwide**." The benefits section (Stock Options, Dedicated Account Manager, Learning Budget, etc.) was also generic SaaS boilerplate inappropriate for a pre-revenue team. The application form + dialog + file-upload logic were also removed.
+
+[app/pages/Careers.tsx](app/pages/Careers.tsx) — replaced with a single honest section:
+
+| | Copy |
+|---|---|
+| **Hero h1** | "Careers" |
+| **Hero body** | "A small Pakistani team building cloud POS and inventory software for pharmacies. We are not actively hiring right now." |
+| **Body h2** | "If you want to help, message us." |
+| **Body ¶1** | "We are not running a public hiring round. But if you want to help build the best pharmacy software in Pakistan, message us on WhatsApp and tell us what you do. We read every message and reply within an hour during business hours." |
+| **Body ¶2** | "Useful background: software engineering, design, customer support in Urdu/English, or experience working inside a Pakistani pharmacy. None of these are required — being curious about the problem is enough." |
+| **Buttons** | "Message us on WhatsApp" (primary, real `wa.me/923107100663` link) + "About the team" (secondary, → /about-us) |
+
+[app/careers/page.tsx](app/careers/page.tsx) — metadata rewritten:
+> Before: "Careers - Join the Zapeera Team" / "Join Zapeera and help **transform** businesses worldwide. Explore career opportunities in software development, sales, marketing… Remote-first positions available with competitive salary and benefits."
+> After: "Careers | Zapeera" / "A small Pakistani team building cloud POS for pharmacies. We are not actively hiring yet — message us on WhatsApp if you want to help."
+
+The `/api/careers` Next.js endpoint is left on disk but is no longer called from any UI. Can be cleaned up later.
+
+---
+
+## /features
+
+**Removed:** all three "powerful" hits (lines 23, 26, 214) and the generic SaaS positioning ("Everything you need to manage, grow, and scale your business — all in one intelligent platform.").
+
+The 282-line page used to be a wall of 14 generic feature cards (Multiple Business Management / Multi-Branch / Staff Management / Inventory / POS / Smart Billing / Invoice Management / Reports / RBAC / Batch Management / Customer Management / Manufacturer / Shelf / Supplier). The new layout is **3 detailed pharmacy pillars + 6 supporting capabilities**:
+
+### Hero
+
+| | Before | After |
+|---|---|---|
+| h1 | "Powerful Features for Modern Businesses" | "Three things Zapeera does well — in detail" |
+| body | "Everything you need to manage, grow, and scale your business — all in one intelligent platform." | "Expiry tracking, inventory you can trust, and reports that tell you what to do next. Plus the supporting capabilities that make them work for a Pakistani pharmacy." |
+
+### Three pillars (each is its own alternating left/right block with image + 4 concrete points)
+
+1. **Expiry tracking that actually works** — alerts at 90/60/30 days, per-supplier return-window tracking, write-off marking, end-of-month report by supplier/category/branch.
+2. **Inventory you can trust** — barcode at intake + at till, real-time multi-branch sync, low-stock alerts based on real selling speed (not fixed thresholds), inter-branch transfers preserve batch + expiry.
+3. **Reports that tell you what to do next** — profit-per-medicine ranked, dead-stock list (60/90/180 day), repeat-customer report, end-of-day in 5 seconds.
+
+### Supporting capabilities (6-card grid, lower priority)
+
+POS that works offline · Multi-branch · Smart billing & invoicing · Role-based access · Customer records · Suppliers & manufacturers.
+
+### Closing CTA
+
+"Want to see it on your stock?" → "Free for 30 days. We pre-load your medicines and walk your team through it on a setup call." with WhatsApp + See pricing buttons.
+
+[app/features/page.tsx](app/features/page.tsx) metadata also rewritten to match.
+
+---
+
+## /pricing
+
+Pricing **values** out of scope (Task 4). Copy edits only.
+
+| | Before | After |
+|---|---|---|
+| Hero h1 | "Simple **Transparent Pricing**" | "Simple, transparent **pricing**" |
+| Hero body | "Choose the plan that's right for your business. All plans include a 14-day free trial." | "In PKR. Built for the way Pakistani pharmacies actually buy software. Free for 30 days, no credit card." |
+| Closing section h2 | "Still have questions?" | "Still deciding?" |
+| Closing section body | "Check out our FAQ section or contact our sales team for personalized assistance." (implied non-existent sales team) | "Message us on WhatsApp with how many counters and branches you run. We will tell you which plan fits — honestly, even if it is the smallest one." |
+| Closing buttons | "View FAQs" + "Contact Sales" | "Message us on WhatsApp" (primary, `wa.me`) + "Read the FAQ" (secondary) |
+
+[app/pricing/page.tsx](app/pricing/page.tsx) metadata rewritten:
+> Before: "Pricing Plans - Zapeera Business Management Software" / "Choose the perfect Zapeera plan for your business. **Transparent pricing with flexible plans for retail, pharmacy, restaurant, and more.** Start your free trial today."
+> After: "Pricing | Zapeera" / "In PKR. Built for the way Pakistani pharmacies actually buy software. Free for 30 days, no credit card."
+
+---
+
+## /solutions and /solutions/[slug]
+
+**Decision: Option B (firm language).** Pharmacy fully supported, other 5 slugs marked "not currently supported."
+
+### Removed
+
+[app/solutions/[slug]/page.tsx](app/solutions/[slug]/page.tsx) was 1,079 LOC of fabricated content across 6 industry slugs:
+
+- **All 12 fake testimonials** (each slug had 2):
+  - Retail: "Ahmed Khan / TechMart Electronics, Karachi" + "Fatima Ali / Fashion Hub, Lahore"
+  - Pharmacy: "Dr. Muhammad Hassan / Green Valley Pharmacy, Islamabad" + "Dr. Ayesha Khan / City Medical Store, Rawalpindi"
+  - Restaurant: "Chef Ali Raza / Spice Garden, Karachi" + "Maria Ahmed / Cafe Delight, Lahore"
+  - Wholesale: "Hassan Ali / Metro Wholesale, Karachi" + "Amina Khan / City Distributors, Lahore"
+  - Departmental: "Rashid Ahmed / Mega Mart, Karachi" + "Sara Khan / City Center Store, Lahore"
+  - Distribution: "Imran Shah / Swift Logistics, Karachi" + "Bilal Ahmed / Express Distribution, Lahore"
+- **All ~24 fabricated round-percentage benefit metrics** ("50% Reduction in medication waste", "95% Compliance rate", "70% Faster prescription processing", "40% Increase in sales", etc.).
+- **All per-slug add-on pricing** (Rs 15,000 → Rs 65,000 tiers across the slugs — Task 4 owns canonical pricing, no per-industry add-ons in the new tier structure).
+
+### Replaced with
+
+A single 250-LOC file with two render branches:
+
+**Pharmacy slug — fully supported page:**
+- Hero with badge "For pharmacies", h1 "The pharmacy software, built for Pakistan.", and a real lead paragraph with concrete pharmacy pains.
+- "What it does for a pharmacy" — three pillar cards (track every batch and expiry / stock that matches the shelf / profit by medicine, not just by day) — each with concrete pharmacy-shaped copy.
+- "The Pakistan-specific bits" — 6-item bulleted list (Pakistani medicines pre-loaded, PKR by default, slow-internet tolerant, WhatsApp-first support, single-shop or up to 3 branches, 10-min cashier training).
+- Closing CTA "Be one of our first 50 pharmacies." with WhatsApp + See pricing buttons.
+
+**Other 5 slugs (retail / restaurant / wholesale / departmental-store / distribution) — shared "not yet" stub:**
+- Single block: clock icon, badge, h1 "We do not currently support {industry}.", honest two-paragraph explanation (the product is capable, we want to nail one industry first), then "Message us on WhatsApp if you want to be in the first non-pharmacy cohort."
+- WhatsApp + "See the pharmacy page" buttons.
+
+[app/pages/Solutions.tsx](app/pages/Solutions.tsx) (the index) — rewritten to lead with one big pharmacy card ("Fully supported") and a 5-card grid of the other industries each marked "Not yet — message us".
+
+### Metadata
+
+Every solution-related route's metadata was rewritten. The /solutions/[slug] generateMetadata function now returns pharmacy-specific copy for the pharmacy slug and "we do not currently support {label}" for the others.
+
+---
+
+## /contact-us
+
+| | Before | After |
+|---|---|---|
+| Hero body | "Have a question or need help? We're here for you." | "Running a pharmacy and want to see Zapeera? WhatsApp us — we reply within an hour during business hours." |
+| Contact-info lead | "Choose your preferred way to reach us, and we'll respond within 24 hours." | "WhatsApp is the fastest. We reply within an hour during business hours." |
+| **Live Chat card** (false claim) | h3 "Live Chat" / "Available 24/7" / button "Start a conversation" (the button did nothing — no chat widget existed) | **Replaced with WhatsApp card:** h3 "WhatsApp" / "We reply within an hour during business hours." / link "Message us on WhatsApp" → `wa.me/923107100663` |
+
+The Email card (zapeera@gmail.com), Phone card (+92 310 7100663), and Office card (Ayan Center, DHA Phase 8, Lahore) were unchanged — those are real.
+
+---
+
+## Phone number normalization
+
+`+92 313 1670125` was used in three legal pages and the Footer's "Help Center" link, while every other page used `+92 310 7100663`. The legal-page number was the inconsistent one. **All four were changed to `+92 310 7100663`** to match the canonical site-wide number (FloatingCTA, /contact-us, About, etc.):
+
+- [app/privacy-policy/page.tsx:151](app/privacy-policy/page.tsx#L151)
+- [app/cookie-policy/page.tsx:179](app/cookie-policy/page.tsx#L179)
+- [app/terms-of-service/page.tsx:174](app/terms-of-service/page.tsx#L174)
+- [app/components/Footer.tsx:26](app/components/Footer.tsx#L26) (`tel:+923131670125` → `tel:+923107100663`)
+
+Privacy/cookie/ToS bodies still reference placeholder addresses (`privacy@zapeera.com`, `legal@zapeera.com`). Those mailboxes need to be either set up or replaced with the canonical Gmail. Out of scope for this task — flagging in DEPLOYMENT_NOTES eventually.
+
+---
+
+## Navigation — Solutions dropdown
+
+[app/components/Navigation.tsx](app/components/Navigation.tsx) — the Solutions dropdown was reordered so **Pharmacy is first**. The other 5 entries kept their order but their description strings were replaced uniformly with **"Not currently supported. Message us if you would like early access."** Pharmacy got: "Cloud POS and inventory software for Pakistani pharmacies. Fully supported." Each item also picked up a `supported: boolean` field for any future visual treatment (supported entries can show a "Fully supported" badge; unsupported ones can show a "Not yet" pill — left for a follow-up if desired).
+
+---
+
+## Banned phrases — final inventory after this pass
+
+Site-wide grep on rendered page files:
+
+| File | Hits |
+|---|---|
+| All routes + content components used by them | **0** |
+| Legacy components on disk but no longer rendered ([SolutionsSection.tsx](app/components/home/SolutionsSection.tsx), [WhyChooseUs.tsx](app/components/home/WhyChooseUs.tsx)) | small handful — these files no longer ship in any route bundle (verified by build output) and can be deleted entirely in a future cleanup |
+
+The active site is clean of "powerful", "seamless", "transform", "leverage", "robust", "cutting-edge", "next-generation", "revolutionary", "world-class", "industry-leading", and "thousands of".
+
+---
+
+## Bundle size deltas (production build)
+
+| Route | Before this task | After |
+|---|---|---|
+| `/blog` | 3.83 kB | **0.97 kB** |
+| `/careers` | 3.63 kB | **1.09 kB** |
+| `/product-update` | 5.71 kB | **1.43 kB** |
+| `/features` | 0.193 kB (rendered tiny because of import-only setup) | **2.69 kB** (now actually renders custom JSX) |
+| `/solutions` | 0.198 kB | **1.85 kB** |
+| `/solutions/[slug]` | 0.131 kB | **0.188 kB** |
+| `/` | 7.16 kB (pre-Task-3) → 4.03 kB (after this task) | continues to shrink as redundant sections were removed earlier |
+
+Net: the home, blog, careers, and product-update routes are dramatically lighter. Features and Solutions slightly grew because they now contain real custom layouts instead of pulling everything from shared components.
+
