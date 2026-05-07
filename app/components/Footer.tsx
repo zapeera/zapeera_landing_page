@@ -22,7 +22,6 @@ const Footer = () => {
       { name: "Contact Us", path: "/contact-us" },
     ],
     Resources: [
-      { name: "Blog", path: "/blog" },
       { name: "Help Center", path: "tel:+923107100663" },
       { name: "Updates", path: "/product-update" },
     ],

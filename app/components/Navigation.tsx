@@ -164,7 +164,6 @@ const Navigation = () => {
     { name: "Features", path: "/features" },
     { name: "Solutions", path: "/solutions" },
     { name: "Pricing", path: "/pricing" },
-    { name: "Blog", path: "/blog" },
     { name: "Updates", path: "/product-update" },
     { name: "About Us", path: "/about-us" },
     { name: "Careers", path: "/careers" },

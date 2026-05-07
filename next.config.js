@@ -66,14 +66,6 @@ const nextConfig = {
     return config;
   },
   
-  // 301 redirects — collapse duplicate routes to a canonical path.
-  async redirects() {
-    return [
-      { source: '/blogs', destination: '/blog', permanent: true },
-      { source: '/blogs/:slug', destination: '/blog/:slug', permanent: true },
-    ];
-  },
-
   // Headers for caching
   async headers() {
     return [
