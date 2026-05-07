@@ -4,22 +4,20 @@ import Footer from "@/app/components/Footer";
 import Updates from "@/app/pages/Updates";
 
 export const metadata: Metadata = {
-  title: 'Product Updates & Release Notes - Zapeera',
-  description: 'Stay updated with the latest Zapeera product updates, new features, improvements, and release notes. See what\'s new in our business management platform.',
+  title: 'Updates | Zapeera',
+  description: 'What we are building right now and what we shipped recently. We post in small honest steps.',
   keywords: [
     'zapeera updates',
-    'software release notes',
-    'new features',
-    'product updates',
-    'software changelog'
+    'pharmacy software changelog',
+    'product roadmap',
   ],
   authors: [{ name: 'Zapeera Team' }],
   creator: 'Zapeera',
   publisher: 'Zapeera',
   metadataBase: new URL('https://zapeera.com'),
   openGraph: {
-    title: 'Product Updates & Release Notes - Zapeera',
-    description: 'Stay updated with the latest Zapeera product updates and new features.',
+    title: 'Updates | Zapeera',
+    description: 'What we are building right now and what we shipped recently.',
     url: 'https://zapeera.com/product-update',
     siteName: 'Zapeera',
     type: 'website',
@@ -29,15 +27,15 @@ export const metadata: Metadata = {
         url: 'https://zapeera.com/og-home.jpg',
         width: 1200,
         height: 630,
-        alt: 'Product Updates - Zapeera',
+        alt: 'Updates | Zapeera',
         type: 'image/jpeg',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Product Updates - Zapeera',
-    description: 'Latest product updates and new features.',
+    title: 'Updates | Zapeera',
+    description: 'What we are building right now and what we shipped recently.',
     images: ['https://zapeera.com/og-home.jpg'],
     creator: '@zapeera',
   },
