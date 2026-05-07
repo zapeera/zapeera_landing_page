@@ -41,7 +41,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="bg-white py-12 md:py-24">
+    <section className="bg-white py-20 md:py-32">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="text-center max-w-3xl mx-auto animate-fade-in-up mb-6 lg:mb-10">
           <h2 className="section-heading">

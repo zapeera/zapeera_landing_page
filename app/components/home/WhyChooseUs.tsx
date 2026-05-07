@@ -157,7 +157,7 @@ const WhyChooseUs = () => {
   const activeContent = tabContent[activeTab as keyof typeof tabContent];
 
   return (
-    <section className="relative py-12 md:py-24 overflow-hidden bg-primary-50">
+    <section className="relative py-20 md:py-32 overflow-hidden bg-primary-50">
       <Container size="xl" padding="none">
         <div className="relative z-10 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}

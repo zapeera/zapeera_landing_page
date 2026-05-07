@@ -49,7 +49,7 @@ const FeaturesOverview = () => {
   ];
 
   return (
-    <section className="py-12 md:py-24 bg-primary-50">
+    <section className="py-20 md:py-32 bg-primary-50">
       <Container size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}

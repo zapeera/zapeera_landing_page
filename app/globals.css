@@ -132,18 +132,26 @@
 
 @layer components {
   /* Legacy heading utility classes — retained for backward compatibility.
-     Prefer the type-scale tokens (text-display, text-h1, text-h2, ...) on new code. */
+     Prefer the type-scale tokens (text-display, text-h1, text-h2, ...) on new code.
+     Spacing reflects the polished editorial rhythm: section-heading sits close to
+     its description, then a generous gap before content begins. */
   .section-heading-h1 {
-    @apply text-display text-neutral-900 mb-2;
+    @apply text-display text-neutral-900 mb-6;
   }
   .section-heading {
-    @apply text-h1 text-neutral-900 mb-2;
+    @apply text-h1 text-neutral-900 mb-4;
   }
   .section-paragraph {
-    @apply text-body-lg text-neutral-600 mb-8;
+    @apply text-body-lg text-neutral-600 mb-12 md:mb-16;
   }
   .card-heading {
     @apply text-h4 text-neutral-900 mb-2;
+  }
+
+  /* Editorial section eyebrow — a muted, slightly-tracked label that sits
+     above section headings to give them more presence. */
+  .section-eyebrow {
+    @apply inline-block text-caption font-semibold uppercase text-primary-600 mb-4;
   }
 }
 

@@ -35,7 +35,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="relative py-12 md:py-24 overflow-hidden bg-primary-50">
+    <section className="relative py-20 md:py-32 overflow-hidden bg-primary-50">
       <Container className="relative z-10" size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}

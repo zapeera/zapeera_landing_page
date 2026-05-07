@@ -29,7 +29,7 @@ const SolutionsSection = () => {
   ];
 
   return (
-    <section className="bg-white py-12 md:py-24">
+    <section className="bg-white py-20 md:py-32">
       <Container size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}
