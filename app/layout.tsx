@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Poppins, Montserrat } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import './globals.css'
 import { Toaster } from "@/app/components/ui/toaster";
 import { Toaster as Sonner } from "@/app/components/ui/sonner";
@@ -10,17 +10,15 @@ import PerformanceMonitor from './components/PerformanceMonitor'
 import GoogleVerification from './components/GoogleVerification'
 import GoogleAnalytics from './components/GoogleAnalytics'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
-  variable: '--font-poppins'
-})
+// Single typeface across the site. Weights trimmed to the four actually used
+// in JSX (font-normal, font-medium, font-semibold, font-bold). Italic is kept
+// for the hero headline emphasis. font-display: swap is the next/font default.
 const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
+  weight: ['400', '500', '600', '700'],
   style: ['normal', 'italic'],
-  variable: '--font-montserrat'
+  display: 'swap',
+  variable: '--font-montserrat',
 })
 
 export const metadata: Metadata = {
@@ -105,7 +103,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${poppins.variable} ${montserrat.variable} font-montserrat bg-gradient-to-br from-accent-500/5 via-white to-primary-800/5`} suppressHydrationWarning>
+      <body className={`${montserrat.variable} font-montserrat bg-white`} suppressHydrationWarning>
         <GoogleAnalytics />
         <GoogleVerification />
         <ReactQueryProvider>

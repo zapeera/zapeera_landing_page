@@ -19,7 +19,6 @@ export default {
     extend: {
       fontFamily: {
         sans: ["var(--font-montserrat)", "system-ui", "-apple-system", "sans-serif"],
-        poppins: ["var(--font-poppins)", "system-ui", "-apple-system", "sans-serif"],
         montserrat: ["var(--font-montserrat)", "system-ui", "-apple-system", "sans-serif"],
       },
 
