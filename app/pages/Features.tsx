@@ -1,6 +1,5 @@
 'use client'
 
-import Image from "next/image";
 import Link from "next/link";
 import { Calendar, Boxes, BarChart3, Check } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
@@ -19,7 +18,6 @@ const pillars = [
       "Mark batches that cannot be returned and write them off cleanly",
       "End-of-month expiry report by supplier, by category, by branch",
     ],
-    image: "/feature/Batch.webp",
   },
   {
     icon: Boxes,
@@ -32,7 +30,6 @@ const pillars = [
       "Low-stock alerts tied to your real selling speed, not a fixed threshold",
       "Inter-branch transfers with batch and expiry kept intact",
     ],
-    image: "/feature/Inventory Management.webp",
   },
   {
     icon: BarChart3,
@@ -45,7 +42,6 @@ const pillars = [
       "Repeat-customer report — who came back, what they bought, how often",
       "End-of-day in 5 seconds, not an hour with a calculator",
     ],
-    image: "/feature/Reports & Analytics.webp",
   },
 ];
 
@@ -76,46 +72,37 @@ const Features = () => {
           </Container>
         </section>
 
-        {/* Three pillars */}
-        <section className="py-20 lg:py-32">
+        {/* Three pillars — text-driven cards, no images for now.
+            Real product screenshots will come back here once the team
+            captures clean retina shots with realistic Pakistani medicine
+            data (Panadol, Augmentin, Brufen, etc.). */}
+        <section className="py-20 md:py-28">
           <Container>
-            <div className="space-y-20 lg:space-y-32">
-              {pillars.map((feature, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {pillars.map((feature) => (
                 <div
                   key={feature.title}
-                  className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} gap-8 lg:gap-16 items-center`}
+                  className="bg-white rounded-2xl border border-neutral-200 p-8 md:p-10 hover:border-primary-600/40 hover:shadow-md transition-all duration-300 flex flex-col"
                 >
-                  <div className="flex-1">
-                    <div className="w-14 h-14 rounded-2xl bg-primary-50 flex items-center justify-center mb-6">
-                      <feature.icon className="w-7 h-7 text-primary-600" />
-                    </div>
-                    <h2 className="text-h2 text-neutral-900 font-semibold mb-4">{feature.title}</h2>
-                    <p className="text-body-lg text-neutral-600 mb-6 leading-relaxed">
-                      {feature.intro}
-                    </p>
-                    <ul className="space-y-3">
-                      {feature.points.map((point) => (
-                        <li key={point} className="flex items-start gap-3">
-                          <div className="w-6 h-6 rounded-full bg-primary-600/10 flex items-center justify-center flex-shrink-0 mt-1">
-                            <Check className="w-3.5 h-3.5 text-primary-600" />
-                          </div>
-                          <span className="text-body text-neutral-700">{point}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="w-14 h-14 rounded-2xl bg-primary-50 flex items-center justify-center mb-6">
+                    <feature.icon className="w-7 h-7 text-primary-600" />
                   </div>
-
-                  <div className="flex-1 w-full">
-                    <div className="rounded-2xl border border-neutral-200 overflow-hidden bg-white shadow-md">
-                      <Image
-                        src={feature.image}
-                        alt={feature.title}
-                        width={800}
-                        height={550}
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
-                  </div>
+                  <h2 className="text-h3 text-neutral-900 font-semibold mb-4">
+                    {feature.title}
+                  </h2>
+                  <p className="text-body text-neutral-600 mb-6 leading-relaxed">
+                    {feature.intro}
+                  </p>
+                  <ul className="space-y-3 mt-auto">
+                    {feature.points.map((point) => (
+                      <li key={point} className="flex items-start gap-3">
+                        <div className="w-5 h-5 rounded-full bg-primary-600/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Check className="w-3 h-3 text-primary-600" />
+                        </div>
+                        <span className="text-body-sm text-neutral-700 leading-relaxed">{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
@@ -123,7 +110,7 @@ const Features = () => {
         </section>
 
         {/* Supporting capabilities */}
-        <section className="py-20 md:py-32 bg-primary-50">
+        <section className="py-20 md:py-28 bg-primary-50">
           <Container>
             <div className="text-center max-w-3xl mx-auto">
               <h2 className="section-heading">The supporting bits</h2>
@@ -136,7 +123,7 @@ const Features = () => {
               {supporting.map((item) => (
                 <div
                   key={item.title}
-                  className="bg-white rounded-xl border border-neutral-200 p-6 hover:border-primary-600/40 hover:shadow-md transition-all duration-300"
+                  className="bg-white rounded-xl border border-neutral-200 p-6 md:p-8 hover:border-primary-600/40 hover:shadow-md transition-all duration-300"
                 >
                   <h3 className="card-heading">{item.title}</h3>
                   <p className="text-body text-neutral-600 leading-relaxed">{item.body}</p>
@@ -147,7 +134,7 @@ const Features = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-20 md:py-32 bg-white">
+        <section className="py-20 md:py-28 bg-white">
           <Container>
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="section-heading">Want to see it on your stock?</h2>
