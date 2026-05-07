@@ -26,15 +26,15 @@ export default {
       // Type scale — semantic names with paired line-height + weight.
       // Use as: text-display, text-h1, text-h2, text-h3, text-h4, text-body-lg, text-body, text-body-sm, text-caption.
       fontSize: {
-        display: ["clamp(2.5rem, 5vw, 3.75rem)", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
-        h1: ["clamp(2rem, 4vw, 3rem)", { lineHeight: "1.15", letterSpacing: "-0.01em", fontWeight: "700" }],
-        h2: ["clamp(1.75rem, 3vw, 2.25rem)", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "600" }],
-        h3: ["clamp(1.375rem, 2.5vw, 1.75rem)", { lineHeight: "1.3", fontWeight: "600" }],
-        h4: ["1.25rem", { lineHeight: "1.35", fontWeight: "600" }],
-        "body-lg": ["1.125rem", { lineHeight: "1.6" }],
-        body: ["1rem", { lineHeight: "1.6" }],
-        "body-sm": ["0.875rem", { lineHeight: "1.5" }],
-        caption: ["0.75rem", { lineHeight: "1.4", letterSpacing: "0.02em" }],
+        display: ["clamp(2.75rem, 6vw, 4.5rem)", { lineHeight: "1.05", letterSpacing: "-0.035em", fontWeight: "700" }],
+        h1: ["clamp(2.25rem, 4.5vw, 3.5rem)", { lineHeight: "1.1", letterSpacing: "-0.025em", fontWeight: "700" }],
+        h2: ["clamp(1.875rem, 3.25vw, 2.5rem)", { lineHeight: "1.15", letterSpacing: "-0.02em", fontWeight: "600" }],
+        h3: ["clamp(1.5rem, 2.5vw, 1.875rem)", { lineHeight: "1.25", letterSpacing: "-0.01em", fontWeight: "600" }],
+        h4: ["1.25rem", { lineHeight: "1.35", letterSpacing: "-0.005em", fontWeight: "600" }],
+        "body-lg": ["1.125rem", { lineHeight: "1.7" }],
+        body: ["1rem", { lineHeight: "1.7" }],
+        "body-sm": ["0.875rem", { lineHeight: "1.55" }],
+        caption: ["0.75rem", { lineHeight: "1.4", letterSpacing: "0.05em" }],
       },
 
       colors: {

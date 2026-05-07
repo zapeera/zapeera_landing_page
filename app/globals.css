@@ -111,19 +111,19 @@
   }
 
   /* Default heading rhythm so any raw <h1>..<h4> across the codebase
-     picks up consistent type without per-page overrides. Pages that
-     need a different size should use the Heading component or text-* tokens. */
+     picks up consistent type and breathing room without per-page overrides.
+     Pages that need a different size should use a text-* token directly. */
   h1 {
-    @apply text-h1 text-neutral-900 font-bold;
+    @apply text-h1 text-neutral-900 font-bold mb-6;
   }
   h2 {
-    @apply text-h2 text-neutral-900 font-semibold;
+    @apply text-h2 text-neutral-900 font-semibold mb-5;
   }
   h3 {
-    @apply text-h3 text-neutral-900 font-semibold;
+    @apply text-h3 text-neutral-900 font-semibold mb-3;
   }
   h4 {
-    @apply text-h4 text-neutral-900 font-semibold;
+    @apply text-h4 text-neutral-900 font-semibold mb-2;
   }
   p {
     @apply text-body text-neutral-700;
