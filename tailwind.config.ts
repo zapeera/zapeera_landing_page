@@ -80,6 +80,12 @@ export default {
           900: "#093834",
         },
 
+        // Surface tones — alternating section backgrounds.
+        // `cream` is the warm off-white used to break up white sections without
+        // introducing a heavy divider line. Keep these two values close in luminance.
+        cream: "#FAF8F4",
+        canvas: "#FFFFFF",
+
         // Neutral gray scale — text, borders, surfaces.
         neutral: {
           50: "#F8FAFC",
