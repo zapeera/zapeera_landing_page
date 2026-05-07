@@ -1,188 +1,219 @@
 "use client";
 
-'use client';
-
 import { useState } from "react";
 import { Check } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
-import { Card } from "@/app/components/ui/card";
-import Link from "next/link";
 import { Switch } from "@/app/components/ui/switch";
 import Container from "../ui/container";
+import { cn } from "@/app/lib/utils";
+import { waUrl, pricingCtaMessages } from "@/app/lib/whatsapp";
 
 interface PricingSectionProps {
   showHeading?: boolean;
 }
 
+type Plan = {
+  name: string;
+  tagline: string;
+  monthly: number;
+  yearly: number;
+  ctaMessage: string;
+  popular?: boolean;
+  features: string[];
+};
+
+const plans: Plan[] = [
+  {
+    name: "Solo",
+    tagline: "For single-shop pharmacies",
+    monthly: 1500,
+    yearly: 15000,
+    ctaMessage: pricingCtaMessages.solo,
+    features: [
+      "1 user account",
+      "1 pharmacy / 1 branch",
+      "Full POS with barcode scanning",
+      "Inventory management",
+      "Expiry alerts (30 / 60 / 90 days)",
+      "Daily sales reports",
+      "Pakistani medicines pre-loaded",
+      "WhatsApp support",
+      "30-day free trial — no credit card",
+    ],
+  },
+  {
+    name: "Team",
+    tagline: "For pharmacies with a small team",
+    monthly: 3500,
+    yearly: 35000,
+    ctaMessage: pricingCtaMessages.team,
+    popular: true,
+    features: [
+      "Everything in Solo",
+      "3 user accounts",
+      "Role-based access (owner / cashier / manager)",
+      "Advanced reports — profit by medicine, dead stock, top customers",
+      "Customer credit tracking",
+      "WhatsApp support",
+    ],
+  },
+  {
+    name: "Business",
+    tagline: "For multi-branch pharmacies",
+    monthly: 7500,
+    yearly: 75000,
+    ctaMessage: pricingCtaMessages.business,
+    features: [
+      "Everything in Team",
+      "10 user accounts",
+      "Up to 3 branches with consolidated reporting",
+      "Multi-branch inventory transfer",
+      "Priority WhatsApp support",
+      "Onboarding assistance",
+    ],
+  },
+];
+
+const enterprise = {
+  name: "Enterprise / Chain",
+  tagline: "For pharmacy chains and groups",
+  ctaMessage: pricingCtaMessages.enterprise,
+  features: [
+    "Custom pricing",
+    "Unlimited users and branches",
+    "Dedicated account manager",
+    "Custom integrations",
+  ],
+};
+
+const formatPkr = (n: number) => `Rs ${n.toLocaleString("en-PK")}`;
+
 const PricingSection = ({ showHeading = true }: PricingSectionProps) => {
   const [isYearly, setIsYearly] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState(1); // Professional plan (index 1) is default active
-
-  const plans = [
-    {
-      name: "Starter",
-      description: "Perfect for small businesses just getting started",
-      monthlyPrice: 5000,
-      yearlyPrice: 50000,
-      tier: "Basic",
-      features: [
-        "1 Business",
-        "1 Branch",
-        "1 Manager Account",
-        "1 Cashier Account",
-        "Basic Reports & Analytics",
-        "Staff Management",
-        "Role-based Access",
-        "24/7 Support",
-        "Point of Sale (POS)",
-      ],
-      popular: false,
-    },
-    {
-      name: "Professional",
-      description: "Ideal for growing businesses with multiple locations",
-      monthlyPrice: 20000,
-      yearlyPrice: 200000,
-      tier: "Standard",
-      features: [
-        "1 Business",
-        "5 Branches",
-        "5 Manager Accounts",
-        "5 Cashier Accounts",
-        "Advanced Reports & Analytics",
-        "Multi-branch Reports",
-        "Staff Management",
-        "Role-based Access",
-        "24/7 Support",
-        "Point of Sale (POS)",
-      ],
-      popular: true,
-    },
-    {
-      name: "Business",
-      description: "For businesses with multiple operations",
-      monthlyPrice: 100000,
-      yearlyPrice: 1000000,
-      tier: "Business",
-      features: [
-        "3 Businesses",
-        "5 Branches per Business",
-        "5 Manager Accounts per Branch",
-        "5 Cashier Accounts per Branch",
-        "Advanced Reports & Analytics",
-        "Multi-branch Reports",
-        "Staff Management",
-        "Role-based Access",
-        "24/7 Support",
-        "Point of Sale (POS)",
-      ],
-      popular: false,
-    },
-  ];
 
   return (
     <section className="py-20 md:py-32 bg-primary-50">
-     <Container size="full" padding="none">
-     <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-        {/* Header Section */}
-        {showHeading && (
-          <div className="text-center max-w-3xl mx-auto ">
-            <h2 className="section-heading">
-              Simple,Transparent Pricing
-            </h2>
-            <p className="section-paragraph">
-              Choose the plan that's right for your business. All plans include a 14-day free trial.
-            </p>
+      <Container size="full" padding="none">
+        <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+          {showHeading && (
+            <div className="text-center max-w-3xl mx-auto">
+              <h2 className="section-heading">Simple, transparent pricing</h2>
+              <p className="section-paragraph">
+                In PKR. Built for the way Pakistani pharmacies actually buy software. 30-day free trial — no credit card.
+              </p>
+            </div>
+          )}
+
+          {/* Billing toggle */}
+          <div className="flex items-center justify-center gap-4 mb-12 md:mb-16">
+            <span className={cn("text-body-sm", !isYearly ? "font-semibold text-neutral-900" : "text-neutral-500")}>
+              Monthly
+            </span>
+            <Switch checked={isYearly} onCheckedChange={setIsYearly} aria-label="Toggle annual billing" />
+            <span className={cn("text-body-sm flex items-center gap-2", isYearly ? "font-semibold text-neutral-900" : "text-neutral-500")}>
+              Annual
+              <span className="text-xs font-medium text-primary-700 bg-primary-100 rounded-full px-2 py-0.5">
+                Save 17%
+              </span>
+            </span>
           </div>
-        )}
 
-        {/* Billing Toggle */}
-        <div className="flex items-center justify-center gap-4 mb-6 lg:mb-16">
-          <span className={`text-sm ${!isYearly ? "font-semibold text-black" : "text-gray-500"}`}>
-            Monthly
-          </span>
-          <Switch checked={isYearly} onCheckedChange={setIsYearly} />
-          <span className={`text-sm ${isYearly ? "font-semibold text-black" : "text-gray-500"}`}>
-            Yearly
-            <span className="ml-2 text-xs text-primary-800">(Save 17%)</span>
-          </span>
-        </div>
-
-        {/* Pricing Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {plans.map((plan, index) => (
-            <Card
-              key={index}
-              onClick={() => {
-                setSelectedPlan(index);
-              }}
-              className={`relative p-8 rounded-2xl transition-all duration-300 shadow-md hover:shadow-xl cursor-pointer ${
-                selectedPlan === index
-                  ? "!border-2 !border-primary-800 lg:scale-105 scale-[1.02] bg-white shadow-lg"
-                  : "border-gray-200"
-              }`}
-            >
-              {/* Active Badge - Shows "Most Popular" for Professional, "Selected" for others */}
-              {selectedPlan === index && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
-                  <div className="bg-primary-800 text-white px-4 py-1 rounded-full text-sm font-medium shadow-lg">
-                    {index === 1 ? "Most Popular" : "Selected"}
-                  </div>
-                </div>
-              )}
-
-              {/* Plan Header */}
-              <div className="text-center mb-6">
-                <h3 className="card-heading">{plan.name}</h3>
-                <p className="text-sm text-gray-500 mb-4">{plan.description}</p>
-
-                {plan.monthlyPrice ? (
-                  <div className="mb-2">
-                    <span className="text-4xl font-bold text-gray-900">
-                      Rs {isYearly ? plan.yearlyPrice : plan.monthlyPrice}
-                    </span>
-                    <span className="text-gray-500">
-                      /{isYearly ? "year" : "month"}
-                    </span>
-                  </div>
-                ) : (
-                  <div className="mb-2">
-                    <span className="text-4xl font-bold text-gray-900">Custom</span>
-                  </div>
-                )}
-              </div>
-
-              {/* Button */}
-              <Button
-                className={`w-full mb-6 py-3 rounded-lg font-semibold transition-all ${
-                  selectedPlan === index
-                    ? "text-white bg-gradient-to-r from-accent-400 to-primary-600 hover:opacity-90 shadow-lg hover:shadow-xl"
-                    : "bg-white border-2 border-gray-300 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-accent-400 hover:to-primary-600 hover:border-transparent shadow-sm hover:shadow-lg"
-                }`}
-                asChild
-                onClick={(e) => e.stopPropagation()}
-              >
-                <Link href="/contact-us">
-                  {plan.monthlyPrice ? "Start Free Trial" : "Contact Sales"}
-                </Link>
-              </Button>
-
-              {/* Features List */}
-              <ul className="space-y-3">
-                {plan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-primary-800/10 flex items-center justify-center mt-0.5">
-                      <Check className="w-3 h-3 text-primary-800" />
+          {/* Three pricing cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-8">
+            {plans.map((plan) => {
+              const price = isYearly ? plan.yearly : plan.monthly;
+              const suffix = isYearly ? "/year" : "/month";
+              return (
+                <div
+                  key={plan.name}
+                  className={cn(
+                    "relative bg-white rounded-2xl p-8 transition-all duration-300 flex flex-col",
+                    plan.popular
+                      ? "border-2 border-primary-700 shadow-lg lg:scale-[1.02]"
+                      : "border border-neutral-200 shadow-sm hover:shadow-md",
+                  )}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+                      <span className="bg-primary-700 text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">
+                        Most popular
+                      </span>
                     </div>
-                    <span className="text-sm text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </Card>
-          ))}
+                  )}
+
+                  <h3 className="text-h3 text-neutral-900 font-semibold mb-1">{plan.name}</h3>
+                  <p className="text-body-sm text-neutral-500 mb-6">{plan.tagline}</p>
+
+                  <div className="mb-6">
+                    <span className="text-4xl md:text-5xl font-bold text-neutral-900 tracking-tight">
+                      {formatPkr(price)}
+                    </span>
+                    <span className="text-body text-neutral-500 ml-1">{suffix}</span>
+                  </div>
+
+                  <Button
+                    size="md"
+                    className={cn(
+                      "w-full rounded-full mb-8 font-semibold",
+                      "bg-primary-800 hover:bg-primary-900 text-white",
+                    )}
+                    asChild
+                  >
+                    <a href={waUrl(plan.ctaMessage)} target="_blank" rel="noopener noreferrer">
+                      Start free trial
+                    </a>
+                  </Button>
+
+                  <ul className="space-y-3 flex-1">
+                    {plan.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-3">
+                        <div className="w-5 h-5 rounded-full bg-primary-600/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Check className="w-3 h-3 text-primary-700" />
+                        </div>
+                        <span className="text-body-sm text-neutral-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Enterprise card */}
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-white rounded-2xl border border-neutral-200 p-8 md:p-10 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div className="flex-1">
+                <h3 className="text-h3 text-neutral-900 font-semibold mb-1">{enterprise.name}</h3>
+                <p className="text-body-sm text-neutral-500 mb-4">{enterprise.tagline}</p>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 max-w-2xl">
+                  {enterprise.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2">
+                      <Check className="w-4 h-4 text-primary-700 mt-1 flex-shrink-0" />
+                      <span className="text-body-sm text-neutral-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="md:text-right md:flex-shrink-0">
+                <div className="text-h3 text-neutral-900 font-semibold mb-3">Custom pricing</div>
+                <Button
+                  size="md"
+                  className="rounded-full px-7 bg-primary-800 hover:bg-primary-900 text-white font-semibold"
+                  asChild
+                >
+                  <a href={waUrl(enterprise.ctaMessage)} target="_blank" rel="noopener noreferrer">
+                    Contact us
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-body-sm text-neutral-500 text-center mt-8 max-w-2xl mx-auto">
+            Prices in Pakistani Rupees (PKR). Excludes applicable taxes.
+          </p>
         </div>
-      </div>
-     </Container>
+      </Container>
     </section>
   );
 };
