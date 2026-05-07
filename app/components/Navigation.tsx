@@ -155,7 +155,7 @@ const Navigation = () => {
     { name: "Features", path: "/features" },
     { name: "Solutions", path: "/solutions" },
     { name: "Pricing", path: "/pricing" },
-    { name: "Blogs", path: "/blogs" },
+    { name: "Blog", path: "/blog" },
     { name: "Updates", path: "/product-update" },
     { name: "About Us", path: "/about-us" },
     { name: "Careers", path: "/careers" },
@@ -207,9 +207,9 @@ const Navigation = () => {
                     <Link
                       href={link.path}
                       prefetch={true}
-                      className={`text-sm font-medium transition-colors hover:text-[#1732BD] flex items-center gap-1 whitespace-nowrap ${
+                      className={`text-sm font-medium transition-colors hover:text-primary-700 flex items-center gap-1 whitespace-nowrap ${
                         pathname === link.path || pathname?.startsWith("/solutions/")
-                          ? "text-[#1732BD] font-semibold"
+                          ? "text-primary-700 font-semibold"
                           : "text-gray-700"
                       }`}
                     >
@@ -235,7 +235,7 @@ const Navigation = () => {
                                     <IconComponent className="w-5 h-5" />
                                   </div>
                                   <div className="flex-1 min-w-0">
-                                    <div className="font-semibold text-sm text-gray-900 group-hover:text-[#1732BD] transition-colors mb-1">
+                                    <div className="font-semibold text-sm text-gray-900 group-hover:text-primary-700 transition-colors mb-1">
                                       {solution.title}
                                     </div>
                                     <div className="text-xs text-gray-600 leading-relaxed line-clamp-2">
@@ -257,8 +257,8 @@ const Navigation = () => {
                     prefetch={true}
                     className={`text-sm font-medium transition-colors whitespace-nowrap ${
                       pathname === link.path
-                        ? "text-[#1732BD] font-semibold"
-                        : "text-gray-700 hover:text-[#1732BD]"
+                        ? "text-primary-700 font-semibold"
+                        : "text-gray-700 hover:text-primary-700"
                     }`}
                   >
                     {link.name}
@@ -277,7 +277,7 @@ const Navigation = () => {
                 className={`whitespace-nowrap rounded-full px-5 font-medium text-sm transition-all duration-300 ${
                   isAboutPage && !isScrolled
                     ? "bg-white/10 border-white/30 text-white hover:bg-white/20 hover:border-white/50"
-                    : "bg-white border-gray-300 text-gray-700 hover:bg-gradient-to-r hover:from-[#29CDCF] hover:to-[#1947C4] hover:text-white hover:border-transparent"
+                    : "bg-white border-gray-300 text-gray-700 hover:bg-gradient-to-r hover:from-accent-400 hover:to-primary-600 hover:text-white hover:border-transparent"
                 }`}
               >
                 <a href="https://app.zapeera.com/" target="_blank" rel="noopener noreferrer">Login</a>
@@ -286,7 +286,7 @@ const Navigation = () => {
                 size="sm"
                 variant="outline"
                 asChild
-                className={`border-gray-300 text-white bg-gradient-to-r from-[#29CDCF] to-[#1947C4] hover:text-white hover:border-transparent whitespace-nowrap rounded-full px-5 font-medium text-sm transition-all duration-300`}
+                className={`border-gray-300 text-white bg-gradient-to-r from-accent-400 to-primary-600 hover:text-white hover:border-transparent whitespace-nowrap rounded-full px-5 font-medium text-sm transition-all duration-300`}
               >
                 <Link href="/contact-us">Contact Us</Link>
               </Button>
@@ -331,8 +331,8 @@ const Navigation = () => {
                         onClick={() => setIsMobileSolutionsOpen(!isMobileSolutionsOpen)}
                         className={`w-full flex items-center justify-between text-base sm:text-lg font-semibold px-2 sm:px-4 py-3 sm:py-3.5 transition-all duration-200 rounded-lg ${
                         pathname === link.path || pathname?.startsWith("/solutions/")
-                            ? "text-[#1732BD] bg-[#1732BD]/10"
-                            : "text-gray-900 hover:text-[#1732BD] hover:bg-gray-100"
+                            ? "text-primary-700 bg-primary-700/10"
+                            : "text-gray-900 hover:text-primary-700 hover:bg-gray-100"
                         }`}
                       >
                         <span>{link.name}</span>
@@ -351,8 +351,8 @@ const Navigation = () => {
                               }}
                             className={`px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base transition-all duration-200 rounded-lg ${
                               pathname === `/solutions/${solution.slug}`
-                                ? "text-[#1732BD] bg-[#1732BD]/10 font-semibold"
-                                : "text-gray-700 hover:text-[#1732BD] hover:bg-gray-100"
+                                ? "text-primary-700 bg-primary-700/10 font-semibold"
+                                : "text-gray-700 hover:text-primary-700 hover:bg-gray-100"
                             }`}
                           >
                             {solution.title}
@@ -369,8 +369,8 @@ const Navigation = () => {
                       onClick={() => setIsMobileMenuOpen(false)}
                       className={`px-2 sm:px-4 py-3 sm:py-3.5 text-base sm:text-lg font-semibold transition-all duration-200 rounded-lg ${
                         pathname === link.path
-                          ? "text-[#1732BD] bg-[#1732BD]/10"
-                          : "text-gray-900 hover:text-[#1732BD] hover:bg-gray-100"
+                          ? "text-primary-700 bg-primary-700/10"
+                          : "text-gray-900 hover:text-primary-700 hover:bg-gray-100"
                       }`}
                     >
                       {link.name}
@@ -393,7 +393,7 @@ const Navigation = () => {
                   </Button>
                   <Button
                     size="lg"
-                    className="w-full bg-gradient-to-r from-[#22D5C7] to-[#1732BD] hover:opacity-90 text-white text-base sm:text-lg rounded-full"
+                    className="w-full bg-gradient-to-r from-accent-500 to-primary-700 hover:opacity-90 text-white text-base sm:text-lg rounded-full"
                     asChild
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -501,7 +501,7 @@ const Navigation = () => {
           <div className="flex gap-3 pt-2">
             <Button
               type="submit"
-              className="flex-1 bg-gradient-to-r from-[#29CDCF] to-[#1947C4] hover:opacity-90 text-white"
+              className="flex-1 bg-gradient-to-r from-accent-400 to-primary-600 hover:opacity-90 text-white"
             >
               Submit Quote Request
             </Button>
@@ -527,7 +527,7 @@ const Navigation = () => {
             </p>
             <Button
               onClick={() => setIsQuoteModalOpen(false)}
-              className="bg-gradient-to-r from-[#29CDCF] to-[#1947C4] hover:opacity-90 text-white px-8"
+              className="bg-gradient-to-r from-accent-400 to-primary-600 hover:opacity-90 text-white px-8"
             >
               Close
             </Button>

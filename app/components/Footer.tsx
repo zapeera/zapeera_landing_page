@@ -38,7 +38,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="border-t border-gray-300" style={{ backgroundColor: 'rgb(239 246 255)' }}>
+    <footer className="border-t border-neutral-200 bg-primary-50">
      <Container size="xl" padding="none">
      <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
@@ -65,51 +65,51 @@ const Footer = () => {
     href="https://web.facebook.com/profile.php?id=61582397802995"
     target="_blank"
     rel="noopener noreferrer"
-    className="w-10 h-10 rounded-lg border border-gray-200 hover:border-[#1947C4]/50 hover:shadow-md transition-all duration-300 flex items-center justify-center"
-    style={{ backgroundColor: 'rgb(218 227 249)' }}
+    className="w-10 h-10 rounded-lg border border-neutral-200 bg-primary-100 hover:border-primary-600/50 hover:shadow-md transition-all duration-300 flex items-center justify-center"
+   
   >
-    <Facebook className="w-5 h-5 text-[#1947C4]" />
+    <Facebook className="w-5 h-5 text-primary-600" />
   </a>
 
   <a
     href="https://www.linkedin.com/company/zapeera/"
     target="_blank"
     rel="noopener noreferrer"
-    className="w-10 h-10 rounded-lg border border-gray-200 hover:border-[#1947C4]/50 hover:shadow-md transition-all duration-300 flex items-center justify-center"
-    style={{ backgroundColor: 'rgb(218 227 249)' }}
+    className="w-10 h-10 rounded-lg border border-neutral-200 bg-primary-100 hover:border-primary-600/50 hover:shadow-md transition-all duration-300 flex items-center justify-center"
+   
   >
-    <Linkedin className="w-5 h-5 text-[#1947C4]" />
+    <Linkedin className="w-5 h-5 text-primary-600" />
   </a>
 
   <a
     href="https://www.instagram.com/zapeera.official/"
     target="_blank"
     rel="noopener noreferrer"
-    className="w-10 h-10 rounded-lg border border-gray-200 hover:border-[#1947C4]/50 hover:shadow-md transition-all duration-300 flex items-center justify-center"
-    style={{ backgroundColor: 'rgb(218 227 249)' }}
+    className="w-10 h-10 rounded-lg border border-neutral-200 bg-primary-100 hover:border-primary-600/50 hover:shadow-md transition-all duration-300 flex items-center justify-center"
+   
   >
-    <Instagram className="w-5 h-5 text-[#1947C4]" />
+    <Instagram className="w-5 h-5 text-primary-600" />
   </a>
 
   <a
     href="https://www.youtube.com/@zapeera"
     target="_blank"
     rel="noopener noreferrer"
-    className="w-10 h-10 rounded-lg border border-gray-200 hover:border-[#1947C4]/50 hover:shadow-md transition-all duration-300 flex items-center justify-center"
-    style={{ backgroundColor: 'rgb(218 227 249)' }}
+    className="w-10 h-10 rounded-lg border border-neutral-200 bg-primary-100 hover:border-primary-600/50 hover:shadow-md transition-all duration-300 flex items-center justify-center"
+   
   >
-    <Youtube className="w-5 h-5 text-[#1947C4]" />
+    <Youtube className="w-5 h-5 text-primary-600" />
   </a>
 
   <a
     href="https://www.tiktok.com/@zapeera"
     target="_blank"
     rel="noopener noreferrer"
-    className="w-10 h-10 rounded-lg border border-gray-200 hover:border-[#1947C4]/50 hover:shadow-md transition-all duration-300 flex items-center justify-center"
-    style={{ backgroundColor: 'rgb(218 227 249)' }}
+    className="w-10 h-10 rounded-lg border border-neutral-200 bg-primary-100 hover:border-primary-600/50 hover:shadow-md transition-all duration-300 flex items-center justify-center"
+   
   >
     <svg
-      className="w-5 h-5 text-[#1947C4]"
+      className="w-5 h-5 text-primary-600"
       viewBox="0 0 24 24"
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"

@@ -105,7 +105,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${poppins.variable} ${montserrat.variable} font-montserrat bg-gradient-to-br from-[#26D2C6]/5 via-white to-[#1C22AA]/5`} suppressHydrationWarning>
+      <body className={`${inter.variable} ${poppins.variable} ${montserrat.variable} font-montserrat bg-gradient-to-br from-accent-500/5 via-white to-primary-800/5`} suppressHydrationWarning>
         <GoogleAnalytics />
         <GoogleVerification />
         <ReactQueryProvider>
