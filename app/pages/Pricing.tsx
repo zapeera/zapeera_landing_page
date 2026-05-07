@@ -1,149 +1,55 @@
 'use client'
 
-import { memo, useMemo } from "react";
+import { memo, useState } from "react";
 import FloatingCTA from "@/app/components/FloatingCTA";
 import { Button } from "@/app/components/ui/button";
-import { Check, X } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/app/components/ui/accordion";
 import Loading from "../components/ui/loading";
 import PricingSection from "../components/home/PricingSection";
 import Link from "next/link";
 import Container from "../components/ui/container";
+import { waUrl } from "@/app/lib/whatsapp";
+
+const pricingFaqs = [
+  {
+    question: "What happens after the 30-day free trial?",
+    answer:
+      "Pick the plan that fits and we move you onto it. No auto-charge — we never need a card during the trial. If 30 days isn't enough, message us; we are reasonable about it.",
+  },
+  {
+    question: "Can I switch plans later?",
+    answer:
+      "Yes. Upgrade any time and the change is immediate. Downgrades take effect at the next billing cycle so nothing breaks mid-month.",
+  },
+  {
+    question: "Do you offer discounts for annual payment?",
+    answer:
+      "Yes. Annual billing saves 17% — Solo at Rs 15,000/year (vs Rs 18,000 monthly), Team at Rs 35,000/year, Business at Rs 75,000/year.",
+  },
+  {
+    question: "What if I have more than 3 branches?",
+    answer:
+      "The Business plan covers up to 3 branches. Beyond that, the Enterprise plan covers unlimited branches with custom pricing — message us with how many shops you run and we'll quote.",
+  },
+  {
+    question: "Is there a setup fee?",
+    answer:
+      "No. We do not charge a setup fee. The free trial includes a setup call where we load your stock, suppliers, and batches and walk your team through the till — at no cost.",
+  },
+  {
+    question: "Can I cancel anytime?",
+    answer:
+      "Yes. Cancel from your account or message us. We export your inventory, sales history, and customer list as CSV so nothing is locked in.",
+  },
+];
 
 const Pricing = memo(() => {
-  // Extra Features data for all plans
-  const plansWithExtraFeatures = [
-    {
-      name: "Starter",
-      extraFeatures: {
-        "Point of Sale (POS)": "✓",
-        "Inventory Management": "✓",
-        "Medical/Non Medical Products": "✓",
-        "Product Batching": "✓",
-        "Expiry Date Tracking": "✓",
-        "Stock Management": "✓",
-        "Low Stock Alerts": "✓",
-        "Supplier Management": "✓",
-        "Manufacturer Management": "✓",
-        "Shelf Management": "✓",
-        "Purchase Orders": "✓",
-        "Refunds & Returns": "✓",
-        "Inventory Reports": "Basic",
-        "Customer Reports": "Basic",
-        "Profit & Loss Reports": "Basic",
-        "Sales Analytics": "Basic",
-        "Real-time Dashboard": "✓",
-        "Branch Performance": false,
-        "Export Data": "Basic",
-        "Staff Management": "Basic",
-        "Role-based Access": "Basic",
-        "Branch Management": false,
-        "Company Management": false,
-        "Shift Management": false,
-        "Advanced Analytics": false,
-        "Custom Reports": false,
-        "Data Backup": "Basic",
-        "Security Features": "Basic",
-        "Audit Logs": "Basic",
-        "Offline Mode": false,
-        "Data Import/Export": false,
-        "24/7 Support": false,
-        "Dedicated Account Manager": false,
-        "Custom Development": false,
-        "White-label Solution": false,
-        "Training & Onboarding": "Basic",
-        "Documentation": "Basic",
-      },
-    },
-    {
-      name: "Professional",
-      extraFeatures: {
-        "Point of Sale (POS)": "✓",
-        "Inventory Management": "✓",
-        "Medical/Non Medical Products": "✓",
-        "Product Batching": "✓",
-        "Expiry Date Tracking": "✓",
-        "Stock Management": "✓",
-        "Low Stock Alerts": "✓",
-        "Supplier Management": "✓",
-        "Manufacturer Management": "✓",
-        "Shelf Management": "✓",
-        "Purchase Orders": "✓",
-        "Refunds & Returns": "✓",
-        "Inventory Reports": "Advanced",
-        "Customer Reports": "Advanced",
-        "Profit & Loss Reports": "Advanced",
-        "Sales Analytics": "Advanced",
-        "Real-time Dashboard": "✓",
-        "Branch Performance": "Advanced",
-        "Export Data": "Advanced",
-        "Staff Management": "Advanced",
-        "Role-based Access": "Advanced",
-        "Branch Management": "✓",
-        "Company Management": "✓",
-        "Shift Management": "✓",
-        "Advanced Analytics": "✓",
-        "Custom Reports": "✓",
-        "Data Backup": "Advanced",
-        "Security Features": "Advanced",
-        "Audit Logs": "Advanced",
-        "Offline Mode": "✓",
-        "Data Import/Export": "Advanced",
-        "24/7 Support": "✓",
-        "Dedicated Account Manager": false,
-        "Custom Development": false,
-        "White-label Solution": false,
-        "Training & Onboarding": "Advanced",
-        "Documentation": "Advanced",
-      },
-    },
-    {
-      name: "Business",
-      extraFeatures: {
-        "Point of Sale (POS)": "✓",
-        "Inventory Management": "✓",
-        "Medical/Non Medical Products": "✓",
-        "Product Batching": "✓",
-        "Expiry Date Tracking": "✓",
-        "Stock Management": "✓",
-        "Low Stock Alerts": "✓",
-        "Supplier Management": "✓",
-        "Manufacturer Management": "✓",
-        "Shelf Management": "✓",
-        "Purchase Orders": "✓",
-        "Refunds & Returns": "✓",
-        "Inventory Reports": "Advanced",
-        "Customer Reports": "Advanced",
-        "Profit & Loss Reports": "Advanced",
-        "Sales Analytics": "Advanced",
-        "Real-time Dashboard": "✓",
-        "Branch Performance": "Advanced",
-        "Export Data": "Advanced",
-        "Staff Management": "Advanced",
-        "Role-based Access": "Advanced",
-        "Branch Management": "✓",
-        "Company Management": "✓",
-        "Shift Management": "✓",
-        "Advanced Analytics": "✓",
-        "Custom Reports": "✓",
-        "Data Backup": "Advanced",
-        "Security Features": "Advanced",
-        "Audit Logs": "Advanced",
-        "Offline Mode": "✓",
-        "Data Import/Export": "Advanced",
-        "24/7 Support": "✓",
-        "Dedicated Account Manager": "✓",
-        "Custom Development": "✓",
-        "White-label Solution": "✓",
-        "Training & Onboarding": "Advanced",
-        "Documentation": "Advanced",
-      },
-    },
-  ];
-
-  const extraFeaturesList = useMemo(() => 
-    Object.keys(plansWithExtraFeatures[0].extraFeatures), 
-    []
-  );
+  const [openItem, setOpenItem] = useState<string>("item-0");
 
   return (
     <Loading>
@@ -151,98 +57,96 @@ const Pricing = memo(() => {
         <FloatingCTA />
 
         <main>
-        {/* Hero Section */}
-        <section className="pt-32 pb-16 lg:pt-40 lg:pb-20 bg-gradient-hero">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto animate-fade-in-up">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Simple, transparent{" "}
-                <span className="bg-gradient-primary bg-clip-text text-transparent">
-                  pricing
-                </span>
-              </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-8">
-                In PKR. Built for the way Pakistani pharmacies actually buy software. Free for 30 days, no credit card.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20 lg:py-32">
-          <PricingSection showHeading={false} />
-        </section>
-
-        {/* Extra Features Table */}
-        <section className="py-20 lg:py-32 bg-muted/30">
-          <Container>
-            <div className="max-w-7xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Extra Features</h2>
-              
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="border-b border-border bg-muted/50">
-                      <th className="text-left p-3 font-semibold">Features</th>
-                      {plansWithExtraFeatures.map((plan, index) => (
-                        <th key={index} className="p-3 text-center font-semibold text-sm">
-                          {plan.name}
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {extraFeaturesList.map((feature, featureIndex) => (
-                      <tr key={featureIndex} className="border-b border-border hover:bg-muted/30">
-                        <td className="p-3 font-medium text-sm">{feature}</td>
-                        {plansWithExtraFeatures.map((plan, planIndex) => {
-                          const featureValue = (plan.extraFeatures as any)[feature];
-                          return (
-                            <td key={planIndex} className="p-3 text-center">
-                              {typeof featureValue === "boolean" ? (
-                                featureValue ? (
-                                  <Check className="w-4 h-4 text-primary mx-auto" />
-                                ) : (
-                                  <X className="w-4 h-4 text-muted-foreground mx-auto" />
-                                )
-                              ) : typeof featureValue === "string" && featureValue === "✓" ? (
-                                <Check className="w-4 h-4 text-primary mx-auto" />
-                              ) : typeof featureValue === "string" && featureValue === "✗" ? (
-                                <X className="w-4 h-4 text-muted-foreground mx-auto" />
-                              ) : (
-                                <span className="text-xs font-medium">{featureValue}</span>
-                              )}
-                            </td>
-                          );
-                        })}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+          {/* Hero */}
+          <section className="pt-32 pb-16 lg:pt-40 lg:pb-20 bg-cream">
+            <Container>
+              <div className="text-center max-w-3xl mx-auto">
+                <h1 className="text-h1 text-neutral-900 font-bold mb-6">
+                  Simple, transparent pricing
+                </h1>
+                <p className="text-body-lg text-neutral-600 mb-4">
+                  In PKR. Built for the way Pakistani pharmacies actually buy software.
+                </p>
+                <p className="text-body text-neutral-500">
+                  30-day free trial. No credit card required. We set it up for you and pre-load your medicines.
+                </p>
               </div>
-            </div>
-          </Container>
-        </section>
+            </Container>
+          </section>
 
-        {/* Closing CTA */}
-        <section className="py-20 lg:py-32 bg-muted/30">
-          <div className="container mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Still deciding?</h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Message us on WhatsApp with how many counters and branches you run. We will tell you which plan fits — honestly, even if it is the smallest one.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="bg-primary-800 hover:bg-primary-900 text-white rounded-full px-7" asChild>
-                <a href="https://wa.me/923107100663" target="_blank" rel="noopener noreferrer">
-                  Message us on WhatsApp
-                </a>
-              </Button>
-              <Button size="lg" variant="secondary" className="rounded-full px-7" asChild>
-                <Link href="/#faq">Read the FAQ</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
+          {/* Pricing cards (Solo / Team / Business + Enterprise) */}
+          <PricingSection showHeading={false} />
+
+          {/* Pricing FAQ */}
+          <section className="py-20 md:py-32 bg-white">
+            <Container>
+              <div className="text-center max-w-3xl mx-auto">
+                <h2 className="section-heading">Pricing questions</h2>
+                <p className="section-paragraph">
+                  The things pharmacy owners ask before signing up. If yours is not here, message us — we will answer.
+                </p>
+              </div>
+
+              <div className="max-w-3xl mx-auto">
+                <Accordion
+                  type="single"
+                  collapsible
+                  value={openItem}
+                  onValueChange={setOpenItem}
+                  className="space-y-4"
+                >
+                  {pricingFaqs.map((faq, index) => (
+                    <AccordionItem
+                      key={index}
+                      value={`item-${index}`}
+                      className="group border border-neutral-200 rounded-xl shadow-sm bg-white"
+                    >
+                      <AccordionTrigger className="p-6 text-left hover:no-underline">
+                        <div className="flex items-start gap-4 w-full">
+                          <div className="w-3 h-3 rounded-full bg-primary-600 mt-2 flex-shrink-0" />
+                          <div className="flex-1">
+                            <h3 className="card-heading">{faq.question}</h3>
+                          </div>
+                        </div>
+                      </AccordionTrigger>
+
+                      <AccordionContent className="px-6 pb-6">
+                        <div className="pl-7 border-l-2 border-primary-600/20">
+                          <p className="text-body text-neutral-600 leading-relaxed">{faq.answer}</p>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+            </Container>
+          </section>
+
+          {/* Closing CTA */}
+          <section className="py-20 md:py-32 bg-primary-50">
+            <Container>
+              <div className="max-w-2xl mx-auto text-center">
+                <h2 className="section-heading">Still deciding?</h2>
+                <p className="section-paragraph">
+                  Message us on WhatsApp with how many counters and branches you run. We will tell you which plan fits — honestly, even if it is the smallest one.
+                </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                  <Button
+                    size="lg"
+                    className="bg-primary-800 hover:bg-primary-900 text-white rounded-full px-7"
+                    asChild
+                  >
+                    <a href={waUrl()} target="_blank" rel="noopener noreferrer">
+                      Message us on WhatsApp
+                    </a>
+                  </Button>
+                  <Button size="lg" variant="secondary" className="rounded-full px-7" asChild>
+                    <Link href="/#faq">Read the FAQ</Link>
+                  </Button>
+                </div>
+              </div>
+            </Container>
+          </section>
         </main>
       </div>
     </Loading>
