@@ -3,23 +3,23 @@ import Container from "../ui/container";
 const steps = [
   {
     number: 1,
-    title: "Create Your Account",
-    description: "Sign up for a free trial in minutes to join Zapeera.",
+    title: "Message us on WhatsApp",
+    description: "Tell us a bit about your pharmacy — branches, counters, what you sell. We confirm whether Zapeera is the right fit for you.",
   },
   {
     number: 2,
-    title: "Configure Your Store",
-    description: "Set up taxes, currency (PKR), and preferences through our intuitive dashboard.",
+    title: "We set it up with you",
+    description: "On a free setup call we load your stock, your suppliers, and your batches. We do this in Urdu or English, whichever is easier.",
   },
   {
     number: 3,
-    title: "Add Your Products",
-    description: "Import inventory via CSV or add items manually; include images, prices, and categories.",
+    title: "Train your staff in an hour",
+    description: "The till screen is simple enough that a cashier can ring sales within 10 minutes. We walk your team through it on the same call.",
   },
   {
     number: 4,
-    title: "Start Selling",
-    description: "Open your store and process sales immediately. Zapeera syncs stock in real time across all devices and branches.",
+    title: "Run for 30 days, free",
+    description: "Use everything. Track expiry, run reports, manage branches. After the month you pick a plan — or you do not, no auto-charge.",
   },
 ];
 
@@ -29,10 +29,11 @@ const HowItWorks = () => {
       <Container size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Section Heading */}
-          <div className="text-center mb-6 lg:mb-10">
-            <h2 className="section-heading">
-              Getting Started
-            </h2>
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="section-heading">How you get started</h2>
+            <p className="section-paragraph">
+              No sales call, no procurement form. From the first WhatsApp message to your first live sale is usually a week.
+            </p>
           </div>
 
           {/* Steps Timeline */}

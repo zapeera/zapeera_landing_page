@@ -13,24 +13,43 @@ const FAQSection = () => {
   const [openItem, setOpenItem] = useState<string>("item-0");
   const faqs = [
     {
-      question: "What can Zapeera do for my business?",
-      answer: "Zapeera is an all-in-one cloud-based business management software that combines POS, inventory, staff management, and reporting, allowing you to manage sales and stock from anywhere.",
+      question: "Will it work for my single shop, or do I need multiple branches?",
+      answer:
+        "Both. Zapeera works the same whether you run one counter or three branches. Multi-branch only kicks in when you turn it on.",
     },
     {
-      question: "Can I manage multiple branches with Zapeera?",
-      answer: "Yes. You can manage all branches from a single dashboard, sync inventory, transfer stock, and view consolidated sales reports in real time.",
+      question: "What if my internet goes down?",
+      answer:
+        "The till keeps working. Sales are saved locally and sync to the cloud the moment your connection is back. You will not lose a sale because PTCL went down.",
     },
     {
-      question: "Is Zapeera cloud-based and can I use it offline?",
-      answer: "Yes. Zapeera is a cloud-based POS system and also works offline. Sales sync automatically once your internet connection is restored.",
+      question: "Do you have Pakistani medicines pre-loaded?",
+      answer:
+        "Yes. We start you with a database of medicines registered in Pakistan, plus common generics and brand alternatives. You can add or correct any entry on your account.",
     },
     {
-      question: "What are the pricing options, and is there a free trial?",
-      answer: "Plans start at PKR 5,000/month and include a 14-day free trial with full access. No credit card is required, and you can upgrade anytime.",
+      question: "Can my staff use it without training?",
+      answer:
+        "The till screen is built so a new cashier can ring a sale within 10 minutes. We also do a free setup call when you start, in Urdu or English, and walk your team through it.",
     },
     {
-      question: "How secure is my data on Zapeera?",
-      answer: "Your data is protected with encryption, automatic backups, and role-based access controls, following global security best practices.",
+      question: "What happens after the free month?",
+      answer:
+        "You pick a plan. We do not auto-charge a card and we do not need one upfront for the trial. If 30 days is not enough, message us — we are reasonable about it.",
+    },
+    {
+      question: "Is my data safe?",
+      answer:
+        "Your data is encrypted in transit and at rest, backed up daily, and tied to your account only. We do not sell or share pharmacy data with anyone, ever.",
+    },
+    {
+      question: "What if I want to stop using Zapeera?",
+      answer:
+        "Cancel from your account or message us. We export your inventory, sales history, and customer list as CSV so nothing is locked in.",
+    },
+    {
+      question: "Do you charge in PKR or USD?",
+      answer: "PKR. All plans are priced in rupees — no exchange-rate surprises at the end of the month.",
     },
   ];
 

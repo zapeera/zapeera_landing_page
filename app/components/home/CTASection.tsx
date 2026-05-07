@@ -1,28 +1,28 @@
-import { ArrowRight } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
 import Link from "next/link";
 
 const CTASection = () => {
   return (
     <section className="relative overflow-hidden bg-white py-20 md:py-32">
-      {/* Background gradient */}
-      <div className="absolute " />
-
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 relative">
-        <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
+        <div className="max-w-3xl mx-auto text-center animate-fade-in-up">
           <h2 className="section-heading md:mb-6 mb-4">
-            Ready to Simplify Your Business?
+            Be one of our first 50 pharmacies.
           </h2>
-          <p className="section-paragraph max-w-3xl mx-auto">
-            Join over 500 Pakistani businesses already growing smarter with Zapeera's cloud-based POS and inventory management software. Start your 14-day free trial today and see the difference Zapeera makes (no credit card needed)!
+          <p className="section-paragraph max-w-2xl mx-auto">
+            Free for 30 days. No credit card. We set it up for you and pre-load your medicines. Message us on WhatsApp — we reply within an hour during business hours.
           </p>
 
-          <div className="flex items-center justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-accent-400 to-primary-600 hover:opacity-90 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-full font-semibold group" asChild>
-              <Link href="/contact-us">
-                Start Your Free Trial Now
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Button
+              size="lg"
+              className="bg-primary-800 hover:bg-primary-900 text-white rounded-full px-7"
+              asChild
+            >
+              <Link href="/contact-us">Message us on WhatsApp</Link>
+            </Button>
+            <Button size="lg" variant="secondary" className="rounded-full px-7" asChild>
+              <Link href="/pricing">See pricing</Link>
             </Button>
           </div>
         </div>
