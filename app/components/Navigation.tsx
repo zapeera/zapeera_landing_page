@@ -35,48 +35,57 @@ const Navigation = () => {
   const pathname = usePathname();
   const router = useRouter();
 
+  // Pharmacy is the only fully-supported industry today.
+  // Other industries are listed so they remain crawlable + reachable, but each
+  // routes to a "not currently supported — message us" stub on /solutions/[slug].
   const solutions = [
     {
-      title: "Retail",
-      description: "Complete retail management with multi-branch sync and real-time inventory tracking",
-      slug: "retail",
-      icon: ShoppingBag,
-      color: "text-blue-600"
-    },
-    {
       title: "Pharmacy",
-      description: "Specialized pharmacy management with medication tracking and expiry alerts",
+      description: "Cloud POS and inventory software for Pakistani pharmacies. Fully supported.",
       slug: "pharmacy",
       icon: Pill,
-      color: "text-green-600"
+      color: "text-primary-600",
+      supported: true,
+    },
+    {
+      title: "Retail",
+      description: "Not currently supported. Message us if you would like early access.",
+      slug: "retail",
+      icon: ShoppingBag,
+      color: "text-neutral-500",
+      supported: false,
     },
     {
       title: "Restaurant",
-      description: "Manage menus, kitchen orders, tables, and staff scheduling efficiently",
+      description: "Not currently supported. Message us if you would like early access.",
       slug: "restaurant",
       icon: UtensilsCrossed,
-      color: "text-orange-600"
+      color: "text-neutral-500",
+      supported: false,
     },
     {
       title: "Wholesale",
-      description: "Bulk order processing with flexible pricing and automated invoicing",
+      description: "Not currently supported. Message us if you would like early access.",
       slug: "wholesale",
       icon: Package,
-      color: "text-purple-600"
+      color: "text-neutral-500",
+      supported: false,
     },
     {
       title: "Departmental Store",
-      description: "Multi-category management with advanced inventory control and reporting",
+      description: "Not currently supported. Message us if you would like early access.",
       slug: "departmental-store",
       icon: Store,
-      color: "text-indigo-600"
+      color: "text-neutral-500",
+      supported: false,
     },
     {
       title: "Distribution",
-      description: "Comprehensive distribution with route optimization and warehouse management",
+      description: "Not currently supported. Message us if you would like early access.",
       slug: "distribution",
       icon: Truck,
-      color: "text-red-600"
+      color: "text-neutral-500",
+      supported: false,
     },
   ];
 
