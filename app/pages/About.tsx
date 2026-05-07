@@ -1,86 +1,12 @@
-"use client";
-
-'use client'
-
-import { memo, useState, useEffect } from 'react';
+import { memo } from 'react';
 import FloatingCTA from "@/app/components/FloatingCTA";
-import { Target, Eye, Linkedin, ChevronLeft, ChevronRight } from "lucide-react";
+import { Target, Eye } from "lucide-react";
 import { Card } from "@/app/components/ui/card";
-import { Button } from "@/app/components/ui/button";
 import Image from "next/image";
 import Container from "../components/ui/container";
 import Loading from "../components/ui/loading";
 
 const About = memo(() => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768); // md breakpoint
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  // Reset index when screen size changes
-  useEffect(() => {
-    setCurrentIndex(0);
-  }, [isMobile]);
-
-  const leadership = [
-    {
-      name: "Mr. Muhammad Majid",
-      role: "CEO & Co-Founder",
-      image: "/team-images/Mr Muhammad Majid.jpeg",
-      bio: "With over 15 years in enterprise software, Muhammad leads our strategic vision and fosters a culture of innovation and inclusivity.",
-      linkedin: "#"
-    },
-    {
-      name: "Mr. Muhammad Umair",
-      role: "CTO & Co-Founder",
-      image: "/team-images/Mr. Muhammad Umair.png",
-      bio: "Muhammad is the architect behind our core platform, specializing in scalable cloud infrastructures and distributed systems.",
-      linkedin: "#"
-    },
-    {
-      name: "Mr. Muhammad Bilal",
-      role: "Head of Product",
-      image: "/team-images/Muhammad Bilal.jpeg",
-      bio: "Product strategist focused on user experience and delivering solutions that truly make a difference.",
-      linkedin: "#"
-    },
-    {
-      name: "Mr. Ali Mahtab",
-      role: "Head of Design",
-      image: "/team-images/Mr. Ali Mehtab.png",
-      bio: "Creative director with passion for beautiful interfaces and exceptional user experiences.",
-      linkedin: "#"
-    },
-  ];
-
-  const cardsPerSlide = isMobile ? 1 : 2;
-  const totalSlides = Math.ceil(leadership.length / cardsPerSlide);
-
-  const nextLeader = () => {
-    const maxIndex = totalSlides - 1;
-    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-  };
-
-  const prevLeader = () => {
-    const maxIndex = totalSlides - 1;
-    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
-  };
-
-  const getVisibleLeaders = () => {
-    const start = currentIndex * cardsPerSlide;
-    return leadership.slice(start, start + cardsPerSlide);
-  };
-
-  const canGoNext = currentIndex < totalSlides - 1;
-  const canGoPrev = currentIndex > 0;
-
   return (
     <Loading>
       <div className="min-h-screen bg-background">
@@ -118,9 +44,10 @@ const About = memo(() => {
                   {/* Left Side - Team Photo */}
                   <div className="relative w-full h-[400px] lg:h-[500px] rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/hero.jpeg"
-                      alt="Zapeera Team"
+                      src="/images/hero.webp"
+                      alt="Zapeera pharmacy dashboard"
                       fill
+                      sizes="(max-width: 1024px) 100vw, 600px"
                       className="object-cover"
                     />
                   </div>
