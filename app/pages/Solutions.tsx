@@ -64,13 +64,13 @@ const Solutions = () => {
           </Container>
         </section>
 
-        {/* Other industries — not yet */}
+        {/* Other industries — coming soon */}
         <section className="py-20 md:py-32 bg-primary-50">
           <Container>
             <div className="text-center max-w-3xl mx-auto">
-              <h2 className="section-heading">Other industries</h2>
+              <h2 className="section-heading">Other industries — coming soon</h2>
               <p className="section-paragraph">
-                Not currently supported. The product is genuinely capable of running other retail businesses — we are just not asking anyone to rely on it yet, in a category we have not focused on.
+                We are focused on pharmacies first. Tap any industry below to leave your name on the early-access list.
               </p>
             </div>
 
@@ -88,7 +88,7 @@ const Solutions = () => {
                     <div className="text-body font-semibold text-neutral-900 mb-0.5 group-hover:text-primary-700 transition-colors">
                       {item.label}
                     </div>
-                    <div className="text-body-sm text-neutral-500">Not yet — message us</div>
+                    <div className="text-body-sm text-neutral-500">Coming soon</div>
                   </div>
                 </Link>
               ))}
@@ -97,7 +97,7 @@ const Solutions = () => {
             <div className="text-center mt-12">
               <Button size="lg" className="bg-primary-800 hover:bg-primary-900 text-white rounded-full px-7" asChild>
                 <a href="https://wa.me/923107100663" target="_blank" rel="noopener noreferrer">
-                  Message us on WhatsApp
+                  Notify me on WhatsApp
                 </a>
               </Button>
             </div>

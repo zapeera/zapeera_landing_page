@@ -90,8 +90,8 @@ export async function generateMetadata({ params }: SolutionPageProps): Promise<M
 
   const label = labels[params.slug as Exclude<Slug, "pharmacy">];
   return {
-    title: `${label} | Zapeera`,
-    description: `Zapeera does not currently support ${label.toLowerCase()}. We are focused on Pakistani pharmacies first. Message us if you would like to be in the first non-pharmacy cohort.`,
+    title: `${label} — coming soon | Zapeera`,
+    description: `Zapeera for ${label.toLowerCase()} is coming soon. We are focused on Pakistani pharmacies first. Message us on WhatsApp for early access.`,
     alternates: { canonical: `https://zapeera.com/solutions/${params.slug}` },
     robots: { index: true, follow: true },
   };
@@ -261,9 +261,9 @@ function NotYetPage({ slug }: { slug: Exclude<Slug, "pharmacy"> }) {
   const label = labels[slug];
 
   return (
-    <section className="bg-cream pt-32 pb-20 lg:pt-40 lg:pb-32 min-h-[70vh]">
+    <section className="bg-cream pt-32 pb-20 lg:pt-40 lg:pb-32 min-h-[70vh] flex items-center">
       <Container>
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-xl mx-auto">
           <Link
             href="/solutions"
             className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 transition-colors mb-8"
@@ -272,26 +272,23 @@ function NotYetPage({ slug }: { slug: Exclude<Slug, "pharmacy"> }) {
             Back to solutions
           </Link>
 
-          <div className="bg-white rounded-2xl border border-neutral-200 p-8 md:p-12">
-            <div className="w-12 h-12 rounded-full bg-primary-50 flex items-center justify-center mb-6">
+          <div className="bg-white rounded-2xl border border-neutral-200 p-8 md:p-10 text-center">
+            <div className="w-12 h-12 rounded-full bg-primary-50 flex items-center justify-center mx-auto mb-5">
               <Clock className="w-6 h-6 text-primary-600" />
             </div>
 
-            <Badge variant="secondary" className="mb-4">{label}</Badge>
-            <h1 className="text-h1 text-neutral-900 font-bold mb-6">
-              We do not currently support {label.toLowerCase()}.
+            <Badge variant="secondary" className="mb-4">Coming soon</Badge>
+            <h1 className="text-h2 text-neutral-900 font-bold mb-4">
+              Zapeera for {label.toLowerCase()} — coming soon.
             </h1>
-            <p className="text-body-lg text-neutral-600 leading-relaxed mb-4">
-              Zapeera is built for Pakistani pharmacies first. The product is genuinely capable of running other retail businesses, but we want to nail one industry properly before we ask anyone else to rely on it.
-            </p>
-            <p className="text-body-lg text-neutral-600 leading-relaxed mb-8">
-              If you run a {label.toLowerCase()} business and want to be in the first non-pharmacy cohort, message us on WhatsApp. We will tell you honestly when we are ready — and you will be the first to know.
+            <p className="text-body text-neutral-600 leading-relaxed mb-8">
+              We are focused on Pakistani pharmacies first. Message us for early access when we open this up.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center gap-3">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Button size="lg" className="bg-primary-800 hover:bg-primary-900 text-white rounded-full px-7" asChild>
                 <a href="https://wa.me/923107100663" target="_blank" rel="noopener noreferrer">
-                  Message us on WhatsApp
+                  Notify me on WhatsApp
                 </a>
               </Button>
               <Button size="lg" variant="secondary" className="rounded-full px-7" asChild>

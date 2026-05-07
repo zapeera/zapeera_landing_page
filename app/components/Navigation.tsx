@@ -49,7 +49,7 @@ const Navigation = () => {
     },
     {
       title: "Retail",
-      description: "Not currently supported. Message us if you would like early access.",
+      description: "Coming soon. Message us for early access.",
       slug: "retail",
       icon: ShoppingBag,
       color: "text-neutral-500",
@@ -57,7 +57,7 @@ const Navigation = () => {
     },
     {
       title: "Restaurant",
-      description: "Not currently supported. Message us if you would like early access.",
+      description: "Coming soon. Message us for early access.",
       slug: "restaurant",
       icon: UtensilsCrossed,
       color: "text-neutral-500",
@@ -65,7 +65,7 @@ const Navigation = () => {
     },
     {
       title: "Wholesale",
-      description: "Not currently supported. Message us if you would like early access.",
+      description: "Coming soon. Message us for early access.",
       slug: "wholesale",
       icon: Package,
       color: "text-neutral-500",
@@ -73,7 +73,7 @@ const Navigation = () => {
     },
     {
       title: "Departmental Store",
-      description: "Not currently supported. Message us if you would like early access.",
+      description: "Coming soon. Message us for early access.",
       slug: "departmental-store",
       icon: Store,
       color: "text-neutral-500",
@@ -81,7 +81,7 @@ const Navigation = () => {
     },
     {
       title: "Distribution",
-      description: "Not currently supported. Message us if you would like early access.",
+      description: "Coming soon. Message us for early access.",
       slug: "distribution",
       icon: Truck,
       color: "text-neutral-500",
