@@ -148,7 +148,7 @@ export default function PrivacyPolicyPage() {
                     <p>If you have any questions about this Privacy Policy, please contact us at:</p>
                     <div className="bg-muted/50 rounded-lg p-4 space-y-2">
                       <p><strong>Email:</strong> privacy@zapeera.com</p>
-                      <p><strong>Phone:</strong> +92 313 1670125</p>
+                      <p><strong>Phone:</strong> +92 310 7100663</p>
                     </div>
                   </div>
                 </section>

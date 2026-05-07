@@ -23,8 +23,8 @@ const Footer = () => {
     ],
     Resources: [
       { name: "Blog", path: "/blog" },
-      { name: "Help Center", path: "tel:+923131670125" },
-      { name: "API Docs", path: "/product-update" },
+      { name: "Help Center", path: "tel:+923107100663" },
+      { name: "Updates", path: "/product-update" },
     ],
     Legal: [
       { name: "Privacy Policy", path: "/privacy-policy" },
