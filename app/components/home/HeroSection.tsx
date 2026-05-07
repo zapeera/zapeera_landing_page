@@ -17,12 +17,10 @@ const HeroSection = () => {
       <Container className="relative z-10" size="xl" padding="none">
         <div className="flex flex-col items-center justify-center pt-20 md:pt-28 lg:pt-32">
           {/* Centered Content */}
-          <div className="text-center max-w-4xl mx-auto px-2 mb-12 md:mb-16">
-            {/* Main Heading */}
-            <h1 className="text-display text-neutral-900 font-montserrat mb-6 md:mb-8">
-              A Business Management Platform
-              <br />
-              You Can <em className="italic font-bold text-primary-700">Depend On</em>
+          <div className="text-center max-w-5xl mx-auto px-2 mb-12 md:mb-16">
+            {/* Main Heading — one-line on desktop, natural wrap on smaller widths */}
+            <h1 className="text-h1 text-neutral-900 font-montserrat mb-6 md:mb-8">
+              A Business Management Platform You Can <em className="italic font-bold text-primary-700">Depend On</em>
             </h1>
 
             <p className="text-body-lg md:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed font-montserrat font-normal mb-8 md:mb-10">
