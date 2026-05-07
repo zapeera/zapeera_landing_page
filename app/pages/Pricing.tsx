@@ -156,13 +156,13 @@ const Pricing = memo(() => {
           <div className="container mx-auto px-4 lg:px-8">
             <div className="text-center max-w-3xl mx-auto animate-fade-in-up">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Simple{" "}
+                Simple, transparent{" "}
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
-                  Transparent Pricing
+                  pricing
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-8">
-                Choose the plan that's right for your business. All plans include a 14-day free trial.
+                In PKR. Built for the way Pakistani pharmacies actually buy software. Free for 30 days, no credit card.
               </p>
             </div>
           </div>
@@ -224,19 +224,21 @@ const Pricing = memo(() => {
           </Container>
         </section>
 
-        {/* FAQ Preview */}
+        {/* Closing CTA */}
         <section className="py-20 lg:py-32 bg-muted/30">
           <div className="container mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Still have questions?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Still deciding?</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Check out our FAQ section or contact our sales team for personalized assistance.
+              Message us on WhatsApp with how many counters and branches you run. We will tell you which plan fits — honestly, even if it is the smallest one.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" variant="outline" asChild>
-                <Link href="/#faq">View FAQs</Link>
+              <Button size="lg" className="bg-primary-800 hover:bg-primary-900 text-white rounded-full px-7" asChild>
+                <a href="https://wa.me/923107100663" target="_blank" rel="noopener noreferrer">
+                  Message us on WhatsApp
+                </a>
               </Button>
-              <Button size="lg" className="bg-gradient-primary hover:opacity-90" asChild>
-                <Link href="/contact-us">Contact Sales</Link>
+              <Button size="lg" variant="secondary" className="rounded-full px-7" asChild>
+                <Link href="/#faq">Read the FAQ</Link>
               </Button>
             </div>
           </div>
