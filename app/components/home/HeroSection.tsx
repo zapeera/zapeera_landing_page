@@ -1,8 +1,8 @@
 "use client";
 import { Button } from "@/app/components/ui/button";
-import Link from "next/link";
 import Image from "next/image";
 import Container from "../ui/container";
+import { getWhatsAppLink, whatsappMessages } from "@/app/lib/whatsapp";
 
 const HeroSection = () => {
 
@@ -38,9 +38,13 @@ const HeroSection = () => {
                 className="bg-white border-2 border-gray-300 hover:border-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-accent-400 hover:to-primary-600 text-gray-700 text-sm sm:text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-base px-4 sm:px-5 md:px-5 lg:px-5 xl:px-5 2xl:px-6 py-2.5 sm:py-2.5 md:py-2.5 lg:py-2.5 xl:py-2.5 2xl:py-3 rounded-full font-semibold shadow-sm hover:shadow-lg transition-all duration-300"
                 asChild
               >
-                <Link href="/contact-us">
+                <a
+                  href={getWhatsAppLink(whatsappMessages.demo)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Request a Demo
-                </Link>
+                </a>
               </Button>
             </div>
           </div>
