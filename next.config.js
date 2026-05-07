@@ -66,39 +66,27 @@ const nextConfig = {
     return config;
   },
   
-  // Headers for caching
+  // Headers
   async headers() {
     return [
+      // Security headers — every route
       {
         source: '/(.*)',
         headers: [
-          {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on'
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block'
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN'
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
-          }
-        ]
+          { key: 'X-DNS-Prefetch-Control', value: 'on' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+        ],
       },
+      // Hash-named JS/CSS chunks — safe to cache forever (changes invalidate via filename hash).
+      // The previous rule was at /static/(.*), which was a no-op — Next.js serves under /_next/static.
       {
-        source: '/static/(.*)',
+        source: '/_next/static/(.*)',
         headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable'
-          }
-        ]
-      }
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
     ];
   },
 };
