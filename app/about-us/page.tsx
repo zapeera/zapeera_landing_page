@@ -4,22 +4,21 @@ import Footer from "@/app/components/Footer";
 import About from "@/app/pages/About";
 
 export const metadata: Metadata = {
-  title: 'About Us - Zapeera',
-  description: 'Learn about Zapeera - our mission, vision, team, and commitment to transforming business management with innovative solutions.',
+  title: 'About — Zapeera',
+  description: 'A small Pakistani team building cloud POS and inventory software for Pakistani pharmacies. Honest about what we have shipped and what is still coming.',
   keywords: [
     'about zapeera',
-    'company mission',
-    'business management team',
-    'software company',
-    'tech innovation'
+    'pharmacy software Pakistan',
+    'Pakistani team',
+    'pharmacy startup',
   ],
   authors: [{ name: 'Zapeera Team' }],
   creator: 'Zapeera',
   publisher: 'Zapeera',
   metadataBase: new URL('https://zapeera.com'),
   openGraph: {
-    title: 'About Us - Zapeera',
-    description: 'Learn about Zapeera - our mission, vision, team, and commitment to transforming business management.',
+    title: 'About — Zapeera',
+    description: 'A small Pakistani team building cloud POS and inventory software for Pakistani pharmacies.',
     url: 'https://zapeera.com/about-us',
     siteName: 'Zapeera',
     type: 'website',
@@ -29,15 +28,15 @@ export const metadata: Metadata = {
         url: 'https://zapeera.com/og-home.jpg',
         width: 1200,
         height: 630,
-        alt: 'About Us - Zapeera',
+        alt: 'About — Zapeera',
         type: 'image/jpeg',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Us - Zapeera',
-    description: 'Learn about Zapeera - our mission, vision, and team.',
+    title: 'About — Zapeera',
+    description: 'A small Pakistani team building cloud POS and inventory software for Pakistani pharmacies.',
     images: ['https://zapeera.com/og-home.jpg'],
     creator: '@zapeera',
   },

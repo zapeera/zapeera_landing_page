@@ -58,7 +58,7 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-muted-foreground mb-6 text-sm">
-              The all-in-one business management and POS solution. Built to help businesses grow smarter and faster.
+              Cloud POS and inventory software, built for Pakistani pharmacies.
             </p>
             <div className="flex gap-4">
   <a

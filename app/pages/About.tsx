@@ -60,30 +60,6 @@ const About = memo(() => {
     },
   ];
 
-  // milestones of success
-  const milestones = [
-    {
-      year: "2023",
-      title: "Innovation",
-      description: "Launched our flagship AI-driven analytics suite for enterprise clients.",
-    },
-    {
-      year: "2024",
-      title: "Scale",
-      description: "Reached a milestone of 500+ active enterprise partners worldwide.",
-    },
-    {
-      year: "2025",
-      title: "Excellence",
-      description: "Awarded \"Best SaaS Platform of the Year\" by the Global Tech Association.",
-    },
-    {
-      year: "2026",
-      title: "Vision 2026",
-      description: "Future-proofing our core architecture for the next decade of growth.",
-    },
-  ];
-
   const cardsPerSlide = isMobile ? 1 : 2;
   const totalSlides = Math.ceil(leadership.length / cardsPerSlide);
 
@@ -123,11 +99,11 @@ const About = memo(() => {
             <Container className="relative z-10" size="xl" padding="none">
               <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
                 <div className="text-center max-w-4xl mx-auto">
-                  <h1 className="section-heading-h1 tracking-tight text-gray-900 font-montserrat mb-6">
+                  <h1 className="section-heading-h1 tracking-tight text-neutral-900 font-montserrat mb-6">
                     About Zapeera
                   </h1>
-                  <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                    Empowering businesses with intelligent solutions. We're building the future of business management, one innovation at a time.
+                  <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed">
+                    A small Pakistani team building cloud software for Pakistani pharmacies. Honest about what we have shipped and what is still coming.
                   </p>
                 </div>
               </div>
@@ -152,17 +128,17 @@ const About = memo(() => {
                   {/* Right Side - Our Story */}
                   <div className="space-y-6">
                     <h2 className="section-heading text-left">
-                      Our Story
+                      Our story
                     </h2>
                     <div className="space-y-4">
                       <p className="section-paragraph text-left mb-0">
-                        We started with a unique vision to answer one question: how can we make business operations simpler, more efficient, and more accessible? Our journey began with a commitment to deliver solutions that empower business owners and help them master their operations.
+                        We are a small Pakistani team. We spent the last year sitting with pharmacy owners in Lahore and Karachi, watching how a real shop runs from open to close, and listening to what is actually broken versus what is just annoying.
                       </p>
                       <p className="section-paragraph text-left mb-0">
-                        From day one, we've focused on creating intuitive software that adapts to your business needs, not the other way around. Our team of passionate developers, designers, and business experts work tirelessly to ensure every feature serves a real purpose.
+                        The pattern was the same everywhere. Expired medicines piling up in a corner because nobody had time to track 90-day windows. Stock numbers that did not match the shelf because the till and the inventory book were two different worlds. End-of-day hisaab on a calculator at 11pm.
                       </p>
                       <p className="section-paragraph text-left mb-0">
-                        Today, Zapeera stands as a testament to our commitment—helping thousands of businesses across Pakistan streamline their operations, reduce costs, and focus on what matters most: growing their business and serving their customers.
+                        International POS software is built for chains and priced in dollars. Local desktop software is stuck in 2010. Zapeera sits between the two — modern cloud software, built in Pakistan, priced in PKR, supported on WhatsApp.
                       </p>
                     </div>
                   </div>
@@ -171,218 +147,47 @@ const About = memo(() => {
             </Container>
           </section>
 
-          {/* Vision & Mission Section */}
+          {/* Where we are heading */}
           <section className="py-12 md:py-20 bg-primary-50">
             <Container size="xl" padding="none">
               <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
                 <h2 className="section-heading text-center mb-12">
-                  Our Vision & Mission
+                  Where we are heading
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-                  {/* Vision Card - Blue Background */}
                   <Card className="p-8 lg:p-10 border-0 bg-primary-600">
                     <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center mb-6">
                       <Eye className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-h2 font-medium text-white mb-4">Vision</h3>
+                    <h3 className="text-h2 font-medium text-white mb-4">The first 50</h3>
                     <p className="text-white/90 leading-relaxed">
-                      We envision a future where every business, regardless of size, has access to intelligent solutions that enable seamless operations and continuous growth. Our goal is to empower entrepreneurs to focus on what they do best—serving their customers and building their dreams.
-                  </p>
-                </Card>
+                      Our goal for this year is 50 paying pharmacies running Zapeera daily — in Lahore and Karachi first. Not 500, not 5,000. Fifty pharmacies we support personally, who tell us what to fix next.
+                    </p>
+                  </Card>
 
-                  {/* Mission Card - Gradient Background */}
-                  <Card className="p-8 lg:p-10 border-0 bg-gradient-to-br from-accent-500/20 via-white to-primary-800/20">
+                  <Card className="p-8 lg:p-10 border-0 bg-white">
                     <div className="w-16 h-16 rounded-full bg-primary-600/10 flex items-center justify-center mb-6">
                       <Target className="w-8 h-8 text-primary-600" />
-                  </div>
-                    <h3 className="text-h2 font-medium text-gray-900 mb-4">Mission</h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      We are committed to providing businesses with an all-in-one management platform that's powerful, intuitive, and accessible. Our mission is to enable businesses to operate more efficiently, make smarter decisions, and scale effortlessly as they grow.
-                  </p>
-                </Card>
+                    </div>
+                    <h3 className="text-h2 font-medium text-neutral-900 mb-4">What we are building next</h3>
+                    <p className="text-neutral-700 leading-relaxed">
+                      Roman Urdu and Urdu interface. Better expiry analytics. Native WhatsApp ordering for repeat customers. We ship in small steps and tell you when something is actually ready, not before.
+                    </p>
+                  </Card>
                 </div>
               </div>
             </Container>
           </section>
 
-          {/* Milestones Section */}
-          <section className="py-12 md:py-24 bg-white">
-            <Container size="xl" padding="none">
-              <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-                <div className="text-center mb-12">
-                  <h2 className="section-heading">
-                    Milestones of Success
-                  </h2>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-                  {milestones.map((milestone, index) => (
-                    <Card
-                      key={index}
-                      className="p-6 border-t-4 border-primary-600 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 min-h-[220px]"
-                    >
-                      <div className="text-h2 font-medium text-primary-600 mb-3">
-                        {milestone.year}
-                      </div>
-                      <h3 className="card-heading mb-3">
-                        {milestone.title}
-                      </h3>
-                      <p className="text-sm text-gray-600 leading-relaxed">
-                        {milestone.description}
-                      </p>
-                        </Card>
-                  ))}
-                </div>
-              </div>
-            </Container>
-          </section>
-
-          {/* Leadership Section */}
+          {/* Team Section — honest, name-free until we are ready to publish names + bios */}
           <section className="py-12 md:py-20 bg-primary-50">
             <Container size="xl" padding="none">
               <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-                <div className="text-center max-w-3xl mx-auto mb-12">
-                  <h2 className="section-heading">
-                    Leadership
-                </h2>
+                <div className="text-center max-w-3xl mx-auto">
+                  <h2 className="section-heading">The team</h2>
                   <p className="section-paragraph">
-                    Meet the visionaries guiding Zapeera towards a smarter future.
-                </p>
-              </div>
-
-                <div className="relative max-w-6xl mx-auto">
-                  {/* Left Navigation Button */}
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    onClick={prevLeader}
-                    disabled={!canGoPrev}
-                    className="absolute -left-16 top-1/2 -translate-y-1/2 z-10 rounded-full hidden md:flex bg-white shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    <ChevronLeft className="w-5 h-5" />
-                  </Button>
-
-                  {/* Slider Container */}
-                  <div className="overflow-hidden">
-                    <div
-                      className="flex transition-transform duration-500 ease-in-out"
-                      style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-                    >
-                      {Array.from({ length: totalSlides }).map((_, slideIndex) => {
-                        const startIndex = slideIndex * cardsPerSlide;
-                        const slideLeaders = leadership.slice(startIndex, startIndex + cardsPerSlide);
-
-                        return (
-                          <div
-                            key={slideIndex}
-                            className="min-w-full grid grid-cols-1 md:grid-cols-2 gap-6 px-2"
-                          >
-                            {slideLeaders.map((leader, cardIndex) => (
-                              <Card
-                                key={startIndex + cardIndex}
-                                className="p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-300 h-full"
-                              >
-                                <div className="flex flex-col md:flex-row gap-6 h-full">
-                                  {/* Profile Image - Left Side with Padding */}
-                                  <div className="flex-shrink-0">
-                                    <div className="relative w-[120px] h-[120px] md:w-[140px] md:h-[170px] rounded-lg overflow-hidden">
-                      <Image
-                                        src={leader.image}
-                                        alt={leader.name}
-                                        fill
-                                        className="object-cover"
-                      />
-                    </div>
-                                  </div>
-
-                                  {/* Content - Right Side */}
-                                  <div className="flex-1 flex flex-col justify-between">
-                                    <div>
-                                      <div className="flex items-start justify-between mb-3">
-                                        <div className="flex-1">
-                                          <h3 className="card-heading mb-1">
-                                            {leader.name}
-                                          </h3>
-                                          <p className="text-sm font-medium text-primary-600 mb-3">
-                                            {leader.role}
-                                          </p>
-                                        </div>
-                                        <a
-                                          href={leader.linkedin}
-                                          target="_blank"
-                                          rel="noopener noreferrer"
-                                          className="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center hover:bg-primary-700 transition-colors flex-shrink-0 ml-4"
-                                        >
-                                          <Linkedin className="w-5 h-5 text-white" />
-                                        </a>
-                      </div>
-                                      <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                                        {leader.bio}
-                                      </p>
-                      </div>
-                    </div>
-                  </div>
-                              </Card>
-                            ))}
-                            {/* Fill empty space if odd number of cards */}
-                            {slideLeaders.length === 1 && (
-                              <div className="hidden md:block"></div>
-                            )}
-                      </div>
-                        );
-                      })}
-                </div>
-              </div>
-
-                  {/* Right Navigation Button */}
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    onClick={nextLeader}
-                    disabled={!canGoNext}
-                    className="absolute -right-16 top-1/2 -translate-y-1/2 z-10 rounded-full hidden md:flex bg-white shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    <ChevronRight className="w-5 h-5" />
-                  </Button>
-
-                  {/* Dots indicator and mobile buttons */}
-                  <div className="flex items-center justify-center gap-4 mt-8">
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      onClick={prevLeader}
-                      disabled={!canGoPrev}
-                      className="rounded-full md:hidden disabled:opacity-50"
-                    >
-                      <ChevronLeft className="w-5 h-5" />
-                    </Button>
-
-                    {/* Dots indicator */}
-                    <div className="flex gap-2">
-                      {Array.from({ length: totalSlides }).map((_, index) => (
-                        <button
-                          key={index}
-                          onClick={() => setCurrentIndex(index)}
-                          className={`h-2 rounded-full transition-all ${
-                            index === currentIndex
-                              ? "bg-primary-600 w-8"
-                              : "bg-gray-300 w-2"
-                          }`}
-                          aria-label={`Go to slide ${index + 1}`}
-                        />
-                      ))}
-                    </div>
-
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      onClick={nextLeader}
-                      disabled={!canGoNext}
-                      className="rounded-full md:hidden disabled:opacity-50"
-                    >
-                      <ChevronRight className="w-5 h-5" />
-                    </Button>
-                </div>
+                    A small Pakistani team — engineers, designers, and people who have spent time on the pharmacy side of the counter. Names and roles will go up here when we are ready to put them up properly.
+                  </p>
                 </div>
               </div>
             </Container>
