@@ -20,11 +20,11 @@ const HeroSection = () => {
           <div className="text-center max-w-5xl mx-auto px-2 mb-12 md:mb-16">
             {/* Main Heading — one-line on desktop, natural wrap on smaller widths */}
             <h1 className="text-h1 text-neutral-900 font-montserrat mb-6 md:mb-8">
-              A Business Management Platform You Can <em className="italic font-bold text-primary-700">Depend On</em>
+              The pharmacy software, built for <em className="italic font-bold text-primary-700">Pakistan</em>.
             </h1>
 
             <p className="text-body-lg md:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed font-montserrat font-normal mb-8 md:mb-10">
-              Zapeera is a powerful cloud-based business management and POS system designed for pharmacies, retail stores, restaurants, and wholesalers. Manage inventory, branches, staff, and sales effortlessly online or offline and keep your operations running smoothly
+              Track every batch and expiry. Replace the end-of-day hisaab. See which medicines actually make profit and which are dead stock — across one shop or three. Built for the way Pakistani pharmacies actually run, priced for the Pakistani market.
             </p>
 
             {/* CTA Buttons */}
