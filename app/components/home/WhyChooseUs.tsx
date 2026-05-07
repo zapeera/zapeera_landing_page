@@ -157,7 +157,7 @@ const WhyChooseUs = () => {
   const activeContent = tabContent[activeTab as keyof typeof tabContent];
 
   return (
-    <section className="relative lg:pt-[80px] md:pb-[90px] pb-[45px] pt-[40px] overflow-hidden" style={{ backgroundColor: 'rgb(239 246 255)' }}>
+    <section className="relative py-12 md:py-24 overflow-hidden bg-primary-50">
       <Container size="xl" padding="none">
         <div className="relative z-10 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}
@@ -179,7 +179,7 @@ const WhyChooseUs = () => {
                 md:justify-center
                 gap-3
                 lg:gap-4
-                mb-[20px]
+                mb-5
                 overflow-x-auto
                 md:overflow-visible
                 scrollbar-hide
@@ -201,7 +201,7 @@ const WhyChooseUs = () => {
                     whitespace-nowrap
                     ${
                       activeTab === tab.id
-                        ? "bg-[#1947C4] text-white shadow-md shadow-[#1947C4]/20"
+                        ? "bg-primary-600 text-white shadow-md shadow-primary-600/20"
                         : "bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900 border border-gray-200"
                     }
                   `}
@@ -218,7 +218,7 @@ const WhyChooseUs = () => {
             {/* Left Side - Content */}
             <div className="md:space-y-4 space-y-2">
               {/* Title */}
-              <h3 className="text-[22px] md:text-[28px] lg:text-[32px] font-medium text-gray-900">
+              <h3 className="text-h2 font-medium text-gray-900">
                 {activeContent.title}
               </h3>
 
@@ -235,8 +235,8 @@ const WhyChooseUs = () => {
                     className="p-0"
                   >
                     {/* Icon */}
-                    <div className="w-10 h-10 rounded-lg bg-[#1947C4]/10 flex items-center justify-center mb-2">
-                      <feature.icon className="w-5 h-5 text-[#1947C4]" strokeWidth={2} />
+                    <div className="w-10 h-10 rounded-lg bg-primary-600/10 flex items-center justify-center mb-2">
+                      <feature.icon className="w-5 h-5 text-primary-600" strokeWidth={2} />
                     </div>
 
                     {/* Title */}
@@ -245,7 +245,7 @@ const WhyChooseUs = () => {
                     </h4>
 
                     {/* Description */}
-                    <p className="text-[14px] text-gray-600 leading-relaxed">
+                    <p className="text-body-sm text-gray-600 leading-relaxed">
                       {feature.description}
                     </p>
                   </div>

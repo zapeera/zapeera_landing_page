@@ -81,7 +81,7 @@ const PricingSection = ({ showHeading = true }: PricingSectionProps) => {
   ];
 
   return (
-    <section className="pt-[40px] md:pt-[80px] md:pb-[110px] pb-[40px] gradient-to-br from-[#26D2C6]/15 to-[white]/15" style={{ backgroundColor: 'rgb(239 246 255)' }}>
+    <section className="py-12 md:py-24 bg-primary-50">
      <Container size="full" padding="none">
      <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         {/* Header Section */}
@@ -104,7 +104,7 @@ const PricingSection = ({ showHeading = true }: PricingSectionProps) => {
           <Switch checked={isYearly} onCheckedChange={setIsYearly} />
           <span className={`text-sm ${isYearly ? "font-semibold text-black" : "text-gray-500"}`}>
             Yearly
-            <span className="ml-2 text-xs text-[#0C2C8A]">(Save 17%)</span>
+            <span className="ml-2 text-xs text-primary-800">(Save 17%)</span>
           </span>
         </div>
 
@@ -118,14 +118,14 @@ const PricingSection = ({ showHeading = true }: PricingSectionProps) => {
               }}
               className={`relative p-8 rounded-2xl transition-all duration-300 shadow-md hover:shadow-xl cursor-pointer ${
                 selectedPlan === index
-                  ? "!border-2 !border-[#0C2C8A] lg:scale-105 scale-[1.02] bg-white shadow-lg"
+                  ? "!border-2 !border-primary-800 lg:scale-105 scale-[1.02] bg-white shadow-lg"
                   : "border-gray-200"
               }`}
             >
               {/* Active Badge - Shows "Most Popular" for Professional, "Selected" for others */}
               {selectedPlan === index && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
-                  <div className="bg-[#0C2C8A] text-white px-4 py-1 rounded-full text-sm font-medium shadow-lg">
+                  <div className="bg-primary-800 text-white px-4 py-1 rounded-full text-sm font-medium shadow-lg">
                     {index === 1 ? "Most Popular" : "Selected"}
                   </div>
                 </div>
@@ -156,8 +156,8 @@ const PricingSection = ({ showHeading = true }: PricingSectionProps) => {
               <Button
                 className={`w-full mb-6 py-3 rounded-lg font-semibold transition-all ${
                   selectedPlan === index
-                    ? "text-white bg-gradient-to-r from-[#29CDCF] to-[#1947C4] hover:opacity-90 shadow-lg hover:shadow-xl"
-                    : "bg-white border-2 border-gray-300 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-[#29CDCF] hover:to-[#1947C4] hover:border-transparent shadow-sm hover:shadow-lg"
+                    ? "text-white bg-gradient-to-r from-accent-400 to-primary-600 hover:opacity-90 shadow-lg hover:shadow-xl"
+                    : "bg-white border-2 border-gray-300 text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-accent-400 hover:to-primary-600 hover:border-transparent shadow-sm hover:shadow-lg"
                 }`}
                 asChild
                 onClick={(e) => e.stopPropagation()}
@@ -171,8 +171,8 @@ const PricingSection = ({ showHeading = true }: PricingSectionProps) => {
               <ul className="space-y-3">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-[#0C2C8A]/10 flex items-center justify-center mt-0.5">
-                      <Check className="w-3 h-3 text-[#0C2C8A]" />
+                    <div className="w-5 h-5 rounded-full bg-primary-800/10 flex items-center justify-center mt-0.5">
+                      <Check className="w-3 h-3 text-primary-800" />
                     </div>
                     <span className="text-sm text-gray-700">{feature}</span>
                   </li>

@@ -49,7 +49,7 @@ const FeaturesOverview = () => {
   ];
 
   return (
-    <section className="lg:pt-[80px] pt-[40px] md:pb-[85px] pb-[45px] gradient-to-br from-[#26D2C6]/15 via-white to-[#1C22AA]/15" style={{ backgroundColor: 'rgb(239 246 255)' }}>
+    <section className="py-12 md:py-24 bg-primary-50">
       <Container size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}
@@ -67,10 +67,10 @@ const FeaturesOverview = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl border border-gray-200 p-4 hover:border-[#1947C4]/50 hover:shadow-md transition-all duration-300 flex flex-col"
+                className="bg-white rounded-xl border border-gray-200 p-4 hover:border-primary-600/50 hover:shadow-md transition-all duration-300 flex flex-col"
               >
                 {/* Image */}
-                <div className="w-full h-12 sm:h-14 md:h-16 lg:h-[60px] xl:h-[60px] 2xl:h-[60px] mb-4 flex items-center justify-start">
+                <div className="w-full h-12 sm:h-14 md:h-16 lg:h-[60px] mb-4 flex items-center justify-start">
                   <Image
                     src={feature.image}
                     alt={feature.title}

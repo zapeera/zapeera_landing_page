@@ -41,7 +41,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="bg-white md:pt-[80px] pt-[40px] md:pb-[92px] pb-[40px]">
+    <section className="bg-white py-12 md:py-24">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="text-center max-w-3xl mx-auto animate-fade-in-up mb-6 lg:mb-10">
           <h2 className="section-heading">
@@ -81,7 +81,7 @@ const Testimonials = () => {
               )}
 
               {/* Quote */}
-              <blockquote className="text-[14px] lg:text-2xl font-medium mb-6 leading-relaxed">
+              <blockquote className="text-body-sm lg:text-2xl font-medium mb-6 leading-relaxed">
                 "{testimonials[currentIndex].quote}"
               </blockquote>
 

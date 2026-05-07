@@ -22,7 +22,7 @@ const PharmacySection = () => {
       <div className="" />
       
       <Container>
-      <div className="  lg:pt-[100px] pt-[50px]">
+      <div className="  pt-12 md:pt-24">
         <div className=" mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}

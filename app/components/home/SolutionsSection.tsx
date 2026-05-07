@@ -29,7 +29,7 @@ const SolutionsSection = () => {
   ];
 
   return (
-    <section className="bg-white lg:pt-[85px] pt-[40px] md:pb-[90px] pb-[45px]">
+    <section className="bg-white py-12 md:py-24">
       <Container size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}
@@ -47,7 +47,7 @@ const SolutionsSection = () => {
             {solutions.map((solution, index) => (
               <div
                 key={index}
-                className="bg-white h-full rounded-2xl p-3 border border-gray-200 hover:border-[#1947C4]/50 hover:shadow-md transition-all duration-300 flex flex-col"
+                className="bg-white h-full rounded-2xl p-3 border border-gray-200 hover:border-primary-600/50 hover:shadow-md transition-all duration-300 flex flex-col"
               >
                 {/* Image */}
                 <div className="relative w-full h-32 rounded-lg mb-4 overflow-hidden">

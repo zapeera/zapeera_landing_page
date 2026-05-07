@@ -35,7 +35,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="relative lg:pt-[80px] pt-[40px] md:pb-[90px] pb-[45px]  overflow-hidden gradient-to-br from-[#26D2C6]/15 to-[white]/15" style={{ backgroundColor: 'rgb(239 246 255)' }}>
+    <section className="relative py-12 md:py-24 overflow-hidden bg-primary-50">
       <Container className="relative z-10" size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}
@@ -56,7 +56,7 @@ const FAQSection = () => {
                 >
                   <AccordionTrigger className="p-6 text-left hover:no-underline">
                     <div className="flex items-start gap-4 w-full">
-                      <div className="w-3 h-3 rounded-full bg-[#1947C4] mt-2 flex-shrink-0" />
+                      <div className="w-3 h-3 rounded-full bg-primary-600 mt-2 flex-shrink-0" />
                       <div className="flex-1">
                         <h3 className="card-heading">
                           {faq.question}
@@ -65,8 +65,8 @@ const FAQSection = () => {
                     </div>
                   </AccordionTrigger>
 
-                  <AccordionContent className="px-6 pb-6" style={{ backgroundColor: 'rgb(239 246 255)' }}>
-                    <div className="pl-7 border-l-2 border-[#1947C4]/20">
+                  <AccordionContent className="px-6 pb-6">
+                    <div className="pl-7 border-l-2 border-primary-600/20">
                       <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                     </div>
                   </AccordionContent>

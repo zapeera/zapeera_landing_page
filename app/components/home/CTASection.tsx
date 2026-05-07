@@ -4,13 +4,13 @@ import Link from "next/link";
 
 const CTASection = () => {
   return (
-    <section className="relative overflow-hidden bg-white lg:py-[80px] py-[40px]">
+    <section className="relative overflow-hidden bg-white py-12 md:py-24">
       {/* Background gradient */}
       <div className="absolute " />
 
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 relative">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
-          <h2 className="section-heading md:mb-[26px] mb-[16px]">
+          <h2 className="section-heading md:mb-6 mb-4">
             Ready to Simplify Your Business?
           </h2>
           <p className="section-paragraph max-w-3xl mx-auto">
@@ -18,7 +18,7 @@ const CTASection = () => {
           </p>
 
           <div className="flex items-center justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-[#29CDCF] to-[#1947C4] hover:opacity-90 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-full font-semibold group" asChild>
+            <Button size="lg" className="bg-gradient-to-r from-accent-400 to-primary-600 hover:opacity-90 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-full font-semibold group" asChild>
               <Link href="/contact-us">
                 Start Your Free Trial Now
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />

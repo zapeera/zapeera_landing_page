@@ -25,7 +25,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="relative overflow-hidden bg-white lg:py-[80px] py-[40px]">
+    <section className="relative overflow-hidden bg-white py-12 md:py-24">
       <Container size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Section Heading */}
@@ -44,7 +44,7 @@ const HowItWorks = () => {
               >
                 {/* Step Number - Simple on mobile, Circle on desktop */}
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-full hidden md:flex items-center justify-center mx-auto mb-4 bg-[#E9FAF9] border-2 border-[#1947C4]/30">
+                  <div className="w-16 h-16 rounded-full hidden md:flex items-center justify-center mx-auto mb-4 bg-accent-50 border-2 border-primary-600/30">
                     <span className="md:text-xl text-sm md:font-bold font-medium text-black">
                       {step.number}
                     </span>
