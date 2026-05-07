@@ -1,280 +1,177 @@
-import type { Metadata } from 'next';
+'use client'
+
 import Image from "next/image";
-import {
-  Building2,
-  Users,
-  Package,
-  ShoppingCart,
-  FileText,
-  BarChart3,
-  UserCog,
-  GitBranch,
-  Warehouse,
-  UserCheck,
-  Factory,
-  Layout,
-  Truck,
-} from "lucide-react";
+import Link from "next/link";
+import { Calendar, Boxes, BarChart3, Check } from "lucide-react";
+import { Button } from "@/app/components/ui/button";
 import Container from "../components/ui/container";
 import Loading from "../components/ui/loading";
 
-export const metadata: Metadata = {
-  title: 'Features - Comprehensive Business Management Tools',
-  description: "Discover Zapeera's powerful features: POS, inventory, analytics, and more.",
-  openGraph: {
-    title: 'Features - Comprehensive Business Management Tools',
-    description: "Discover Zapeera's powerful features: POS, inventory, analytics, and more.",
-    url: 'https://zapeera.com/features',
-    images: ['/og-features.jpg'],
+const pillars = [
+  {
+    icon: Calendar,
+    title: "Expiry tracking that actually works",
+    intro:
+      "The biggest leak in a Pakistani pharmacy is medicines you do not return to the supplier in time. Zapeera tracks every batch from the moment it comes in, alerts you with enough runway to act, and tells you exactly how much each expiry would have cost you if you had missed it.",
+    points: [
+      "Alerts at 90, 60, and 30 days before any batch expires",
+      "Per-supplier return-window tracking — know who takes returns and who does not",
+      "Mark batches that cannot be returned and write them off cleanly",
+      "End-of-month expiry report by supplier, by category, by branch",
+    ],
+    image: "/feature/Batch.webp",
   },
-  alternates: { canonical: 'https://zapeera.com/features' },
-};
+  {
+    icon: Boxes,
+    title: "Inventory you can trust",
+    intro:
+      "Most pharmacy stock counts are wrong because the till and the inventory book are two different worlds. Zapeera makes them the same world. Barcode scan when stock comes in, scan again at the till. The number on the screen matches the number on the shelf without anyone counting at midnight.",
+    points: [
+      "Real-time stock levels across one shop or three branches",
+      "Barcode at intake and at the till — no manual counting",
+      "Low-stock alerts tied to your real selling speed, not a fixed threshold",
+      "Inter-branch transfers with batch and expiry kept intact",
+    ],
+    image: "/feature/Inventory Management.webp",
+  },
+  {
+    icon: BarChart3,
+    title: "Reports that tell you what to do next",
+    intro:
+      "Most reports show you what happened. Zapeera shows you what to do about it. Profit by medicine, dead stock by category, repeat customers by branch — straight on the dashboard, not buried five clicks deep.",
+    points: [
+      "Profit-per-medicine ranked highest to lowest",
+      "Dead-stock list — items that have not sold in 60 / 90 / 180 days",
+      "Repeat-customer report — who came back, what they bought, how often",
+      "End-of-day in 5 seconds, not an hour with a calculator",
+    ],
+    image: "/feature/Reports & Analytics.webp",
+  },
+];
+
+const supporting = [
+  { title: "POS that works offline", body: "Sales keep ringing when the internet drops. Everything syncs once the line is back." },
+  { title: "Multi-branch", body: "Manage up to three branches from one dashboard. Transfer stock, compare branches, consolidate reports." },
+  { title: "Smart billing & invoicing", body: "Tax-correct invoices in PKR. SMS or printed receipt. Returns and refunds without paperwork." },
+  { title: "Role-based access", body: "What the cashier sees is not what the owner sees. Audit logs of who did what." },
+  { title: "Customer records", body: "Phone-number lookup at the till. Repeat-prescription history. Loyalty without a separate app." },
+  { title: "Suppliers & manufacturers", body: "Purchase history, return windows, and supplier performance ranked by reliability." },
+];
 
 const Features = () => {
-  const features = [
-    {
-      icon: Building2,
-      title: "Multiple Business Management",
-      description: "Effortlessly manage multiple businesses from a single, unified dashboard.",
-      benefits: [
-        "Consolidated view of all business operations",
-        "Switch between businesses with one click",
-        "Separate accounting and reporting per business",
-        "Individual branding for each business",
-      ],
-      image: "/images/business.webp",
-    },
-    {
-      icon: GitBranch,
-      title: "Multi-Branch Management",
-      description: "Coordinate and monitor operations across all your locations in real-time.",
-      benefits: [
-        "Centralized control with branch autonomy",
-        "Real-time sync across all locations",
-        "Branch-specific performance tracking",
-        "Inter-branch inventory transfers",
-      ],
-      image: "/feature/Branch Menagement.webp",
-    },
-    {
-      icon: Users,
-      title: "Staff Management",
-      description: "Organize your team with comprehensive employee management tools.",
-      benefits: [
-        "Role-based access control",
-        "Time tracking and attendance",
-        "Performance analytics per employee",
-        "Shift scheduling and management",
-      ],
-      image: "/feature/Staff Menagement.webp",
-    },
-    {
-      icon: Warehouse,
-      title: "Inventory Management & Tracking",
-      description: "Keep perfect track of your stock levels with intelligent inventory management.",
-      benefits: [
-        "Real-time stock level monitoring",
-        "Automated low-stock alerts",
-        "Batch and serial number tracking",
-        "Supplier management",
-      ],
-      image: "/feature/Inventory Management.webp",
-    },
-    {
-      icon: ShoppingCart,
-      title: "Advanced POS Management",
-      description: "Lightning-fast point-of-sale system that works online and offline.",
-      benefits: [
-        "Quick checkout process",
-        "Multiple payment methods",
-        "Offline mode with auto-sync",
-        "Customer display integration",
-      ],
-      image: "/feature/POS.webp",
-    },
-    {
-      icon: FileText,
-      title: "Smart Billing & Invoicing",
-      description: "Generate professional invoices and receipts instantly.",
-      benefits: [
-        "Customizable invoice templates",
-        "Automated recurring billing",
-        "Tax calculation and compliance",
-        "Email and SMS invoice delivery",
-      ],
-      image: "/feature/Smart Billing & Invoicing.webp",
-    },
-    {
-      icon: FileText,
-      title: "Invoice Management",
-      description: "Comprehensive invoice management system for streamlined billing processes.",
-      benefits: [
-        "Automated invoice generation",
-        "Payment tracking and reminders",
-        "Invoice templates customization",
-        "Multi-currency invoice support",
-      ],
-      image: "/feature/Invoices.webp",
-    },
-    {
-      icon: BarChart3,
-      title: "Reports & Analytics",
-      description: "Make data-driven decisions with comprehensive business insights.",
-      benefits: [
-        "Real-time sales dashboards",
-        "Profit and loss statements",
-        "Inventory turnover reports",
-        "Custom report builder",
-      ],
-      image: "/feature/Reports & Analytics.webp",
-    },
-    {
-      icon: UserCog,
-      title: "Role-Based Access Management",
-      description: "Control who sees what with granular permission controls.",
-      benefits: [
-        "Custom role creation",
-        "Permission management",
-        "Activity logs and audit trails",
-        "Secure authentication",
-      ],
-      image: "/feature/Role-Based Access Management.webp",
-    },
-    {
-      icon: Package,
-      title: "Batch Management",
-      description: "Efficiently manage product batches with comprehensive tracking and control.",
-      benefits: [
-        "Batch number tracking",
-        "Expiry date monitoring",
-        "Batch-wise inventory reports",
-        "Quality control management",
-      ],
-      image: "/feature/Batch.webp",
-    },
-    {
-      icon: UserCheck,
-      title: "Customer Management",
-      description: "Build lasting relationships with comprehensive customer management tools.",
-      benefits: [
-        "Customer profile management",
-        "Purchase history tracking",
-        "Customer loyalty programs",
-        "Communication history",
-      ],
-      image: "/feature/customer.webp",
-    },
-    {
-      icon: Factory,
-      title: "Manufacturer Management",
-      description: "Streamline manufacturer relationships and product sourcing processes.",
-      benefits: [
-        "Manufacturer database",
-        "Product catalog management",
-        "Supplier performance tracking",
-        "Purchase order automation",
-      ],
-      image: "/feature/Manufactures.webp",
-    },
-    {
-      icon: Layout,
-      title: "Shelf Management",
-      description: "Optimize your retail space with intelligent shelf management solutions.",
-      benefits: [
-        "Shelf layout planning",
-        "Product placement optimization",
-        "Shelf space utilization tracking",
-        "Visual merchandising tools",
-      ],
-      image: "/feature/Shelf.webp",
-    },
-    {
-      icon: Truck,
-      title: "Supplier Management",
-      description: "Manage your supplier relationships and procurement processes efficiently.",
-      benefits: [
-        "Supplier database management",
-        "Purchase order tracking",
-        "Delivery scheduling",
-        "Supplier performance analytics",
-      ],
-      image: "/feature/Suppliers.webp",
-    },
-  ];
-
   return (
     <Loading>
-      <div className="min-h-screen bg-background">
-        <main>
-          {/* Hero Section */}
-          <section className="pt-32 pb-16 lg:pt-40 lg:pb-20 bg-gradient-hero">
-            <div className="container mx-auto px-4 lg:px-8">
-              <div className="text-center max-w-3xl mx-auto animate-fade-in-up">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                  Powerful Features for{" "}
-                  <span className="bg-gradient-primary bg-clip-text text-transparent">
-                    Modern Businesses
-                  </span>
-                </h1>
-                <p className="text-lg md:text-xl text-muted-foreground">
-                  Everything you need to manage, grow, and scale your business—all in one intelligent platform.
-                </p>
-              </div>
+      <main className="min-h-screen bg-background">
+        {/* Hero */}
+        <section className="pt-32 pb-16 lg:pt-40 lg:pb-20 bg-cream">
+          <Container>
+            <div className="text-center max-w-3xl mx-auto">
+              <h1 className="text-h1 text-neutral-900 font-bold mb-6">
+                Three things Zapeera does well — in detail
+              </h1>
+              <p className="text-body-lg text-neutral-600">
+                Expiry tracking, inventory you can trust, and reports that tell you what to do next. Plus the supporting capabilities that make them work for a Pakistani pharmacy.
+              </p>
             </div>
-          </section>
+          </Container>
+        </section>
 
-          {/* Features Grid */}
-          <section className="py-20 lg:py-32">
-            <Container>
-              <div className="space-y-16 lg:space-y-24">
-                {features.map((feature, index) => (
-                  <div
-                    key={index}
-                    className={`flex flex-col ${
-                      index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                    } gap-8 lg:gap-16 items-center animate-fade-in`}
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    {/* Left Content */}
-                    <div className="flex-1">
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center mb-6">
-                        <feature.icon className="w-8 h-8 text-primary-foreground" />
-                      </div>
-                      <h2 className="text-3xl font-bold mb-4">{feature.title}</h2>
-                      <p className="text-lg text-muted-foreground mb-6">
-                        {feature.description}
-                      </p>
-                      <ul className="space-y-3">
-                        {feature.benefits.map((benefit, benefitIndex) => (
-                          <li key={benefitIndex} className="flex items-start gap-3">
-                            <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                              <div className="w-2 h-2 rounded-full bg-primary" />
-                            </div>
-                            <span>{benefit}</span>
-                          </li>
-                        ))}
-                      </ul>
+        {/* Three pillars */}
+        <section className="py-20 lg:py-32">
+          <Container>
+            <div className="space-y-20 lg:space-y-32">
+              {pillars.map((feature, index) => (
+                <div
+                  key={feature.title}
+                  className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} gap-8 lg:gap-16 items-center`}
+                >
+                  <div className="flex-1">
+                    <div className="w-14 h-14 rounded-2xl bg-primary-50 flex items-center justify-center mb-6">
+                      <feature.icon className="w-7 h-7 text-primary-600" />
                     </div>
+                    <h2 className="text-h2 text-neutral-900 font-semibold mb-4">{feature.title}</h2>
+                    <p className="text-body-lg text-neutral-600 mb-6 leading-relaxed">
+                      {feature.intro}
+                    </p>
+                    <ul className="space-y-3">
+                      {feature.points.map((point) => (
+                        <li key={point} className="flex items-start gap-3">
+                          <div className="w-6 h-6 rounded-full bg-primary-600/10 flex items-center justify-center flex-shrink-0 mt-1">
+                            <Check className="w-3.5 h-3.5 text-primary-600" />
+                          </div>
+                          <span className="text-body text-neutral-700">{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                    {/* Right Image */}
-                    <div className="flex-1 w-full">
-                      <div className="rounded-2xl border border-border overflow-hidden">
-                        <Image
-                          src={feature.image}
-                          alt={feature.title}
-                          width={600}
-                          height={400}
-                          className="object-cover w-full h-full"
-                        />
-                      </div>
+                  <div className="flex-1 w-full">
+                    <div className="rounded-2xl border border-neutral-200 overflow-hidden bg-white shadow-md">
+                      <Image
+                        src={feature.image}
+                        alt={feature.title}
+                        width={800}
+                        height={550}
+                        className="object-cover w-full h-full"
+                      />
                     </div>
                   </div>
-                ))}
+                </div>
+              ))}
+            </div>
+          </Container>
+        </section>
+
+        {/* Supporting capabilities */}
+        <section className="py-20 md:py-32 bg-primary-50">
+          <Container>
+            <div className="text-center max-w-3xl mx-auto">
+              <h2 className="section-heading">The supporting bits</h2>
+              <p className="section-paragraph">
+                The three pillars above are the headline. These are the everyday capabilities that sit behind them and make a Pakistani pharmacy actually run.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {supporting.map((item) => (
+                <div
+                  key={item.title}
+                  className="bg-white rounded-xl border border-neutral-200 p-6 hover:border-primary-600/40 hover:shadow-md transition-all duration-300"
+                >
+                  <h3 className="card-heading">{item.title}</h3>
+                  <p className="text-body text-neutral-600 leading-relaxed">{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </Container>
+        </section>
+
+        {/* CTA */}
+        <section className="py-20 md:py-32 bg-white">
+          <Container>
+            <div className="max-w-2xl mx-auto text-center">
+              <h2 className="section-heading">Want to see it on your stock?</h2>
+              <p className="section-paragraph">
+                Free for 30 days. We pre-load your medicines and walk your team through it on a setup call.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <Button
+                  size="lg"
+                  className="bg-primary-800 hover:bg-primary-900 text-white rounded-full px-7"
+                  asChild
+                >
+                  <a href="https://wa.me/923107100663" target="_blank" rel="noopener noreferrer">
+                    Message us on WhatsApp
+                  </a>
+                </Button>
+                <Button size="lg" variant="secondary" className="rounded-full px-7" asChild>
+                  <Link href="/pricing">See pricing</Link>
+                </Button>
               </div>
-            </Container>
-          </section>
-        </main>
-      </div>
+            </div>
+          </Container>
+        </section>
+      </main>
     </Loading>
   );
 };
