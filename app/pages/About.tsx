@@ -114,10 +114,10 @@ const About = memo(() => {
           {/* Hero Section with Gradient Background */}
           <section className="relative min-h-[500px] lg:min-h-[600px] flex items-center justify-center overflow-hidden bg-white">
             {/* Full section gradient background */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_110%_85%_at_center,rgba(41,205,207,0.18)_0%,rgba(41,205,207,0.14)_10%,rgba(41,205,207,0.11)_20%,rgba(38,210,198,0.10)_32%,rgba(25,71,196,0.09)_45%,rgba(25,71,196,0.13)_58%,rgba(25,71,196,0.12)_70%,rgba(25,71,196,0.09)_80%,rgba(25,71,196,0.05)_88%,rgba(25,71,196,0.03)_94%,rgba(25,71,196,0.015)_98%,transparent_100%)] blur-lg pointer-events-none"></div>
+            <div className="absolute inset-0 bg-hero-glow blur-lg pointer-events-none"></div>
 
             {/* Subtle texture background */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.02)_1px,transparent_0)] bg-[length:20px_20px] pointer-events-none opacity-40"></div>
+            <div className="absolute inset-0 bg-dotted-texture pointer-events-none opacity-40"></div>
 
             {/* Content */}
             <Container className="relative z-10" size="xl" padding="none">
@@ -135,7 +135,7 @@ const About = memo(() => {
           </section>
 
           {/* Our Story Section */}
-          <section className="lg:py-[80px] py-[40px] bg-white">
+          <section className="py-12 md:py-24 bg-white">
             <Container size="xl" padding="none">
               <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -172,7 +172,7 @@ const About = memo(() => {
           </section>
 
           {/* Vision & Mission Section */}
-          <section className="lg:py-[80px] py-[40px]" style={{ backgroundColor: 'rgb(239 246 255)' }}>
+          <section className="py-12 md:py-20 bg-primary-50">
             <Container size="xl" padding="none">
               <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
                 <h2 className="section-heading text-center mb-12">
@@ -180,22 +180,22 @@ const About = memo(() => {
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
                   {/* Vision Card - Blue Background */}
-                  <Card className="p-8 lg:p-10 border-0" style={{ backgroundColor: '#1947C4' }}>
+                  <Card className="p-8 lg:p-10 border-0 bg-primary-600">
                     <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center mb-6">
                       <Eye className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-[32px] font-medium text-white mb-4">Vision</h3>
+                    <h3 className="text-h2 font-medium text-white mb-4">Vision</h3>
                     <p className="text-white/90 leading-relaxed">
                       We envision a future where every business, regardless of size, has access to intelligent solutions that enable seamless operations and continuous growth. Our goal is to empower entrepreneurs to focus on what they do best—serving their customers and building their dreams.
                   </p>
                 </Card>
 
                   {/* Mission Card - Gradient Background */}
-                  <Card className="p-8 lg:p-10 border-0 bg-gradient-to-br from-[#26D2C6]/20 via-white to-[#1C22AA]/20">
-                    <div className="w-16 h-16 rounded-full bg-[#1947C4]/10 flex items-center justify-center mb-6">
-                      <Target className="w-8 h-8 text-[#1947C4]" />
+                  <Card className="p-8 lg:p-10 border-0 bg-gradient-to-br from-accent-500/20 via-white to-primary-800/20">
+                    <div className="w-16 h-16 rounded-full bg-primary-600/10 flex items-center justify-center mb-6">
+                      <Target className="w-8 h-8 text-primary-600" />
                   </div>
-                    <h3 className="text-[32px] font-medium text-gray-900 mb-4">Mission</h3>
+                    <h3 className="text-h2 font-medium text-gray-900 mb-4">Mission</h3>
                     <p className="text-gray-700 leading-relaxed">
                       We are committed to providing businesses with an all-in-one management platform that's powerful, intuitive, and accessible. Our mission is to enable businesses to operate more efficiently, make smarter decisions, and scale effortlessly as they grow.
                   </p>
@@ -206,7 +206,7 @@ const About = memo(() => {
           </section>
 
           {/* Milestones Section */}
-          <section className="lg:py-[80px] py-[40px] bg-white">
+          <section className="py-12 md:py-24 bg-white">
             <Container size="xl" padding="none">
               <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
                 <div className="text-center mb-12">
@@ -219,9 +219,9 @@ const About = memo(() => {
                   {milestones.map((milestone, index) => (
                     <Card
                       key={index}
-                      className="p-6 border-t-4 border-[#1947C4] rounded-xl shadow-sm hover:shadow-md transition-all duration-300 min-h-[220px]"
+                      className="p-6 border-t-4 border-primary-600 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 min-h-[220px]"
                     >
-                      <div className="text-[32px] font-medium text-[#1947C4] mb-3">
+                      <div className="text-h2 font-medium text-primary-600 mb-3">
                         {milestone.year}
                       </div>
                       <h3 className="card-heading mb-3">
@@ -238,7 +238,7 @@ const About = memo(() => {
           </section>
 
           {/* Leadership Section */}
-          <section className="lg:py-[80px] py-[40px]" style={{ backgroundColor: 'rgb(239 246 255)' }}>
+          <section className="py-12 md:py-20 bg-primary-50">
             <Container size="xl" padding="none">
               <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
                 <div className="text-center max-w-3xl mx-auto mb-12">
@@ -303,7 +303,7 @@ const About = memo(() => {
                                           <h3 className="card-heading mb-1">
                                             {leader.name}
                                           </h3>
-                                          <p className="text-sm font-medium text-[#1947C4] mb-3">
+                                          <p className="text-sm font-medium text-primary-600 mb-3">
                                             {leader.role}
                                           </p>
                                         </div>
@@ -311,7 +311,7 @@ const About = memo(() => {
                                           href={leader.linkedin}
                                           target="_blank"
                                           rel="noopener noreferrer"
-                                          className="w-10 h-10 rounded-lg bg-[#1947C4] flex items-center justify-center hover:bg-[#1732BD] transition-colors flex-shrink-0 ml-4"
+                                          className="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center hover:bg-primary-700 transition-colors flex-shrink-0 ml-4"
                                         >
                                           <Linkedin className="w-5 h-5 text-white" />
                                         </a>
@@ -365,7 +365,7 @@ const About = memo(() => {
                           onClick={() => setCurrentIndex(index)}
                           className={`h-2 rounded-full transition-all ${
                             index === currentIndex
-                              ? "bg-[#1947C4] w-8"
+                              ? "bg-primary-600 w-8"
                               : "bg-gray-300 w-2"
                           }`}
                           aria-label={`Go to slide ${index + 1}`}
