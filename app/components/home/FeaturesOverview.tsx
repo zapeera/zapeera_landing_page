@@ -4,46 +4,23 @@ import Image from "next/image";
 import Container from "../ui/container";
 
 const FeaturesOverview = () => {
-
   const features = [
     {
-      title: "Product & Category Management",
-      description: "Organize products by category, brand, or type for faster billing and better inventory control.",
-      image: "/icon-image/product-and-category-management.png",
-    },
-    {
-      title: "Supplier & Manufacturer Management",
-      description: "Maintain supplier records, purchase history, and pricing to streamline procurement.",
-      image: "/icon-image/suppliers-and-manufacturers.png",
-    },
-    {
-      title: "Purchase Order Automation",
-      description: "Generate and track purchase orders automatically based on stock levels and demand.",
-      image: "/icon-image/purchase-order-automation.png",
-    },
-    {
-      title: "Batch & Expiry Tracking",
-      description: "Monitor batch numbers and expiry dates to reduce losses and ensure compliance.",
+      title: "Expiry tracking that actually works",
+      description:
+        "Get alerts at 90, 60, and 30 days before any medicine expires. Return to the supplier on time, mark batches that cannot be returned, and stop throwing money in the bin every quarter.",
       image: "/icon-image/batch-and-expiry-tracking.png",
     },
     {
-      title: "Customer Management (CRM)",
-      description: "Store customer details, track purchase history, and manage returns and refunds easily.",
-      image: "/icon-image/customer-management.png",
+      title: "Inventory you can trust",
+      description:
+        "Know exactly what is on the shelf, what is in the back, and what is running low — across one shop or three. Barcode scan when stock comes in, scan again at the till. The numbers match without anyone counting at midnight.",
+      image: "/icon-image/product-and-category-management.png",
     },
     {
-      title: "Smart Billing & Invoicing",
-      description: "Create accurate invoices instantly with taxes, discounts, and multiple payment options.",
-      image: "/icon-image/smart-billing-and-invoicing.png",
-    },
-    {
-      title: "Role-Based Access Control",
-      description: "Control system access by assigning permissions based on staff roles and responsibilities.",
-      image: "/icon-image/role-base-access-control.png",
-    },
-    {
-      title: "Business Insights Dashboard",
-      description: "View real-time sales, inventory, and performance metrics from a single dashboard.",
+      title: "Reports that tell you what to do next",
+      description:
+        "See which medicines actually make profit, which are dead stock, and which customers come back. End-of-day reports take 5 seconds, not an hour with a calculator.",
       image: "/icon-image/business-insights-and-dashboard.png",
     },
   ];
@@ -53,41 +30,36 @@ const FeaturesOverview = () => {
       <Container size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Header */}
-          <div className="text-center ">
+          <div className="text-center max-w-3xl mx-auto">
             <h2 className="section-heading">
-              Powerful Features That Simplify <br className="hidden md:inline"/> Business Management
+              Three things Zapeera does well
             </h2>
-            <p className="section-paragraph max-w-4xl mx-auto">
-              Everything you need to manage inventory, billing, suppliers, staff, and reporting — all built into one cloud-based POS and business management platform.
+            <p className="section-paragraph">
+              We did not build 50 features. We built the three a Pakistani pharmacy actually needs and made them work properly.
             </p>
           </div>
 
-          {/* Features Grid - 4 Columns Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
+          {/* Features Grid - 3 Columns */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {features.map((feature) => (
               <div
-                key={index}
-                className="bg-white rounded-xl border border-gray-200 p-4 hover:border-primary-600/50 hover:shadow-md transition-all duration-300 flex flex-col"
+                key={feature.title}
+                className="bg-white rounded-xl border border-neutral-200 p-6 hover:border-primary-600/50 hover:shadow-md transition-all duration-300 flex flex-col"
               >
-                {/* Image */}
-                <div className="w-full h-12 sm:h-14 md:h-16 lg:h-[60px] mb-4 flex items-center justify-start">
+                <div className="w-14 h-14 mb-5 flex items-center justify-start">
                   <Image
                     src={feature.image}
-                    alt={feature.title}
-                    width={60}
-                    height={60}
+                    alt=""
+                    width={56}
+                    height={56}
                     className="object-contain"
                     unoptimized
                   />
                 </div>
 
-                {/* Title */}
-                <h3 className="card-heading">
-                  {feature.title}
-                </h3>
+                <h3 className="card-heading">{feature.title}</h3>
 
-                {/* Description */}
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-body text-neutral-600 leading-relaxed">
                   {feature.description}
                 </p>
               </div>
