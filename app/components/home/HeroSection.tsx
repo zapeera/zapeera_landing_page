@@ -55,9 +55,10 @@ const HeroSection = () => {
           <div className="w-full max-w-4xl xl:max-w-5xl mx-auto">
             <div className="relative w-full aspect-video bg-transparent overflow-hidden">
               <Image
-                src="/images/hero.jpeg"
-                alt="Dashboard Preview"
+                src="/images/hero.webp"
+                alt="Zapeera pharmacy dashboard preview"
                 fill
+                sizes="(max-width: 1024px) 100vw, 1024px"
                 className="object-cover rounded-t-2xl"
                 priority
               />

@@ -11,14 +11,13 @@ const AboutSection = () => {
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Side - Image */}
-            <div className="relative w-full h-[400px] lg:h-[500px] xl:h-[600px] rounded-2xl overflow-hidden   ">
+            <div className="relative w-full h-[400px] lg:h-[500px] xl:h-[600px] rounded-2xl overflow-hidden">
               <Image
                 src="/whychose/business-management-platform.webp"
-                alt="About Zapeera"
+                alt="Zapeera business management platform illustration"
                 fill
-                className="object-fill shadow-2xl "
-                sizes="(max-width: 1024px) , "
-                priority
+                sizes="(max-width: 1024px) 100vw, 600px"
+                className="object-cover shadow-2xl"
               />
             </div>
 
