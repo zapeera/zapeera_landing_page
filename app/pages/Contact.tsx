@@ -82,7 +82,7 @@ const Contact = memo(() => {
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground">
-                Have a question or need help? We're here for you.
+                Running a pharmacy and want to see Zapeera? WhatsApp us — we reply within an hour during business hours.
               </p>
             </div>
           </div>
@@ -98,7 +98,7 @@ const Contact = memo(() => {
                 <div>
                   <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
                   <p className="text-muted-foreground mb-8">
-                    Choose your preferred way to reach us, and we'll respond within 24 hours.
+                    WhatsApp is the fastest. We reply within an hour during business hours.
                   </p>
                 </div>
 
@@ -138,11 +138,16 @@ const Contact = memo(() => {
                       <MessageCircle className="w-6 h-6 text-primary-foreground" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Live Chat</h3>
-                      <p className="text-sm text-muted-foreground mb-2">Available 24/7</p>
-                      <button className="text-primary hover:underline">
-                        Start a conversation
-                      </button>
+                      <h3 className="font-semibold mb-1">WhatsApp</h3>
+                      <p className="text-sm text-muted-foreground mb-2">We reply within an hour during business hours.</p>
+                      <a
+                        href="https://wa.me/923107100663"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline"
+                      >
+                        Message us on WhatsApp
+                      </a>
                     </div>
                   </div>
                 </Card>
