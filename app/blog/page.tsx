@@ -4,22 +4,20 @@ import Footer from "@/app/components/Footer";
 import Blog from "@/app/pages/Blog";
 
 export const metadata: Metadata = {
-  title: 'Blog - Business Management Insights & Tips | Zapeera',
-  description: 'Read the latest articles, insights, and tips about business management, POS systems, inventory management, and retail operations on Zapeera Blog.',
+  title: 'Blog | Zapeera',
+  description: 'Practical pieces for Pakistani pharmacy owners — coming soon. Notify me on WhatsApp when the first article ships.',
   keywords: [
-    'business management blog',
-    'POS system tips',
-    'inventory management guide',
-    'retail business advice',
-    'business software insights'
+    'pharmacy blog Pakistan',
+    'pharmacy management articles',
+    'expiry tracking pharmacy',
   ],
   authors: [{ name: 'Zapeera Team' }],
   creator: 'Zapeera',
   publisher: 'Zapeera',
   metadataBase: new URL('https://zapeera.com'),
   openGraph: {
-    title: 'Blog - Business Management Insights & Tips | Zapeera',
-    description: 'Read the latest articles, insights, and tips about business management and retail operations.',
+    title: 'Blog | Zapeera',
+    description: 'Practical pieces for Pakistani pharmacy owners — coming soon.',
     url: 'https://zapeera.com/blog',
     siteName: 'Zapeera',
     type: 'website',
@@ -29,15 +27,15 @@ export const metadata: Metadata = {
         url: 'https://zapeera.com/og-home.jpg',
         width: 1200,
         height: 630,
-        alt: 'Blog - Zapeera',
+        alt: 'Blog | Zapeera',
         type: 'image/jpeg',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blog - Zapeera',
-    description: 'Business management insights and tips.',
+    title: 'Blog | Zapeera',
+    description: 'Practical pieces for Pakistani pharmacy owners — coming soon.',
     images: ['https://zapeera.com/og-home.jpg'],
     creator: '@zapeera',
   },
