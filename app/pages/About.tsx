@@ -14,14 +14,7 @@ const About = memo(() => {
 
         <main>
           {/* Hero Section with Gradient Background */}
-          <section className="relative min-h-[500px] lg:min-h-[600px] flex items-center justify-center overflow-hidden bg-white">
-            {/* Full section gradient background */}
-            <div className="absolute inset-0 bg-hero-glow blur-lg pointer-events-none"></div>
-
-            {/* Subtle texture background */}
-            <div className="absolute inset-0 bg-dotted-texture pointer-events-none opacity-40"></div>
-
-            {/* Content */}
+          <section className="relative min-h-[500px] lg:min-h-[600px] flex items-center justify-center overflow-hidden bg-cream">
             <Container className="relative z-10" size="xl" padding="none">
               <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
                 <div className="text-center max-w-4xl mx-auto">

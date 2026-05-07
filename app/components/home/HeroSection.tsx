@@ -7,13 +7,7 @@ import Container from "../ui/container";
 const HeroSection = () => {
 
   return (
-    <section className="relative min-h-screen pt-12 flex flex-col items-center overflow-hidden bg-white">
-      {/* Full section gradient background */}
-      <div className="absolute inset-0 bg-hero-glow blur-lg pointer-events-none"></div>
-
-      {/* Subtle texture background */}
-      <div className="absolute inset-0 bg-dotted-texture pointer-events-none opacity-40"></div>
-
+    <section className="relative min-h-screen pt-12 flex flex-col items-center overflow-hidden bg-cream">
       <Container className="relative z-10" size="xl" padding="none">
         <div className="flex flex-col items-center justify-center pt-20 md:pt-28 lg:pt-32">
           {/* Centered Content */}

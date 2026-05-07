@@ -155,34 +155,6 @@
   }
 }
 
-@layer components {
-  /* Hero glow — centralized so the rgba stops live in one place rather than being
-     duplicated across hero sections. Colors map to: accent-400 (#29CDCF),
-     accent-500 (#26D2C6), primary-600 (#1947C4). */
-  .bg-hero-glow {
-    background-image: radial-gradient(
-      ellipse 110% 85% at center,
-      rgba(41, 205, 207, 0.18) 0%,
-      rgba(41, 205, 207, 0.14) 10%,
-      rgba(41, 205, 207, 0.11) 20%,
-      rgba(38, 210, 198, 0.10) 32%,
-      rgba(25, 71, 196, 0.09) 45%,
-      rgba(25, 71, 196, 0.13) 58%,
-      rgba(25, 71, 196, 0.12) 70%,
-      rgba(25, 71, 196, 0.09) 80%,
-      rgba(25, 71, 196, 0.05) 88%,
-      rgba(25, 71, 196, 0.03) 94%,
-      rgba(25, 71, 196, 0.015) 98%,
-      transparent 100%
-    );
-  }
-
-  .bg-dotted-texture {
-    background-image: radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.02) 1px, transparent 0);
-    background-size: 20px 20px;
-  }
-}
-
 @layer utilities {
   @keyframes marquee-smooth {
     0% { transform: translateX(0); }
