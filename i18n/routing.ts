@@ -16,6 +16,13 @@ export const routing = defineRouting({
   locales: ["ur", "en"],
   defaultLocale: "ur",
   localePrefix: "always",
+  // Always send first-time visitors to /ur regardless of their browser's
+  // Accept-Language. The target audience is Pakistani pharmacy owners; an
+  // English-default browser does not signal a preference for English UI.
+  // Once the user picks a locale via the language switcher, next-intl
+  // persists it in the NEXT_LOCALE cookie and honors that on subsequent
+  // visits.
+  localeDetection: false,
 });
 
 export type Locale = (typeof routing.locales)[number];
