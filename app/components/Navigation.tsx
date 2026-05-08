@@ -8,6 +8,7 @@ import { usePathname, useRouter } from "@/i18n/navigation";
 import { Menu, X, ChevronDown, CheckCircle, ShoppingBag, Pill, UtensilsCrossed, Package, Store, Truck } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
 import Container from "./ui/container";
+import LanguageSwitcher from "./LanguageSwitcher";
 import {
   Dialog,
   DialogContent,
@@ -238,6 +239,7 @@ const Navigation = () => {
 
             {/* Contact Us and Login Buttons - Right side */}
             <div className="hidden lg:flex items-center gap-3 z-10 flex-shrink-0 ms-auto">
+              <LanguageSwitcher variant="desktop" />
 
               <Button
                 size="sm"
@@ -370,6 +372,11 @@ const Navigation = () => {
                     <Link href="/contact-us" className="w-full">{tNav("contact")}</Link>
                   </Button>
                 </div>
+
+                <LanguageSwitcher
+                  variant="mobile"
+                  onSelect={() => setIsMobileMenuOpen(false)}
+                />
             </div>
           </div>
         </div>
