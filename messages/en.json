@@ -1,6 +1,642 @@
 {
-  "_meta": {
-    "locale": "en",
-    "description": "English message bundle. Populated in Phase 2 of the i18n task — Phase 1 only sets up routing."
+  "common": {
+    "nav": {
+      "home": "Home",
+      "features": "Features",
+      "solutions": "Solutions",
+      "pricing": "Pricing",
+      "updates": "Updates",
+      "about": "About Us",
+      "careers": "Careers",
+      "login": "Login",
+      "contact": "Contact Us",
+      "menuToggleAria": "Toggle menu"
+    },
+    "solutionsDropdown": {
+      "title": "Solutions",
+      "items": {
+        "pharmacy": {
+          "title": "Pharmacy",
+          "description": "Cloud POS and inventory software for Pakistani pharmacies. Fully supported."
+        },
+        "retail": {
+          "title": "Retail",
+          "description": "Coming soon. Message us for early access."
+        },
+        "restaurant": {
+          "title": "Restaurant",
+          "description": "Coming soon. Message us for early access."
+        },
+        "wholesale": {
+          "title": "Wholesale",
+          "description": "Coming soon. Message us for early access."
+        },
+        "departmentalStore": {
+          "title": "Departmental Store",
+          "description": "Coming soon. Message us for early access."
+        },
+        "distribution": {
+          "title": "Distribution",
+          "description": "Coming soon. Message us for early access."
+        }
+      }
+    },
+    "buttons": {
+      "startFreeTrial": "Start free trial",
+      "messageOnWhatsapp": "Message us on WhatsApp",
+      "notifyOnWhatsapp": "Notify me on WhatsApp",
+      "askWhatIsNew": "Ask what is new",
+      "requestDemo": "Request a Demo",
+      "loginDashboard": "Login to Dashboard",
+      "seePricing": "See pricing",
+      "seeFeatures": "See features",
+      "seeFAQ": "Read the FAQ",
+      "backToHome": "Back to home",
+      "contactUs": "Contact us",
+      "seeThePharmacyPage": "See the pharmacy page",
+      "backToSolutions": "Back to solutions",
+      "aboutTheTeam": "About the team",
+      "submit": "Submit",
+      "sending": "Sending...",
+      "send": "Send"
+    },
+    "languageToggle": {
+      "ariaLabel": "Switch language",
+      "english": "English",
+      "urdu": "اردو"
+    },
+    "floatingCta": {
+      "ariaLabel": "Chat with us on WhatsApp",
+      "tooltip": "Chat"
+    }
+  },
+  "footer": {
+    "tagline": "Cloud POS and inventory software, built for Pakistani pharmacies.",
+    "copyright": "© {year} Zapeera. All rights reserved.",
+    "columns": {
+      "product": "Product",
+      "company": "Company",
+      "resources": "Resources",
+      "legal": "Legal"
+    },
+    "links": {
+      "features": "Features",
+      "solutions": "Solutions",
+      "pricing": "Pricing",
+      "about": "About Us",
+      "careers": "Careers",
+      "contact": "Contact Us",
+      "helpCenter": "Help Center",
+      "updates": "Updates",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "tiktok": "TikTok"
+    }
+  },
+  "home": {
+    "hero": {
+      "headlineBefore": "The pharmacy software, built for ",
+      "headlineEm": "Pakistan",
+      "headlineAfter": ".",
+      "body": "Track every batch and expiry. Replace the end-of-day hisaab. See which medicines actually make profit and which are dead stock — across one shop or three. Built for the way Pakistani pharmacies actually run, priced for the Pakistani market.",
+      "imageAlt": "Zapeera pharmacy dashboard preview"
+    },
+    "about": {
+      "heading": "Why we built this",
+      "lead": "We are a small Pakistani team. The last year has been talking to pharmacy owners in Lahore and Karachi about what is actually broken and what is just annoying — and building software around the answers.",
+      "items": [
+        {
+          "title": "Made in Pakistan",
+          "body": "Built locally, by people who know what a Pakistani pharmacy actually looks like at 9pm on a Friday."
+        },
+        {
+          "title": "Priced for the Pakistani market",
+          "body": "International POS software is priced in dollars and built for chains. Local desktop software is stuck in 2010. Zapeera sits between the two."
+        },
+        {
+          "title": "Built for the way you work",
+          "body": "WhatsApp-first support. Tolerant of slow internet. Pakistani medicines pre-loaded. Honest about what is shipped and what is still coming."
+        }
+      ],
+      "imageAlt": "Zapeera business management platform illustration"
+    },
+    "featuresOverview": {
+      "heading": "Three things Zapeera does well",
+      "lead": "We did not build 50 features. We built the three a Pakistani pharmacy actually needs and made them work properly.",
+      "items": [
+        {
+          "title": "Expiry tracking that actually works",
+          "description": "Get alerts at 90, 60, and 30 days before any medicine expires. Return to the supplier on time, mark batches that cannot be returned, and stop throwing money in the bin every quarter."
+        },
+        {
+          "title": "Inventory you can trust",
+          "description": "Know exactly what is on the shelf, what is in the back, and what is running low — across one shop or three. Barcode scan when stock comes in, scan again at the till. The numbers match without anyone counting at midnight."
+        },
+        {
+          "title": "Reports that tell you what to do next",
+          "description": "See which medicines actually make profit, which are dead stock, and which customers come back. End-of-day reports take 5 seconds, not an hour with a calculator."
+        }
+      ]
+    },
+    "builtForPakistan": {
+      "heading": "Built for Pakistan",
+      "lead": "The details that international SaaS gets wrong and local desktop software never bothered to add.",
+      "items": [
+        {
+          "title": "Pakistani medicines, pre-loaded",
+          "body": "Start with a database of medicines registered in Pakistan. Add or correct entries — your changes stay on your account."
+        },
+        {
+          "title": "PKR by default",
+          "body": "Prices, taxes, and reports in rupees. No currency conversion screens, no USD pricing math at the end of the month."
+        },
+        {
+          "title": "WhatsApp-first support",
+          "body": "Message us on WhatsApp during business hours and we reply. No ticket queue, no five-step contact form."
+        },
+        {
+          "title": "Built for slow internet",
+          "body": "Designed for the connection speeds Pakistani pharmacies actually have. Sales keep working when the line drops; everything syncs once you are back online."
+        },
+        {
+          "title": "Roman Urdu and Urdu interface",
+          "body": "Coming soon. We are working on it now and will not pretend it is ready before it is."
+        }
+      ]
+    },
+    "howItWorks": {
+      "heading": "How you get started",
+      "lead": "No sales call, no procurement form. From the first WhatsApp message to your first live sale is usually a week.",
+      "steps": [
+        {
+          "title": "Message us on WhatsApp",
+          "description": "Tell us a bit about your pharmacy — branches, counters, what you sell. We confirm whether Zapeera is the right fit for you."
+        },
+        {
+          "title": "We set it up with you",
+          "description": "On a free setup call we load your stock, your suppliers, and your batches. We do this in Urdu or English, whichever is easier."
+        },
+        {
+          "title": "Train your staff in an hour",
+          "description": "The till screen is simple enough that a cashier can ring sales within 10 minutes. We walk your team through it on the same call."
+        },
+        {
+          "title": "Run for 30 days, free",
+          "description": "Use everything. Track expiry, run reports, manage branches. After the month you pick a plan — or you do not, no auto-charge."
+        }
+      ]
+    },
+    "faq": {
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Will it work for my single shop, or do I need multiple branches?",
+          "answer": "Both. Zapeera works the same whether you run one counter or three branches. Multi-branch only kicks in when you turn it on."
+        },
+        {
+          "question": "What if my internet goes down?",
+          "answer": "The till keeps working. Sales are saved locally and sync to the cloud the moment your connection is back. You will not lose a sale because PTCL went down."
+        },
+        {
+          "question": "Do you have Pakistani medicines pre-loaded?",
+          "answer": "Yes. We start you with a database of medicines registered in Pakistan, plus common generics and brand alternatives. You can add or correct any entry on your account."
+        },
+        {
+          "question": "Can my staff use it without training?",
+          "answer": "The till screen is built so a new cashier can ring a sale within 10 minutes. We also do a free setup call when you start, in Urdu or English, and walk your team through it."
+        },
+        {
+          "question": "What happens after the free month?",
+          "answer": "You pick a plan. We do not auto-charge a card and we do not need one upfront for the trial. If 30 days is not enough, message us — we are reasonable about it."
+        },
+        {
+          "question": "Is my data safe?",
+          "answer": "Your data is encrypted in transit and at rest, backed up daily, and tied to your account only. We do not sell or share pharmacy data with anyone, ever."
+        },
+        {
+          "question": "What if I want to stop using Zapeera?",
+          "answer": "Cancel from your account or message us. We export your inventory, sales history, and customer list as CSV so nothing is locked in."
+        },
+        {
+          "question": "Do you charge in PKR or USD?",
+          "answer": "PKR. All plans are priced in rupees — no exchange-rate surprises at the end of the month."
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Be one of our first 50 pharmacies.",
+      "body": "Free for 30 days. No credit card. We set it up for you and pre-load your medicines. Message us on WhatsApp — we reply within an hour during business hours."
+    }
+  },
+  "pricing": {
+    "page": {
+      "heroH1": "Simple, transparent pricing",
+      "heroLead": "In PKR. Built for the way Pakistani pharmacies actually buy software.",
+      "heroNote": "30-day free trial. No credit card required. We set it up for you and pre-load your medicines.",
+      "faqHeading": "Pricing questions",
+      "faqLead": "The things pharmacy owners ask before signing up. If yours is not here, message us — we will answer.",
+      "closingHeading": "Still deciding?",
+      "closingBody": "Message us on WhatsApp with how many counters and branches you run. We will tell you which plan fits — honestly, even if it is the smallest one.",
+      "faqs": [
+        {
+          "question": "What happens after the 30-day free trial?",
+          "answer": "Pick the plan that fits and we move you onto it. No auto-charge — we never need a card during the trial. If 30 days isn't enough, message us; we are reasonable about it."
+        },
+        {
+          "question": "Can I switch plans later?",
+          "answer": "Yes. Upgrade any time and the change is immediate. Downgrades take effect at the next billing cycle so nothing breaks mid-month."
+        },
+        {
+          "question": "Do you offer discounts for annual payment?",
+          "answer": "Yes. Annual billing saves 17% — Solo at Rs 15,000/year (vs Rs 18,000 monthly), Team at Rs 35,000/year, Business at Rs 75,000/year."
+        },
+        {
+          "question": "What if I have more than 3 branches?",
+          "answer": "The Business plan covers up to 3 branches. Beyond that, the Enterprise plan covers unlimited branches with custom pricing — message us with how many shops you run and we'll quote."
+        },
+        {
+          "question": "Is there a setup fee?",
+          "answer": "No. We do not charge a setup fee. The free trial includes a setup call where we load your stock, suppliers, and batches and walk your team through the till — at no cost."
+        },
+        {
+          "question": "Can I cancel anytime?",
+          "answer": "Yes. Cancel from your account or message us. We export your inventory, sales history, and customer list as CSV so nothing is locked in."
+        }
+      ]
+    },
+    "section": {
+      "heading": "Simple, transparent pricing",
+      "lead": "In PKR. Built for the way Pakistani pharmacies actually buy software. 30-day free trial — no credit card.",
+      "billingMonthly": "Monthly",
+      "billingAnnual": "Annual",
+      "billingSave": "Save 17%",
+      "billingToggleAria": "Toggle annual billing",
+      "perMonth": "/month",
+      "perYear": "/year",
+      "popularBadge": "Most popular",
+      "customPricing": "Custom pricing",
+      "taxNote": "Prices in Pakistani Rupees (PKR). Excludes applicable taxes.",
+      "plans": {
+        "solo": {
+          "name": "Solo",
+          "tagline": "For single-shop pharmacies",
+          "features": [
+            "1 user account",
+            "1 pharmacy / 1 branch",
+            "Full POS with barcode scanning",
+            "Inventory management",
+            "Expiry alerts (30 / 60 / 90 days)",
+            "Daily sales reports",
+            "Pakistani medicines pre-loaded",
+            "WhatsApp support",
+            "30-day free trial — no credit card"
+          ]
+        },
+        "team": {
+          "name": "Team",
+          "tagline": "For pharmacies with a small team",
+          "features": [
+            "Everything in Solo",
+            "3 user accounts",
+            "Role-based access (owner / cashier / manager)",
+            "Advanced reports — profit by medicine, dead stock, top customers",
+            "Customer credit tracking",
+            "WhatsApp support"
+          ]
+        },
+        "business": {
+          "name": "Business",
+          "tagline": "For multi-branch pharmacies",
+          "features": [
+            "Everything in Team",
+            "10 user accounts",
+            "Up to 3 branches with consolidated reporting",
+            "Multi-branch inventory transfer",
+            "Priority WhatsApp support",
+            "Onboarding assistance"
+          ]
+        },
+        "enterprise": {
+          "name": "Enterprise / Chain",
+          "tagline": "For pharmacy chains and groups",
+          "features": [
+            "Custom pricing",
+            "Unlimited users and branches",
+            "Dedicated account manager",
+            "Custom integrations"
+          ]
+        }
+      }
+    }
+  },
+  "features": {
+    "heroH1": "Three things Zapeera does well — in detail",
+    "heroLead": "Expiry tracking, inventory you can trust, and reports that tell you what to do next. Plus the supporting capabilities that make them work for a Pakistani pharmacy.",
+    "supportingHeading": "The supporting bits",
+    "supportingLead": "The three pillars above are the headline. These are the everyday capabilities that sit behind them and make a Pakistani pharmacy actually run.",
+    "ctaHeading": "Want to see it on your stock?",
+    "ctaBody": "Free for 30 days. We pre-load your medicines and walk your team through it on a setup call.",
+    "pillars": [
+      {
+        "title": "Expiry tracking that actually works",
+        "intro": "The biggest leak in a Pakistani pharmacy is medicines you do not return to the supplier in time. Zapeera tracks every batch from the moment it comes in, alerts you with enough runway to act, and tells you exactly how much each expiry would have cost you if you had missed it.",
+        "points": [
+          "Alerts at 90, 60, and 30 days before any batch expires",
+          "Per-supplier return-window tracking — know who takes returns and who does not",
+          "Mark batches that cannot be returned and write them off cleanly",
+          "End-of-month expiry report by supplier, by category, by branch"
+        ]
+      },
+      {
+        "title": "Inventory you can trust",
+        "intro": "Most pharmacy stock counts are wrong because the till and the inventory book are two different worlds. Zapeera makes them the same world. Barcode scan when stock comes in, scan again at the till. The number on the screen matches the number on the shelf without anyone counting at midnight.",
+        "points": [
+          "Real-time stock levels across one shop or three branches",
+          "Barcode at intake and at the till — no manual counting",
+          "Low-stock alerts tied to your real selling speed, not a fixed threshold",
+          "Inter-branch transfers with batch and expiry kept intact"
+        ]
+      },
+      {
+        "title": "Reports that tell you what to do next",
+        "intro": "Most reports show you what happened. Zapeera shows you what to do about it. Profit by medicine, dead stock by category, repeat customers by branch — straight on the dashboard, not buried five clicks deep.",
+        "points": [
+          "Profit-per-medicine ranked highest to lowest",
+          "Dead-stock list — items that have not sold in 60 / 90 / 180 days",
+          "Repeat-customer report — who came back, what they bought, how often",
+          "End-of-day in 5 seconds, not an hour with a calculator"
+        ]
+      }
+    ],
+    "supporting": [
+      {
+        "title": "POS that works offline",
+        "body": "Sales keep ringing when the internet drops. Everything syncs once the line is back."
+      },
+      {
+        "title": "Multi-branch",
+        "body": "Manage up to three branches from one dashboard. Transfer stock, compare branches, consolidate reports."
+      },
+      {
+        "title": "Smart billing & invoicing",
+        "body": "Tax-correct invoices in PKR. SMS or printed receipt. Returns and refunds without paperwork."
+      },
+      {
+        "title": "Role-based access",
+        "body": "What the cashier sees is not what the owner sees. Audit logs of who did what."
+      },
+      {
+        "title": "Customer records",
+        "body": "Phone-number lookup at the till. Repeat-prescription history. Loyalty without a separate app."
+      },
+      {
+        "title": "Suppliers & manufacturers",
+        "body": "Purchase history, return windows, and supplier performance ranked by reliability."
+      }
+    ]
+  },
+  "about": {
+    "heroH1": "About Zapeera",
+    "heroLead": "A small Pakistani team building cloud software for Pakistani pharmacies. Honest about what we have shipped and what is still coming.",
+    "story": {
+      "heading": "Our story",
+      "p1": "We are a small Pakistani team. We spent the last year sitting with pharmacy owners in Lahore and Karachi, watching how a real shop runs from open to close, and listening to what is actually broken versus what is just annoying.",
+      "p2": "The pattern was the same everywhere. Expired medicines piling up in a corner because nobody had time to track 90-day windows. Stock numbers that did not match the shelf because the till and the inventory book were two different worlds. End-of-day hisaab on a calculator at 11pm.",
+      "p3": "International POS software is built for chains and priced in dollars. Local desktop software is stuck in 2010. Zapeera sits between the two — modern cloud software, built in Pakistan, priced in PKR, supported on WhatsApp.",
+      "imageAlt": "Zapeera pharmacy dashboard"
+    },
+    "heading": {
+      "heading": "Where we are heading",
+      "first50Title": "The first 50",
+      "first50Body": "Our goal for this year is 50 paying pharmacies running Zapeera daily — in Lahore and Karachi first. Not 500, not 5,000. Fifty pharmacies we support personally, who tell us what to fix next.",
+      "buildingTitle": "What we are building next",
+      "buildingBody": "Roman Urdu and Urdu interface. Better expiry analytics. Native WhatsApp ordering for repeat customers. We ship in small steps and tell you when something is actually ready, not before."
+    },
+    "team": {
+      "heading": "The team",
+      "lead": "A small Pakistani team — engineers, designers, and people who have spent time on the pharmacy side of the counter. Names and roles will go up here when we are ready to put them up properly."
+    }
+  },
+  "solutionsIndex": {
+    "heroH1": "Built for pharmacies first.",
+    "heroLead": "Zapeera is fully supported for Pakistani pharmacies today. Other retail industries are on the roadmap, but we want to nail one industry properly before we ask anyone else to rely on us.",
+    "pharmacyCard": {
+      "badge": "Fully supported",
+      "title": "Pharmacy software, built for Pakistan",
+      "body": "Track every batch and expiry. Replace the end-of-day hisaab. See profit by medicine and dead stock by category — across one shop or three. Pakistani medicines pre-loaded, PKR by default, WhatsApp-first support.",
+      "cta": "See the pharmacy page"
+    },
+    "otherIndustries": {
+      "heading": "Other industries — coming soon",
+      "lead": "We are focused on pharmacies first. Tap any industry below to leave your name on the early-access list.",
+      "comingSoon": "Coming soon",
+      "items": {
+        "retail": "Retail",
+        "restaurant": "Restaurants",
+        "wholesale": "Wholesale",
+        "departmentalStore": "Departmental stores",
+        "distribution": "Distribution"
+      }
+    }
+  },
+  "solutionSlug": {
+    "backToSolutions": "Back to solutions",
+    "pharmacy": {
+      "badge": "For pharmacies",
+      "heroH1": "The pharmacy software, built for Pakistan.",
+      "heroLead": "Track every batch and expiry. Replace the end-of-day hisaab. See which medicines actually make profit and which are dead stock — across one shop or three. Pakistani medicines pre-loaded, PKR by default, WhatsApp-first support.",
+      "pillarsHeading": "What it does for a pharmacy",
+      "pillarsLead": "Three things, done properly. The capability list is longer — these three are what you will notice first.",
+      "extrasHeading": "The Pakistan-specific bits",
+      "extrasLead": "International POS software gets these wrong. Local desktop software never bothered to add them.",
+      "ctaHeading": "Be one of our first 50 pharmacies.",
+      "ctaBody": "Free for 30 days. No credit card. We set it up for you and pre-load your medicines. Message us on WhatsApp — we reply within an hour during business hours.",
+      "pillars": [
+        {
+          "title": "Track every batch and expiry",
+          "body": "Every medicine that comes into your shop is logged with its batch number, supplier, and expiry date. Zapeera alerts you 90, 60, and 30 days before expiry — enough runway to return to the supplier on time. End-of-month report tells you exactly how much each supplier cost you in returns vs write-offs."
+        },
+        {
+          "title": "Stock that matches the shelf",
+          "body": "Barcode scan when stock comes in, scan again at the till. The till and the inventory book are the same world. Multi-branch transfers keep batch and expiry intact, so a medicine moved from one shop to another does not lose its history."
+        },
+        {
+          "title": "Profit by medicine, not just by day",
+          "body": "See which medicines actually make profit and which are dead stock. Repeat-customer reports tell you who comes back and what they buy. End-of-day takes 5 seconds. End-of-month gives you the answers you used to spend a Sunday afternoon on."
+        }
+      ],
+      "extras": [
+        "Pakistani medicines pre-loaded — start with a real database, not an empty one",
+        "Prices and reports in PKR by default",
+        "Works on slow internet — sales keep ringing when the line drops",
+        "WhatsApp-first support — message us, we reply within an hour during business hours",
+        "Single-shop or up to 3 branches on the same dashboard",
+        "Cashier till is simple enough that a new staff member can ring sales within 10 minutes"
+      ]
+    },
+    "notYet": {
+      "badge": "Coming soon",
+      "headlineFn": "Zapeera for {industry} — coming soon.",
+      "body": "We are focused on Pakistani pharmacies first. Message us for early access when we open this up.",
+      "industries": {
+        "retail": "retail",
+        "restaurant": "restaurants",
+        "wholesale": "wholesale",
+        "departmentalStore": "departmental stores",
+        "distribution": "distribution"
+      }
+    }
+  },
+  "contact": {
+    "heroH1": "Get in Touch",
+    "heroLead": "Running a pharmacy and want to see Zapeera? WhatsApp us — we reply within an hour during business hours.",
+    "infoHeading": "Contact Information",
+    "infoLead": "WhatsApp is the fastest. We reply within an hour during business hours.",
+    "cards": {
+      "email": {
+        "title": "Email",
+        "body": "Our team is here to help"
+      },
+      "phone": {
+        "title": "Phone",
+        "body": "Mon-Fri from 8am to 5pm"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "body": "We reply within an hour during business hours.",
+        "link": "Message us on WhatsApp"
+      },
+      "office": {
+        "title": "Office",
+        "addressLine1": "Ayan Center",
+        "addressLine2": "Eden City, DHA Phase 8",
+        "addressLine3": "Lahore, Pakistan"
+      }
+    },
+    "form": {
+      "heading": "Send us a message",
+      "lead": "Or fill the form below — we will reply via WhatsApp.",
+      "fields": {
+        "name": "Full name",
+        "email": "Email",
+        "company": "Pharmacy / company",
+        "phone": "Phone",
+        "subject": "Subject",
+        "message": "Message"
+      },
+      "placeholders": {
+        "name": "Your name",
+        "email": "you@example.com",
+        "company": "Your pharmacy name",
+        "phone": "+92 XXX XXXXXXX",
+        "subject": "How can we help?",
+        "message": "Tell us a bit about your pharmacy..."
+      },
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "successTitle": "Message sent",
+      "successBody": "We will reply on WhatsApp within an hour during business hours.",
+      "errorTitle": "Could not send",
+      "errorBody": "Please try again, or message us directly on WhatsApp."
+    }
+  },
+  "careers": {
+    "heroH1": "Careers",
+    "heroLead": "A small Pakistani team building cloud POS and inventory software for pharmacies. We are not actively hiring right now.",
+    "bodyHeading": "If you want to help, message us.",
+    "bodyP1": "We are not running a public hiring round. But if you want to help build the best pharmacy software in Pakistan, message us on WhatsApp and tell us what you do. We read every message and reply within an hour during business hours.",
+    "bodyP2": "Useful background: software engineering, design, customer support in Urdu/English, or experience working inside a Pakistani pharmacy. None of these are required — being curious about the problem is enough."
+  },
+  "updates": {
+    "heroH1": "Updates",
+    "heroLead": "What we are building right now. We post in small honest steps and we tell you when something is actually ready, not before.",
+    "inProgressHeading": "In progress",
+    "shippedHeading": "Recently shipped",
+    "shippedLead": "We ship updates often, but we have not started a public changelog yet. The first proper one goes up the moment we have something worth showing every pharmacy on the platform. Until then, message us on WhatsApp — we will tell you what is new.",
+    "inProgress": [
+      {
+        "title": "Roman Urdu and Urdu interface",
+        "body": "Translating the till screen, inventory, and reports. Roman Urdu first, full Nastaliq Urdu after. Shipping in stages."
+      },
+      {
+        "title": "Better expiry analytics",
+        "body": "Per-supplier waste reports and a return-window dashboard, so you know which suppliers actually take their expired stock back."
+      },
+      {
+        "title": "WhatsApp ordering for repeat customers",
+        "body": "A small extension that lets your regulars message a number to repeat their last prescription, with the cashier confirming on the till."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Oops! Page not found",
+    "linkHome": "Return to Home"
+  },
+  "whatsappMessages": {
+    "heroTrial": "Assalam-o-Alaikum, I want to start the Zapeera free trial for my pharmacy.",
+    "demo": "Assalam-o-Alaikum, I want a Zapeera demo for my pharmacy.",
+    "pricingSolo": "Assalam-o-Alaikum, I want to start the Zapeera free trial — Solo plan.",
+    "pricingTeam": "Assalam-o-Alaikum, I want to start the Zapeera free trial — Team plan.",
+    "pricingBusiness": "Assalam-o-Alaikum, I want to start the Zapeera free trial — Business plan.",
+    "pricingEnterprise": "Assalam-o-Alaikum, I want to discuss Zapeera Enterprise pricing for my pharmacy chain.",
+    "floating": "Assalam-o-Alaikum, I have a question about Zapeera.",
+    "contact": "Assalam-o-Alaikum, I want to talk to the Zapeera team.",
+    "pharmacy": "Assalam-o-Alaikum, I want to know more about Zapeera for pharmacies.",
+    "careers": "Assalam-o-Alaikum, I want to join the Zapeera team.",
+    "earlyAccess": "Assalam-o-Alaikum, I want early access to Zapeera for {industry}."
+  },
+  "meta": {
+    "default": {
+      "title": "Zapeera — Pharmacy software, built for Pakistan",
+      "description": "Cloud POS and inventory software for Pakistani pharmacies. Track every batch and expiry, replace the end-of-day hisaab, and see which medicines actually make profit. Free for 30 days, no credit card."
+    },
+    "home": {
+      "title": "Zapeera — Pharmacy software, built for Pakistan",
+      "description": "Cloud POS and inventory software for Pakistani pharmacies. Track every batch and expiry, replace the end-of-day hisaab, and see which medicines actually make profit. Free for 30 days, no credit card."
+    },
+    "features": {
+      "title": "Features | Zapeera",
+      "description": "Three things Zapeera does well for Pakistani pharmacies — expiry tracking, inventory you can trust, and reports that tell you what to do next."
+    },
+    "pricing": {
+      "title": "Pricing | Zapeera",
+      "description": "In PKR. Built for the way Pakistani pharmacies actually buy software. Free for 30 days, no credit card."
+    },
+    "solutions": {
+      "title": "Solutions | Zapeera",
+      "description": "Zapeera is built for Pakistani pharmacies first. Other retail industries are not currently supported — message us if you would like to be in the first non-pharmacy cohort."
+    },
+    "solutionsPharmacy": {
+      "title": "Pharmacy software, built for Pakistan | Zapeera",
+      "description": "Cloud POS and inventory software for Pakistani pharmacies — batch and expiry tracking, multi-branch inventory, profit-per-medicine reporting, WhatsApp-first support. Free for 30 days, no credit card."
+    },
+    "solutionsNotYet": {
+      "titleFn": "{industry} — coming soon | Zapeera",
+      "descriptionFn": "Zapeera for {industry} is coming soon. We are focused on Pakistani pharmacies first. Message us on WhatsApp for early access."
+    },
+    "about": {
+      "title": "About — Zapeera",
+      "description": "A small Pakistani team building cloud POS and inventory software for Pakistani pharmacies. Honest about what we have shipped and what is still coming."
+    },
+    "contact": {
+      "title": "Contact — Zapeera",
+      "description": "Running a pharmacy in Pakistan and want to try Zapeera? Message us on WhatsApp — we reply within an hour during business hours."
+    },
+    "careers": {
+      "title": "Careers | Zapeera",
+      "description": "A small Pakistani team building cloud POS for pharmacies. We are not actively hiring yet — message us on WhatsApp if you want to help."
+    },
+    "updates": {
+      "title": "Updates | Zapeera",
+      "description": "What we are building right now and what we shipped recently. We post in small honest steps."
+    }
   }
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { usePathname, useRouter } from "@/i18n/navigation";
@@ -35,58 +36,18 @@ const Navigation = () => {
   const pathname = usePathname();
   const router = useRouter();
 
-  // Pharmacy is the only fully-supported industry today.
-  // Other industries are listed so they remain crawlable + reachable, but each
-  // routes to a "not currently supported — message us" stub on /solutions/[slug].
+  const tNav = useTranslations("common.nav");
+  const tSol = useTranslations("common.solutionsDropdown.items");
+
+  // Pharmacy is fully supported; other industries route to coming-soon stubs.
+  // Titles + descriptions come from translations; slug/icon are locale-independent.
   const solutions = [
-    {
-      title: "Pharmacy",
-      description: "Cloud POS and inventory software for Pakistani pharmacies. Fully supported.",
-      slug: "pharmacy",
-      icon: Pill,
-      color: "text-primary-600",
-      supported: true,
-    },
-    {
-      title: "Retail",
-      description: "Coming soon. Message us for early access.",
-      slug: "retail",
-      icon: ShoppingBag,
-      color: "text-neutral-500",
-      supported: false,
-    },
-    {
-      title: "Restaurant",
-      description: "Coming soon. Message us for early access.",
-      slug: "restaurant",
-      icon: UtensilsCrossed,
-      color: "text-neutral-500",
-      supported: false,
-    },
-    {
-      title: "Wholesale",
-      description: "Coming soon. Message us for early access.",
-      slug: "wholesale",
-      icon: Package,
-      color: "text-neutral-500",
-      supported: false,
-    },
-    {
-      title: "Departmental Store",
-      description: "Coming soon. Message us for early access.",
-      slug: "departmental-store",
-      icon: Store,
-      color: "text-neutral-500",
-      supported: false,
-    },
-    {
-      title: "Distribution",
-      description: "Coming soon. Message us for early access.",
-      slug: "distribution",
-      icon: Truck,
-      color: "text-neutral-500",
-      supported: false,
-    },
+    { slug: "pharmacy", key: "pharmacy", icon: Pill, color: "text-primary-600", supported: true },
+    { slug: "retail", key: "retail", icon: ShoppingBag, color: "text-neutral-500", supported: false },
+    { slug: "restaurant", key: "restaurant", icon: UtensilsCrossed, color: "text-neutral-500", supported: false },
+    { slug: "wholesale", key: "wholesale", icon: Package, color: "text-neutral-500", supported: false },
+    { slug: "departmental-store", key: "departmentalStore", icon: Store, color: "text-neutral-500", supported: false },
+    { slug: "distribution", key: "distribution", icon: Truck, color: "text-neutral-500", supported: false },
   ];
 
   useEffect(() => {
@@ -160,13 +121,13 @@ const Navigation = () => {
   };
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "Features", path: "/features" },
-    { name: "Solutions", path: "/solutions" },
-    { name: "Pricing", path: "/pricing" },
-    { name: "Updates", path: "/product-update" },
-    { name: "About Us", path: "/about-us" },
-    { name: "Careers", path: "/careers" },
+    { key: "home", path: "/" },
+    { key: "features", path: "/features" },
+    { key: "solutions", path: "/solutions" },
+    { key: "pricing", path: "/pricing" },
+    { key: "updates", path: "/product-update" },
+    { key: "about", path: "/about-us" },
+    { key: "careers", path: "/careers" },
   ];
 
   const isAboutPage = pathname === '/about-us';
@@ -205,7 +166,7 @@ const Navigation = () => {
             {/* Desktop Navigation - Centered, Dark text */}
             <div className="hidden lg:flex items-center gap-4 xl:gap-5 2xl:gap-6 flex-1 justify-center min-w-0 px-2">
               {navLinks.map((link) => (
-                link.name === "Solutions" ? (
+                link.key === "solutions" ? (
                   <div
                     key={link.path}
                     className="relative group"
@@ -221,13 +182,13 @@ const Navigation = () => {
                           : "text-gray-700"
                       }`}
                     >
-                      {link.name}
+                      {tNav(link.key)}
                       <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180 flex-shrink-0" />
                     </Link>
 
                     {/* Dropdown Menu */}
                     {isSolutionsHovered && (
-                      <div className="absolute top-[20px] left-[200px] pt-2 z-50 -translate-x-1/2" onMouseEnter={handleSolutionsMouseEnter} onMouseLeave={handleSolutionsMouseLeave}>
+                      <div className="absolute top-[20px] start-[200px] pt-2 z-50 -translate-x-1/2 rtl:translate-x-1/2" onMouseEnter={handleSolutionsMouseEnter} onMouseLeave={handleSolutionsMouseLeave}>
                         <div className="w-[calc(100vw-4rem)] max-w-[1000px] bg-white border border-gray-200 rounded-xl shadow-xl py-4 animate-fade-in">
                           <div className="grid grid-cols-3 gap-3 px-2">
                             {solutions.map((solution) => {
@@ -244,10 +205,10 @@ const Navigation = () => {
                                   </div>
                                   <div className="flex-1 min-w-0">
                                     <div className="font-semibold text-sm text-gray-900 group-hover:text-primary-700 transition-colors mb-1">
-                                      {solution.title}
+                                      {tSol(`${solution.key}.title`)}
                                     </div>
                                     <div className="text-xs text-gray-600 leading-relaxed line-clamp-2">
-                                      {solution.description}
+                                      {tSol(`${solution.key}.description`)}
                                     </div>
                                   </div>
                                 </Link>
@@ -269,7 +230,7 @@ const Navigation = () => {
                         : "text-gray-700 hover:text-primary-700"
                     }`}
                   >
-                    {link.name}
+                    {tNav(link.key)}
                   </Link>
                 )
               ))}
@@ -288,7 +249,7 @@ const Navigation = () => {
                     : "bg-white border-gray-300 text-gray-700 hover:bg-gradient-to-r hover:from-accent-400 hover:to-primary-600 hover:text-white hover:border-transparent"
                 }`}
               >
-                <a href="https://app.zapeera.com/" target="_blank" rel="noopener noreferrer">Login</a>
+                <a href="https://app.zapeera.com/" target="_blank" rel="noopener noreferrer">{tNav("login")}</a>
               </Button>
               <Button
                 size="sm"
@@ -296,7 +257,7 @@ const Navigation = () => {
                 asChild
                 className={`border-gray-300 text-white bg-gradient-to-r from-accent-400 to-primary-600 hover:text-white hover:border-transparent whitespace-nowrap rounded-full px-5 font-medium text-sm transition-all duration-300`}
               >
-                <Link href="/contact-us">Contact Us</Link>
+                <Link href="/contact-us">{tNav("contact")}</Link>
               </Button>
             </div>
 
@@ -307,7 +268,7 @@ const Navigation = () => {
                 isAboutPage && !isScrolled ? "text-white" : "text-gray-700"
               }`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={tNav("menuToggleAria")}
               {...(isMobileMenuOpen ? { 'aria-expanded': 'true' } : { 'aria-expanded': 'false' })}
             >
               {isMobileMenuOpen ? (
@@ -333,9 +294,10 @@ const Navigation = () => {
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex flex-col gap-3 sm:gap-4">
                 {navLinks.map((link) => (
-                  link.name === "Solutions" ? (
+                  link.key === "solutions" ? (
                     <div key={link.path} className="w-full">
                       <button
+                        type="button"
                         onClick={() => setIsMobileSolutionsOpen(!isMobileSolutionsOpen)}
                         className={`w-full flex items-center justify-between text-base sm:text-lg font-semibold px-2 sm:px-4 py-3 sm:py-3.5 transition-all duration-200 rounded-lg ${
                         pathname === link.path || pathname?.startsWith("/solutions/")
@@ -343,11 +305,11 @@ const Navigation = () => {
                             : "text-gray-900 hover:text-primary-700 hover:bg-gray-100"
                         }`}
                       >
-                        <span>{link.name}</span>
+                        <span>{tNav(link.key)}</span>
                         <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isMobileSolutionsOpen ? 'rotate-180' : ''}`} />
                       </button>
                       {isMobileSolutionsOpen && (
-                        <div className="flex flex-col gap-1.5 sm:gap-2 ml-4 sm:ml-6 mt-2">
+                        <div className="flex flex-col gap-1.5 sm:gap-2 ms-4 sm:ms-6 mt-2">
                         {solutions.map((solution) => (
                           <Link
                             key={solution.slug}
@@ -363,7 +325,7 @@ const Navigation = () => {
                                 : "text-gray-700 hover:text-primary-700 hover:bg-gray-100"
                             }`}
                           >
-                            {solution.title}
+                            {tSol(`${solution.key}.title`)}
                           </Link>
                         ))}
                       </div>
@@ -381,7 +343,7 @@ const Navigation = () => {
                           : "text-gray-900 hover:text-primary-700 hover:bg-gray-100"
                       }`}
                     >
-                      {link.name}
+                      {tNav(link.key)}
                     </Link>
                   )
                 ))}
@@ -397,7 +359,7 @@ const Navigation = () => {
                       window.open('https://app.zapeera.com/', '_blank', 'noopener,noreferrer');
                     }}
                   >
-                    Login
+                    {tNav("login")}
                   </Button>
                   <Button
                     size="lg"
@@ -405,7 +367,7 @@ const Navigation = () => {
                     asChild
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <Link href="/contact-us" className="w-full">Contact Us </Link>
+                    <Link href="/contact-us" className="w-full">{tNav("contact")}</Link>
                   </Button>
                 </div>
             </div>

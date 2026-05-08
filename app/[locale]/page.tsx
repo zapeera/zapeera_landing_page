@@ -1,69 +1,15 @@
 import dynamic from 'next/dynamic';
-import type { Metadata } from 'next';
 import Navigation from "@/app/components/Navigation";
 import Footer from "@/app/components/Footer";
 import FloatingCTA from "@/app/components/FloatingCTA";
 import HeroSection from "@/app/components/home/HeroSection";
 import Loading from "@/app/components/ui/loading";
 import StructuredData from "@/app/components/StructuredData";
+import { buildPageMetadata } from "@/app/lib/page-metadata";
 
-export const metadata: Metadata = {
-  title: 'Zapeera — Pharmacy software, built for Pakistan',
-  description: 'Zapeera is cloud POS and inventory software for Pakistani pharmacies. Track every batch and expiry, replace the end-of-day hisaab, and see which medicines actually make profit. Free for 30 days, no credit card.',
-  keywords: [
-    'pharmacy software Pakistan',
-    'pharmacy POS',
-    'medicine inventory software',
-    'expiry tracking pharmacy',
-    'pharmacy management Pakistan',
-    'cloud POS Pakistan',
-    'PKR pharmacy software',
-    'Lahore pharmacy software',
-    'Karachi pharmacy software',
-  ],
-  authors: [{ name: 'Zapeera Team' }],
-  creator: 'Zapeera',
-  publisher: 'Zapeera',
-  metadataBase: new URL('https://zapeera.com'),
-  openGraph: {
-    title: 'Zapeera — Pharmacy software, built for Pakistan',
-    description: 'Cloud POS and inventory software for Pakistani pharmacies. Track every batch and expiry. Free for 30 days, no credit card.',
-    url: 'https://zapeera.com',
-    siteName: 'Zapeera',
-    images: [
-      {
-        url: 'https://zapeera.com/og-home.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zapeera — Pharmacy software, built for Pakistan',
-        type: 'image/jpeg',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zapeera — Pharmacy software, built for Pakistan',
-    description: 'Cloud POS and inventory software for Pakistani pharmacies. Track every batch and expiry. Free for 30 days, no credit card.',
-    images: ['https://zapeera.com/og-home.jpg'],
-    creator: '@zapeera',
-  },
-  alternates: {
-    canonical: 'https://zapeera.com',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+export async function generateMetadata({ params }: { params: { locale: string } }) {
+  return buildPageMetadata({ path: "/", metaKey: "home", locale: params.locale });
+}
 
 // Lazy-loaded home sections.
 // Composition is intentionally pharmacy-focused — no industry-tab carousel,

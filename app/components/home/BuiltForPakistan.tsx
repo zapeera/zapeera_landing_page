@@ -1,39 +1,20 @@
+'use client'
+
+import { useTranslations } from "next-intl";
 import { Check } from "lucide-react";
 import Container from "../ui/container";
 
-const items = [
-  {
-    title: "Pakistani medicines, pre-loaded",
-    body: "Start with a database of medicines registered in Pakistan. Add or correct entries — your changes stay on your account.",
-  },
-  {
-    title: "PKR by default",
-    body: "Prices, taxes, and reports in rupees. No currency conversion screens, no USD pricing math at the end of the month.",
-  },
-  {
-    title: "WhatsApp-first support",
-    body: "Message us on WhatsApp during business hours and we reply. No ticket queue, no five-step contact form.",
-  },
-  {
-    title: "Built for slow internet",
-    body: "Designed for the connection speeds Pakistani pharmacies actually have. Sales keep working when the line drops; everything syncs once you are back online.",
-  },
-  {
-    title: "Roman Urdu and Urdu interface",
-    body: "Coming soon. We are working on it now and will not pretend it is ready before it is.",
-  },
-];
-
 const BuiltForPakistan = () => {
+  const t = useTranslations("home.builtForPakistan");
+  const items = t.raw("items") as Array<{ title: string; body: string }>;
+
   return (
     <section className="bg-white py-20 md:py-32">
       <Container size="xl" padding="none">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="section-heading">Built for Pakistan</h2>
-            <p className="section-paragraph">
-              The details that international SaaS gets wrong and local desktop software never bothered to add.
-            </p>
+            <h2 className="section-heading">{t("heading")}</h2>
+            <p className="section-paragraph">{t("lead")}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
