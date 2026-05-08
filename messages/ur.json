@@ -1,81 +1,81 @@
 {
   "common": {
     "nav": {
-      "home": "Home",
+      "home": "ہوم",
       "features": "Features",
       "solutions": "Solutions",
       "pricing": "Pricing",
       "updates": "Updates",
-      "about": "About Us",
+      "about": "ہمارے بارے میں",
       "careers": "Careers",
       "login": "Login",
-      "contact": "Contact Us",
-      "menuToggleAria": "Toggle menu"
+      "contact": "رابطہ کریں",
+      "menuToggleAria": "مینو کھولیں / بند کریں"
     },
     "solutionsDropdown": {
       "title": "Solutions",
       "items": {
         "pharmacy": {
-          "title": "Pharmacy",
-          "description": "Cloud POS and inventory software for Pakistani pharmacies. Fully supported."
+          "title": "فارمیسی",
+          "description": "پاکستانی فارمیسیز کے لیے cloud POS اور inventory software۔ مکمل سپورٹڈ۔"
         },
         "retail": {
-          "title": "Retail",
-          "description": "Coming soon. Message us for early access."
+          "title": "ریٹیل",
+          "description": "جلد آرہا ہے۔ early access کے لیے ہمیں message کریں۔"
         },
         "restaurant": {
-          "title": "Restaurant",
-          "description": "Coming soon. Message us for early access."
+          "title": "ریسٹورنٹ",
+          "description": "جلد آرہا ہے۔ early access کے لیے ہمیں message کریں۔"
         },
         "wholesale": {
-          "title": "Wholesale",
-          "description": "Coming soon. Message us for early access."
+          "title": "ہول سیل",
+          "description": "جلد آرہا ہے۔ early access کے لیے ہمیں message کریں۔"
         },
         "departmentalStore": {
-          "title": "Departmental Store",
-          "description": "Coming soon. Message us for early access."
+          "title": "ڈیپارٹمنٹل سٹور",
+          "description": "جلد آرہا ہے۔ early access کے لیے ہمیں message کریں۔"
         },
         "distribution": {
-          "title": "Distribution",
-          "description": "Coming soon. Message us for early access."
+          "title": "ڈسٹری بیوشن",
+          "description": "جلد آرہا ہے۔ early access کے لیے ہمیں message کریں۔"
         }
       }
     },
     "buttons": {
-      "startFreeTrial": "Start free trial",
-      "messageOnWhatsapp": "Message us on WhatsApp",
-      "notifyOnWhatsapp": "Notify me on WhatsApp",
-      "askWhatIsNew": "Ask what is new",
-      "requestDemo": "Request a Demo",
-      "loginDashboard": "Login to Dashboard",
-      "seePricing": "See pricing",
-      "seeFeatures": "See features",
-      "seeFAQ": "Read the FAQ",
-      "backToHome": "Back to home",
-      "contactUs": "Contact us",
-      "seeThePharmacyPage": "See the pharmacy page",
-      "backToSolutions": "Back to solutions",
-      "aboutTheTeam": "About the team",
+      "startFreeTrial": "Free trial شروع کریں",
+      "messageOnWhatsapp": "WhatsApp پر message کریں",
+      "notifyOnWhatsapp": "WhatsApp پر notify کریں",
+      "askWhatIsNew": "پوچھیں کیا نیا ہے",
+      "requestDemo": "Demo کی request کریں",
+      "loginDashboard": "Dashboard میں login کریں",
+      "seePricing": "Pricing دیکھیں",
+      "seeFeatures": "Features دیکھیں",
+      "seeFAQ": "FAQ پڑھیں",
+      "backToHome": "ہوم پر واپس",
+      "contactUs": "رابطہ کریں",
+      "seeThePharmacyPage": "فارمیسی صفحہ دیکھیں",
+      "backToSolutions": "Solutions پر واپس",
+      "aboutTheTeam": "ٹیم کے بارے میں",
       "submit": "Submit",
-      "sending": "Sending...",
-      "send": "Send"
+      "sending": "بھیجا جا رہا ہے...",
+      "send": "بھیجیں"
     },
     "languageToggle": {
-      "ariaLabel": "Switch language",
+      "ariaLabel": "زبان تبدیل کریں",
       "english": "English",
       "urdu": "اردو"
     },
     "floatingCta": {
-      "ariaLabel": "Chat with us on WhatsApp",
+      "ariaLabel": "WhatsApp پر ہم سے بات کریں",
       "tooltip": "Chat"
     }
   },
   "footer": {
-    "tagline": "Cloud POS and inventory software, built for Pakistani pharmacies.",
-    "copyright": "© {year} Zapeera. All rights reserved.",
+    "tagline": "پاکستانی فارمیسیز کے لیے بنایا گیا cloud POS اور inventory software۔",
+    "copyright": "© {year} Zapeera۔ تمام حقوق محفوظ ہیں۔",
     "columns": {
-      "product": "Product",
-      "company": "Company",
+      "product": "پروڈکٹ",
+      "company": "کمپنی",
       "resources": "Resources",
       "legal": "Legal"
     },
@@ -83,9 +83,9 @@
       "features": "Features",
       "solutions": "Solutions",
       "pricing": "Pricing",
-      "about": "About Us",
+      "about": "ہمارے بارے میں",
       "careers": "Careers",
-      "contact": "Contact Us",
+      "contact": "رابطہ کریں",
       "helpCenter": "Help Center",
       "updates": "Updates",
       "privacy": "Privacy Policy",
@@ -102,233 +102,233 @@
   },
   "home": {
     "hero": {
-      "headlineBefore": "The pharmacy software, built for ",
-      "headlineEm": "Pakistan",
-      "headlineAfter": ".",
-      "body": "Track every batch and expiry. Replace the end-of-day hisaab. See which medicines actually make profit and which are dead stock — across one shop or three. Built for the way Pakistani pharmacies actually run, priced for the Pakistani market.",
-      "imageAlt": "Zapeera pharmacy dashboard preview"
+      "headlineBefore": "فارمیسی software، بنایا گیا ",
+      "headlineEm": "پاکستان",
+      "headlineAfter": " کے لیے۔",
+      "body": "ہر batch اور expiry کو track کریں۔ end-of-day حساب کتاب کا جھنجھٹ ختم کریں۔ دیکھیں کون سی دوائیں اصل میں profit دیتی ہیں اور کون سی dead stock ہیں — ایک شاپ ہو یا تین۔ پاکستانی فارمیسی جس طرح چلتی ہے، اسی کے مطابق بنایا گیا، پاکستانی market کے لیے priced کیا گیا۔",
+      "imageAlt": "Zapeera فارمیسی dashboard preview"
     },
     "about": {
-      "heading": "Why we built this",
-      "lead": "We are a small Pakistani team. The last year has been talking to pharmacy owners in Lahore and Karachi about what is actually broken and what is just annoying — and building software around the answers.",
+      "heading": "ہم نے یہ کیوں بنایا",
+      "lead": "ہم ایک چھوٹی پاکستانی ٹیم ہیں۔ پچھلا سال لاہور اور کراچی کے فارمیسی owners سے بات کرنے میں گزرا — یہ سمجھنے میں کہ اصل میں کیا ٹوٹا ہوا ہے اور کیا صرف تنگ کرنے والا ہے — اور ان کے جوابات کے گرد software بنایا۔",
       "items": [
         {
-          "title": "Made in Pakistan",
-          "body": "Built locally, by people who know what a Pakistani pharmacy actually looks like at 9pm on a Friday."
+          "title": "پاکستان میں بنایا گیا",
+          "body": "مقامی طور پر بنایا گیا، ان لوگوں نے جو جانتے ہیں جمعہ رات 9 بجے ایک پاکستانی فارمیسی اصل میں کیسی نظر آتی ہے۔"
         },
         {
-          "title": "Priced for the Pakistani market",
-          "body": "International POS software is priced in dollars and built for chains. Local desktop software is stuck in 2010. Zapeera sits between the two."
+          "title": "پاکستانی market کے لیے priced",
+          "body": "International POS software ڈالر میں priced ہے اور chains کے لیے بنا ہے۔ مقامی desktop software 2010 میں اٹکا ہوا ہے۔ Zapeera ان دونوں کے درمیان ہے۔"
         },
         {
-          "title": "Built for the way you work",
-          "body": "WhatsApp-first support. Tolerant of slow internet. Pakistani medicines pre-loaded. Honest about what is shipped and what is still coming."
+          "title": "آپ کے کام کے طریقے کے لیے بنایا گیا",
+          "body": "WhatsApp-first سپورٹ۔ سست internet برداشت کرتا ہے۔ پاکستانی دوائیں پہلے سے loaded ہیں۔ جو شپ ہو چکا اور جو ابھی آنا ہے، دونوں کے بارے میں ایماندار۔"
         }
       ],
       "imageAlt": "Zapeera business management platform illustration"
     },
     "featuresOverview": {
-      "heading": "Three things Zapeera does well",
-      "lead": "We did not build 50 features. We built the three a Pakistani pharmacy actually needs and made them work properly.",
+      "heading": "تین چیزیں جو Zapeera اچھی طرح کرتا ہے",
+      "lead": "ہم نے 50 features نہیں بنائیں۔ ہم نے وہ تین بنائیں جو ایک پاکستانی فارمیسی کو واقعی چاہئیں — اور انہیں صحیح طرح کام کرنے والی بنایا۔",
       "items": [
         {
-          "title": "Expiry tracking that actually works",
-          "description": "Get alerts at 90, 60, and 30 days before any medicine expires. Return to the supplier on time, mark batches that cannot be returned, and stop throwing money in the bin every quarter."
+          "title": "Expiry tracking جو واقعی کام کرتی ہے",
+          "description": "کسی بھی دوائی کی expiry سے 90، 60، اور 30 دن پہلے alert ملے گا۔ supplier کو وقت پر return کریں، جو batches return نہیں ہو سکتیں انہیں mark کریں، اور ہر سہ ماہی پیسے ضائع ہونا بند کریں۔"
         },
         {
-          "title": "Inventory you can trust",
-          "description": "Know exactly what is on the shelf, what is in the back, and what is running low — across one shop or three. Barcode scan when stock comes in, scan again at the till. The numbers match without anyone counting at midnight."
+          "title": "Inventory جس پر بھروسہ ہو",
+          "description": "بالکل پتا چلے کہ shelf پر کیا ہے، پیچھے store میں کیا ہے، اور کیا ختم ہو رہا ہے — ایک شاپ ہو یا تین۔ stock آنے پر barcode scan، till پر دوبارہ scan۔ نمبر بغیر آدھی رات کو counting کیے میل کھائیں گے۔"
         },
         {
-          "title": "Reports that tell you what to do next",
-          "description": "See which medicines actually make profit, which are dead stock, and which customers come back. End-of-day reports take 5 seconds, not an hour with a calculator."
+          "title": "Reports جو بتاتی ہیں آگے کیا کرنا ہے",
+          "description": "دیکھیں کون سی دوائیں اصل میں profit دیتی ہیں، کون سی dead stock ہیں، اور کون سے گاہک واپس آتے ہیں۔ End-of-day reports 5 سیکنڈ میں — calculator پر ایک گھنٹہ نہیں۔"
         }
       ]
     },
     "builtForPakistan": {
-      "heading": "Built for Pakistan",
-      "lead": "The details that international SaaS gets wrong and local desktop software never bothered to add.",
+      "heading": "پاکستان کے لیے بنایا گیا",
+      "lead": "وہ تفصیلات جو international SaaS غلط کرتا ہے اور مقامی desktop software نے کبھی شامل کرنے کی زحمت نہیں کی۔",
       "items": [
         {
-          "title": "Pakistani medicines, pre-loaded",
-          "body": "Start with a database of medicines registered in Pakistan. Add or correct entries — your changes stay on your account."
+          "title": "پاکستانی دوائیں، پہلے سے loaded",
+          "body": "پاکستان میں رجسٹرڈ دواؤں کے database سے شروع کریں۔ entries add کریں یا درست کریں — آپ کی تبدیلیاں آپ کے account میں رہیں گی۔"
         },
         {
           "title": "PKR by default",
-          "body": "Prices, taxes, and reports in rupees. No currency conversion screens, no USD pricing math at the end of the month."
+          "body": "Prices، taxes، اور reports روپوں میں۔ کوئی currency conversion screens نہیں، مہینے کے آخر میں USD pricing کا حساب نہیں۔"
         },
         {
-          "title": "WhatsApp-first support",
-          "body": "Message us on WhatsApp during business hours and we reply. No ticket queue, no five-step contact form."
+          "title": "WhatsApp-first سپورٹ",
+          "body": "Business hours میں WhatsApp پر message کریں اور ہم reply کرتے ہیں۔ کوئی ticket queue نہیں، کوئی پانچ-قدمی contact form نہیں۔"
         },
         {
-          "title": "Built for slow internet",
-          "body": "Designed for the connection speeds Pakistani pharmacies actually have. Sales keep working when the line drops; everything syncs once you are back online."
+          "title": "سست internet کے لیے بنایا گیا",
+          "body": "پاکستانی فارمیسیز کے پاس اصل connection speeds کے مطابق design کیا گیا۔ line گرنے پر بھی sales چلتی رہتی ہیں؛ online ہوتے ہی سب کچھ sync ہو جاتا ہے۔"
         },
         {
-          "title": "Roman Urdu and Urdu interface",
-          "body": "Coming soon. We are working on it now and will not pretend it is ready before it is."
+          "title": "Roman Urdu اور اردو interface",
+          "body": "جلد آرہا ہے۔ ابھی اس پر کام ہو رہا ہے، اور تیار ہونے سے پہلے ہم تیار ہونے کا دکھاوا نہیں کریں گے۔"
         }
       ]
     },
     "howItWorks": {
-      "heading": "How you get started",
-      "lead": "No sales call, no procurement form. From the first WhatsApp message to your first live sale is usually a week.",
+      "heading": "آپ کیسے شروع کرتے ہیں",
+      "lead": "کوئی sales call نہیں، کوئی procurement form نہیں۔ پہلے WhatsApp message سے آپ کی پہلی live sale تک عام طور پر ایک ہفتہ لگتا ہے۔",
       "steps": [
         {
-          "title": "Message us on WhatsApp",
-          "description": "Tell us a bit about your pharmacy — branches, counters, what you sell. We confirm whether Zapeera is the right fit for you."
+          "title": "WhatsApp پر ہمیں message کریں",
+          "description": "اپنی فارمیسی کے بارے میں تھوڑا بتائیں — branches، counters، آپ کیا بیچتے ہیں۔ ہم confirm کریں گے کہ Zapeera آپ کے لیے صحیح fit ہے یا نہیں۔"
         },
         {
-          "title": "We set it up with you",
-          "description": "On a free setup call we load your stock, your suppliers, and your batches. We do this in Urdu or English, whichever is easier."
+          "title": "ہم آپ کے ساتھ مل کر setup کرتے ہیں",
+          "description": "Free setup call پر ہم آپ کا stock، آپ کے suppliers، اور آپ کی batches load کرتے ہیں۔ یہ اردو یا English میں — جو آسان ہو۔"
         },
         {
-          "title": "Train your staff in an hour",
-          "description": "The till screen is simple enough that a cashier can ring sales within 10 minutes. We walk your team through it on the same call."
+          "title": "اپنے staff کو ایک گھنٹے میں train کریں",
+          "description": "Till screen اتنی سادہ ہے کہ نیا cashier 10 منٹ میں sales ring کر سکتا ہے۔ اسی call پر ہم آپ کی ٹیم کو پورا process سکھا دیتے ہیں۔"
         },
         {
-          "title": "Run for 30 days, free",
-          "description": "Use everything. Track expiry, run reports, manage branches. After the month you pick a plan — or you do not, no auto-charge."
+          "title": "30 دن مفت چلائیں",
+          "description": "سب کچھ استعمال کریں۔ Expiry track کریں، reports چلائیں، branches manage کریں۔ مہینے کے بعد plan choose کریں — یا نہ کریں، کوئی auto-charge نہیں۔"
         }
       ]
     },
     "faq": {
-      "heading": "Frequently Asked Questions",
+      "heading": "اکثر پوچھے جانے والے سوالات",
       "items": [
         {
-          "question": "Will it work for my single shop, or do I need multiple branches?",
-          "answer": "Both. Zapeera works the same whether you run one counter or three branches. Multi-branch only kicks in when you turn it on."
+          "question": "کیا یہ میری ایک شاپ کے لیے کام کرے گا، یا multiple branches چاہئیں؟",
+          "answer": "دونوں۔ Zapeera ایک counter کے لیے بھی اور تین branches کے لیے بھی ایک ہی طرح کام کرتا ہے۔ Multi-branch تب چلتا ہے جب آپ خود اسے turn on کریں۔"
         },
         {
-          "question": "What if my internet goes down?",
-          "answer": "The till keeps working. Sales are saved locally and sync to the cloud the moment your connection is back. You will not lose a sale because PTCL went down."
+          "question": "اگر میرا internet چلا جائے تو؟",
+          "answer": "Till چلتی رہتی ہے۔ Sales locally save ہوتی ہیں اور connection واپس آتے ہی cloud پر sync ہو جاتی ہیں۔ PTCL کے بند ہونے سے آپ کی sale نہیں جائے گی۔"
         },
         {
-          "question": "Do you have Pakistani medicines pre-loaded?",
-          "answer": "Yes. We start you with a database of medicines registered in Pakistan, plus common generics and brand alternatives. You can add or correct any entry on your account."
+          "question": "کیا آپ کے پاس پاکستانی دوائیں پہلے سے loaded ہیں؟",
+          "answer": "جی ہاں۔ ہم آپ کو پاکستان میں رجسٹرڈ دواؤں کے database سے start کرتے ہیں — common generics اور brand alternatives بھی۔ آپ اپنے account میں کوئی بھی entry add یا درست کر سکتے ہیں۔"
         },
         {
-          "question": "Can my staff use it without training?",
-          "answer": "The till screen is built so a new cashier can ring a sale within 10 minutes. We also do a free setup call when you start, in Urdu or English, and walk your team through it."
+          "question": "کیا میرا staff بغیر training کے استعمال کر سکتا ہے؟",
+          "answer": "Till screen ایسی بنائی گئی ہے کہ نیا cashier 10 منٹ میں sale ring کر سکے۔ شروع میں ایک free setup call بھی ہوتی ہے، اردو یا English میں، جس میں ہم آپ کی ٹیم کو پورا process سکھا دیتے ہیں۔"
         },
         {
-          "question": "What happens after the free month?",
-          "answer": "You pick a plan. We do not auto-charge a card and we do not need one upfront for the trial. If 30 days is not enough, message us — we are reasonable about it."
+          "question": "Free مہینے کے بعد کیا ہوتا ہے؟",
+          "answer": "آپ ایک plan choose کرتے ہیں۔ ہم card auto-charge نہیں کرتے اور trial کے لیے پہلے سے card مانگتے بھی نہیں۔ اگر 30 دن کافی نہ ہوں، ہمیں message کریں — ہم اس پر reasonable ہیں۔"
         },
         {
-          "question": "Is my data safe?",
-          "answer": "Your data is encrypted in transit and at rest, backed up daily, and tied to your account only. We do not sell or share pharmacy data with anyone, ever."
+          "question": "کیا میرا data محفوظ ہے؟",
+          "answer": "آپ کا data transit اور rest دونوں میں encrypted ہے، روزانہ backup ہوتا ہے، اور صرف آپ کے account سے جڑا ہوتا ہے۔ ہم فارمیسی data کسی کو بیچتے یا share کرتے نہیں — کبھی نہیں۔"
         },
         {
-          "question": "What if I want to stop using Zapeera?",
-          "answer": "Cancel from your account or message us. We export your inventory, sales history, and customer list as CSV so nothing is locked in."
+          "question": "اگر میں Zapeera استعمال کرنا بند کرنا چاہوں؟",
+          "answer": "اپنے account سے cancel کریں یا ہمیں message کریں۔ ہم آپ کا inventory، sales history، اور customer list CSV میں export کر دیتے ہیں — کچھ بھی lock نہیں ہوتا۔"
         },
         {
-          "question": "Do you charge in PKR or USD?",
-          "answer": "PKR. All plans are priced in rupees — no exchange-rate surprises at the end of the month."
+          "question": "کیا آپ PKR میں charge کرتے ہیں یا USD میں؟",
+          "answer": "PKR۔ تمام plans روپوں میں priced ہیں — مہینے کے آخر میں exchange-rate کا کوئی surprise نہیں۔"
         }
       ]
     },
     "cta": {
-      "heading": "Be one of our first 50 pharmacies.",
-      "body": "Free for 30 days. No credit card. We set it up for you and pre-load your medicines. Message us on WhatsApp — we reply within an hour during business hours."
+      "heading": "ہماری پہلی 50 فارمیسیز میں سے ایک بنیں۔",
+      "body": "30 دن مفت۔ کوئی credit card نہیں۔ ہم آپ کے لیے setup کرتے ہیں اور آپ کی دوائیں pre-load کر دیتے ہیں۔ WhatsApp پر ہمیں message کریں — business hours میں ایک گھنٹے کے اندر reply ملے گا۔"
     }
   },
   "pricing": {
     "page": {
-      "heroH1": "Simple, transparent pricing",
-      "heroLead": "In PKR. Built for the way Pakistani pharmacies actually buy software.",
-      "heroNote": "30-day free trial. No credit card required. We set it up for you and pre-load your medicines.",
-      "faqHeading": "Pricing questions",
-      "faqLead": "The things pharmacy owners ask before signing up. If yours is not here, message us — we will answer.",
-      "closingHeading": "Still deciding?",
-      "closingBody": "Message us on WhatsApp with how many counters and branches you run. We will tell you which plan fits — honestly, even if it is the smallest one.",
+      "heroH1": "سادہ، شفاف pricing",
+      "heroLead": "PKR میں۔ پاکستانی فارمیسیز جس طرح software خریدتی ہیں، اسی کے لیے بنایا گیا۔",
+      "heroNote": "30 دن کا free trial۔ کوئی credit card نہیں چاہیے۔ ہم آپ کے لیے setup کرتے ہیں اور آپ کی دوائیں pre-load کر دیتے ہیں۔",
+      "faqHeading": "Pricing کے سوالات",
+      "faqLead": "Sign up سے پہلے فارمیسی owners جو سوال پوچھتے ہیں۔ اگر آپ کا سوال یہاں نہیں ہے، ہمیں message کریں — ہم جواب دیں گے۔",
+      "closingHeading": "ابھی فیصلہ نہیں کر پا رہے؟",
+      "closingBody": "WhatsApp پر بتائیں کہ آپ کے کتنے counters اور branches ہیں۔ ہم بتائیں گے کون سا plan fit ہو گا — ایمانداری سے، چاہے وہ سب سے چھوٹا ہی کیوں نہ ہو۔",
       "faqs": [
         {
-          "question": "What happens after the 30-day free trial?",
-          "answer": "Pick the plan that fits and we move you onto it. No auto-charge — we never need a card during the trial. If 30 days isn't enough, message us; we are reasonable about it."
+          "question": "30 دن کے free trial کے بعد کیا ہوتا ہے؟",
+          "answer": "جو plan آپ کو fit کرے وہ choose کریں اور ہم آپ کو اس پر منتقل کر دیں گے۔ کوئی auto-charge نہیں — trial کے دوران ہمیں card کی بھی ضرورت نہیں۔ اگر 30 دن کافی نہ ہوں، ہمیں message کریں؛ ہم اس پر reasonable ہیں۔"
         },
         {
-          "question": "Can I switch plans later?",
-          "answer": "Yes. Upgrade any time and the change is immediate. Downgrades take effect at the next billing cycle so nothing breaks mid-month."
+          "question": "کیا میں بعد میں plan switch کر سکتا ہوں؟",
+          "answer": "جی ہاں۔ کسی بھی وقت upgrade کریں — تبدیلی فوراً ہو جائے گی۔ Downgrade اگلے billing cycle سے effective ہو گا تاکہ مہینے کے بیچ میں کچھ ٹوٹے نہیں۔"
         },
         {
-          "question": "Do you offer discounts for annual payment?",
-          "answer": "Yes. Annual billing saves 17% — Solo at Rs 15,000/year (vs Rs 18,000 monthly), Team at Rs 35,000/year, Business at Rs 75,000/year."
+          "question": "کیا annual payment پر discount ملتا ہے؟",
+          "answer": "جی ہاں۔ Annual billing پر 17% بچت — Solo پر Rs 15,000/سال (vs Rs 18,000 monthly)، Team پر Rs 35,000/سال، Business پر Rs 75,000/سال۔"
         },
         {
-          "question": "What if I have more than 3 branches?",
-          "answer": "The Business plan covers up to 3 branches. Beyond that, the Enterprise plan covers unlimited branches with custom pricing — message us with how many shops you run and we'll quote."
+          "question": "اگر میری 3 سے زیادہ branches ہیں تو؟",
+          "answer": "Business plan تین branches تک cover کرتا ہے۔ اس سے زیادہ کے لیے Enterprise plan ہے، جس میں unlimited branches اور custom pricing ہے — ہمیں بتائیں آپ کے کتنے shops ہیں اور ہم quote دے دیں گے۔"
         },
         {
-          "question": "Is there a setup fee?",
-          "answer": "No. We do not charge a setup fee. The free trial includes a setup call where we load your stock, suppliers, and batches and walk your team through the till — at no cost."
+          "question": "کیا setup fee ہے؟",
+          "answer": "نہیں۔ ہم setup fee نہیں لیتے۔ Free trial میں ایک setup call بھی شامل ہے — اس میں ہم آپ کا stock، suppliers، اور batches load کرتے ہیں اور آپ کی ٹیم کو till سکھا دیتے ہیں — بالکل مفت۔"
         },
         {
-          "question": "Can I cancel anytime?",
-          "answer": "Yes. Cancel from your account or message us. We export your inventory, sales history, and customer list as CSV so nothing is locked in."
+          "question": "کیا میں کسی بھی وقت cancel کر سکتا ہوں؟",
+          "answer": "جی ہاں۔ اپنے account سے cancel کریں یا ہمیں message کریں۔ ہم آپ کا inventory، sales history، اور customer list CSV میں export کر دیتے ہیں — کچھ lock نہیں ہوتا۔"
         }
       ]
     },
     "section": {
-      "heading": "Simple, transparent pricing",
-      "lead": "In PKR. Built for the way Pakistani pharmacies actually buy software. 30-day free trial — no credit card.",
-      "billingMonthly": "Monthly",
-      "billingAnnual": "Annual",
-      "billingSave": "Save 17%",
-      "billingToggleAria": "Toggle annual billing",
-      "perMonth": "/month",
-      "perYear": "/year",
-      "popularBadge": "Most popular",
+      "heading": "سادہ، شفاف pricing",
+      "lead": "PKR میں۔ پاکستانی فارمیسیز جس طرح software خریدتی ہیں، اسی کے لیے۔ 30 دن کا free trial — کوئی credit card نہیں۔",
+      "billingMonthly": "ماہانہ",
+      "billingAnnual": "سالانہ",
+      "billingSave": "17% بچت",
+      "billingToggleAria": "سالانہ billing toggle کریں",
+      "perMonth": "/ماہ",
+      "perYear": "/سال",
+      "popularBadge": "سب سے مقبول",
       "customPricing": "Custom pricing",
-      "taxNote": "Prices in Pakistani Rupees (PKR). Excludes applicable taxes.",
+      "taxNote": "قیمتیں پاکستانی روپے (PKR) میں۔ قابل اطلاق ٹیکس شامل نہیں۔",
       "plans": {
         "solo": {
           "name": "Solo",
-          "tagline": "For single-shop pharmacies",
+          "tagline": "ایک شاپ والی فارمیسیز کے لیے",
           "features": [
             "1 user account",
-            "1 pharmacy / 1 branch",
-            "Full POS with barcode scanning",
+            "1 فارمیسی / 1 branch",
+            "Barcode scanning کے ساتھ مکمل POS",
             "Inventory management",
-            "Expiry alerts (30 / 60 / 90 days)",
-            "Daily sales reports",
-            "Pakistani medicines pre-loaded",
-            "WhatsApp support",
-            "30-day free trial — no credit card"
+            "Expiry alerts (30 / 60 / 90 دن)",
+            "روزانہ sales reports",
+            "پاکستانی دوائیں pre-loaded",
+            "WhatsApp سپورٹ",
+            "30 دن کا free trial — کوئی credit card نہیں"
           ]
         },
         "team": {
           "name": "Team",
-          "tagline": "For pharmacies with a small team",
+          "tagline": "چھوٹی ٹیم والی فارمیسیز کے لیے",
           "features": [
-            "Everything in Solo",
+            "Solo کا سب کچھ",
             "3 user accounts",
             "Role-based access (owner / cashier / manager)",
-            "Advanced reports — profit by medicine, dead stock, top customers",
+            "Advanced reports — profit by medicine، dead stock، top customers",
             "Customer credit tracking",
-            "WhatsApp support"
+            "WhatsApp سپورٹ"
           ]
         },
         "business": {
           "name": "Business",
-          "tagline": "For multi-branch pharmacies",
+          "tagline": "Multi-branch فارمیسیز کے لیے",
           "features": [
-            "Everything in Team",
+            "Team کا سب کچھ",
             "10 user accounts",
-            "Up to 3 branches with consolidated reporting",
+            "3 branches تک، consolidated reporting کے ساتھ",
             "Multi-branch inventory transfer",
-            "Priority WhatsApp support",
-            "Onboarding assistance"
+            "Priority WhatsApp سپورٹ",
+            "Onboarding سپورٹ"
           ]
         },
         "enterprise": {
           "name": "Enterprise / Chain",
-          "tagline": "For pharmacy chains and groups",
+          "tagline": "فارمیسی chains اور groups کے لیے",
           "features": [
             "Custom pricing",
-            "Unlimited users and branches",
+            "Unlimited users اور branches",
             "Dedicated account manager",
             "Custom integrations"
           ]
@@ -337,306 +337,306 @@
     }
   },
   "features": {
-    "heroH1": "Three things Zapeera does well — in detail",
-    "heroLead": "Expiry tracking, inventory you can trust, and reports that tell you what to do next. Plus the supporting capabilities that make them work for a Pakistani pharmacy.",
-    "supportingHeading": "The supporting bits",
-    "supportingLead": "The three pillars above are the headline. These are the everyday capabilities that sit behind them and make a Pakistani pharmacy actually run.",
-    "ctaHeading": "Want to see it on your stock?",
-    "ctaBody": "Free for 30 days. We pre-load your medicines and walk your team through it on a setup call.",
+    "heroH1": "تین چیزیں جو Zapeera اچھی طرح کرتا ہے — تفصیل کے ساتھ",
+    "heroLead": "Expiry tracking، inventory جس پر بھروسہ ہو، اور reports جو بتاتی ہیں آگے کیا کرنا ہے۔ اور وہ supporting capabilities جو ایک پاکستانی فارمیسی کے لیے ان سب کو کام کرنے والی بناتی ہیں۔",
+    "supportingHeading": "Supporting بات",
+    "supportingLead": "اوپر تین pillars headline ہیں۔ یہ روزمرہ کی capabilities ہیں جو پیچھے بیٹھ کر ایک پاکستانی فارمیسی کو واقعی چلاتی ہیں۔",
+    "ctaHeading": "اپنے stock پر دیکھنا چاہتے ہیں؟",
+    "ctaBody": "30 دن مفت۔ ہم آپ کی دوائیں pre-load کرتے ہیں اور setup call پر آپ کی ٹیم کو سکھا دیتے ہیں۔",
     "pillars": [
       {
-        "title": "Expiry tracking that actually works",
-        "intro": "The biggest leak in a Pakistani pharmacy is medicines you do not return to the supplier in time. Zapeera tracks every batch from the moment it comes in, alerts you with enough runway to act, and tells you exactly how much each expiry would have cost you if you had missed it.",
+        "title": "Expiry tracking جو واقعی کام کرتی ہے",
+        "intro": "ایک پاکستانی فارمیسی میں سب سے بڑی leak وہ دوائیں ہیں جو آپ supplier کو وقت پر return نہیں کرتے۔ Zapeera ہر batch کو آنے کے لمحے سے track کرتا ہے، آپ کو کارروائی کے لیے کافی runway کے ساتھ alert کرتا ہے، اور بالکل بتاتا ہے کہ ہر expiry کتنا نقصان دیتی اگر آپ مس کرتے۔",
         "points": [
-          "Alerts at 90, 60, and 30 days before any batch expires",
-          "Per-supplier return-window tracking — know who takes returns and who does not",
-          "Mark batches that cannot be returned and write them off cleanly",
-          "End-of-month expiry report by supplier, by category, by branch"
+          "کسی بھی batch کی expiry سے 90، 60، اور 30 دن پہلے alerts",
+          "Per-supplier return-window tracking — جانیں کون returns لیتا ہے اور کون نہیں",
+          "جو batches return نہیں ہو سکتیں ان کو mark کریں اور صفائی سے write off کریں",
+          "End-of-month expiry report supplier کے حساب سے، category کے حساب سے، branch کے حساب سے"
         ]
       },
       {
-        "title": "Inventory you can trust",
-        "intro": "Most pharmacy stock counts are wrong because the till and the inventory book are two different worlds. Zapeera makes them the same world. Barcode scan when stock comes in, scan again at the till. The number on the screen matches the number on the shelf without anyone counting at midnight.",
+        "title": "Inventory جس پر بھروسہ ہو",
+        "intro": "زیادہ تر فارمیسی stock counts غلط ہوتے ہیں کیونکہ till اور inventory book دو مختلف دنیائیں ہیں۔ Zapeera انہیں ایک ہی دنیا بنا دیتا ہے۔ Stock آنے پر barcode scan، till پر دوبارہ scan۔ Screen پر نمبر shelf کے نمبر سے میل کھاتا ہے، آدھی رات کو counting کیے بغیر۔",
         "points": [
-          "Real-time stock levels across one shop or three branches",
-          "Barcode at intake and at the till — no manual counting",
-          "Low-stock alerts tied to your real selling speed, not a fixed threshold",
-          "Inter-branch transfers with batch and expiry kept intact"
+          "ایک شاپ ہو یا تین branches، real-time stock levels",
+          "Intake پر اور till پر barcode — کوئی manual counting نہیں",
+          "Low-stock alerts آپ کی اصل selling speed کے مطابق، fixed threshold پر نہیں",
+          "Inter-branch transfers، batch اور expiry برقرار رکھتے ہوئے"
         ]
       },
       {
-        "title": "Reports that tell you what to do next",
-        "intro": "Most reports show you what happened. Zapeera shows you what to do about it. Profit by medicine, dead stock by category, repeat customers by branch — straight on the dashboard, not buried five clicks deep.",
+        "title": "Reports جو بتاتی ہیں آگے کیا کرنا ہے",
+        "intro": "زیادہ تر reports بتاتی ہیں کیا ہوا۔ Zapeera بتاتا ہے اس کے بارے میں کیا کرنا ہے۔ Profit by medicine، dead stock by category، repeat customers by branch — سیدھا dashboard پر، پانچ clicks نیچے دفن نہیں۔",
         "points": [
-          "Profit-per-medicine ranked highest to lowest",
-          "Dead-stock list — items that have not sold in 60 / 90 / 180 days",
-          "Repeat-customer report — who came back, what they bought, how often",
-          "End-of-day in 5 seconds, not an hour with a calculator"
+          "Profit-per-medicine سب سے زیادہ سے کم تک ranked",
+          "Dead-stock list — وہ items جو 60 / 90 / 180 دن سے نہیں بکیں",
+          "Repeat-customer report — کون واپس آیا، کیا خریدا، کتنی بار",
+          "End-of-day 5 سیکنڈ میں — calculator کے ساتھ ایک گھنٹہ نہیں"
         ]
       }
     ],
     "supporting": [
       {
-        "title": "POS that works offline",
-        "body": "Sales keep ringing when the internet drops. Everything syncs once the line is back."
+        "title": "POS جو offline کام کرتا ہے",
+        "body": "Internet گرنے پر بھی sales چلتی رہتی ہیں۔ Line واپس آتے ہی سب کچھ sync ہو جاتا ہے۔"
       },
       {
         "title": "Multi-branch",
-        "body": "Manage up to three branches from one dashboard. Transfer stock, compare branches, consolidate reports."
+        "body": "ایک dashboard سے تین branches تک manage کریں۔ Stock transfer کریں، branches compare کریں، reports consolidate کریں۔"
       },
       {
         "title": "Smart billing & invoicing",
-        "body": "Tax-correct invoices in PKR. SMS or printed receipt. Returns and refunds without paperwork."
+        "body": "PKR میں tax-correct invoices۔ SMS یا printed receipt۔ بغیر کاغذی کام returns اور refunds۔"
       },
       {
         "title": "Role-based access",
-        "body": "What the cashier sees is not what the owner sees. Audit logs of who did what."
+        "body": "Cashier کو جو نظر آتا ہے وہ owner کو نظر آنے والا نہیں۔ کس نے کیا کیا، اس کا audit log۔"
       },
       {
         "title": "Customer records",
-        "body": "Phone-number lookup at the till. Repeat-prescription history. Loyalty without a separate app."
+        "body": "Till پر phone-number lookup۔ Repeat-prescription history۔ علیحدہ app کے بغیر loyalty۔"
       },
       {
         "title": "Suppliers & manufacturers",
-        "body": "Purchase history, return windows, and supplier performance ranked by reliability."
+        "body": "Purchase history، return windows، اور supplier performance ranked by reliability."
       }
     ]
   },
   "about": {
-    "heroH1": "About Zapeera",
-    "heroLead": "A small Pakistani team building cloud software for Pakistani pharmacies. Honest about what we have shipped and what is still coming.",
+    "heroH1": "Zapeera کے بارے میں",
+    "heroLead": "ایک چھوٹی پاکستانی ٹیم جو پاکستانی فارمیسیز کے لیے cloud software بنا رہی ہے۔ جو شپ ہو چکا اور جو ابھی آنا ہے، دونوں کے بارے میں ایماندار۔",
     "story": {
-      "heading": "Our story",
-      "p1": "We are a small Pakistani team. We spent the last year sitting with pharmacy owners in Lahore and Karachi, watching how a real shop runs from open to close, and listening to what is actually broken versus what is just annoying.",
-      "p2": "The pattern was the same everywhere. Expired medicines piling up in a corner because nobody had time to track 90-day windows. Stock numbers that did not match the shelf because the till and the inventory book were two different worlds. End-of-day hisaab on a calculator at 11pm.",
-      "p3": "International POS software is built for chains and priced in dollars. Local desktop software is stuck in 2010. Zapeera sits between the two — modern cloud software, built in Pakistan, priced in PKR, supported on WhatsApp.",
-      "imageAlt": "Zapeera pharmacy dashboard"
+      "heading": "ہماری کہانی",
+      "p1": "ہم ایک چھوٹی پاکستانی ٹیم ہیں۔ پچھلا سال ہم نے لاہور اور کراچی کے فارمیسی owners کے ساتھ بیٹھ کر گزارا — یہ دیکھتے ہوئے کہ ایک اصل شاپ صبح کھلنے سے رات بند ہونے تک کیسے چلتی ہے، اور یہ سنتے ہوئے کہ کیا واقعی ٹوٹا ہوا ہے اور کیا صرف تنگ کرنے والا ہے۔",
+      "p2": "Pattern ہر جگہ ایک جیسا تھا۔ Expired دوائیں ایک کونے میں جمع ہو رہی تھیں کیونکہ کسی کے پاس 90-day windows track کرنے کا وقت نہیں تھا۔ Stock کے نمبر shelf سے میل نہیں کھاتے تھے کیونکہ till اور inventory book دو الگ دنیائیں تھیں۔ End-of-day حساب کتاب رات 11 بجے calculator پر۔",
+      "p3": "International POS software chains کے لیے بنا ہے اور ڈالر میں priced ہے۔ مقامی desktop software 2010 میں اٹکا ہوا ہے۔ Zapeera ان دونوں کے درمیان ہے — modern cloud software، پاکستان میں بنا، PKR میں priced، WhatsApp پر سپورٹ۔",
+      "imageAlt": "Zapeera فارمیسی dashboard"
     },
     "heading": {
-      "heading": "Where we are heading",
-      "first50Title": "The first 50",
-      "first50Body": "Our goal for this year is 50 paying pharmacies running Zapeera daily — in Lahore and Karachi first. Not 500, not 5,000. Fifty pharmacies we support personally, who tell us what to fix next.",
-      "buildingTitle": "What we are building next",
-      "buildingBody": "Roman Urdu and Urdu interface. Better expiry analytics. Native WhatsApp ordering for repeat customers. We ship in small steps and tell you when something is actually ready, not before."
+      "heading": "ہم کہاں جا رہے ہیں",
+      "first50Title": "پہلی 50",
+      "first50Body": "اس سال ہمارا goal 50 paying فارمیسیز ہیں جو روزانہ Zapeera چلائیں — پہلے لاہور اور کراچی میں۔ 500 نہیں، 5,000 نہیں۔ پچاس فارمیسیز جنہیں ہم خود personally سپورٹ کرتے ہیں — جو ہمیں بتاتی ہیں اگلا کیا ٹھیک کرنا ہے۔",
+      "buildingTitle": "ہم آگے کیا بنا رہے ہیں",
+      "buildingBody": "Roman Urdu اور اردو interface۔ بہتر expiry analytics۔ Repeat customers کے لیے native WhatsApp ordering۔ ہم چھوٹے قدموں میں ship کرتے ہیں — اور بتاتے ہیں جب کوئی چیز واقعی ready ہو، اس سے پہلے نہیں۔"
     },
     "team": {
-      "heading": "The team",
-      "lead": "A small Pakistani team — engineers, designers, and people who have spent time on the pharmacy side of the counter. Names and roles will go up here when we are ready to put them up properly."
+      "heading": "ٹیم",
+      "lead": "ایک چھوٹی پاکستانی ٹیم — engineers، designers، اور وہ لوگ جنہوں نے فارمیسی counter کے دوسری طرف وقت گزارا ہے۔ نام اور roles یہاں تب لگیں گے جب ہم انہیں صحیح طریقے سے لگانے کے لیے ready ہوں گے۔"
     }
   },
   "solutionsIndex": {
-    "heroH1": "Built for pharmacies first.",
-    "heroLead": "Zapeera is fully supported for Pakistani pharmacies today. Other retail industries are on the roadmap, but we want to nail one industry properly before we ask anyone else to rely on us.",
+    "heroH1": "پہلے فارمیسیز کے لیے بنایا گیا۔",
+    "heroLead": "Zapeera آج پاکستانی فارمیسیز کے لیے مکمل سپورٹڈ ہے۔ دوسری retail industries roadmap پر ہیں، لیکن ہم چاہتے ہیں ایک industry کو صحیح طرح nail کریں اس سے پہلے کہ کسی اور سے کہیں ہم پر بھروسہ کرے۔",
     "pharmacyCard": {
-      "badge": "Fully supported",
-      "title": "Pharmacy software, built for Pakistan",
-      "body": "Track every batch and expiry. Replace the end-of-day hisaab. See profit by medicine and dead stock by category — across one shop or three. Pakistani medicines pre-loaded, PKR by default, WhatsApp-first support.",
-      "cta": "See the pharmacy page"
+      "badge": "مکمل سپورٹڈ",
+      "title": "فارمیسی software، پاکستان کے لیے بنایا گیا",
+      "body": "ہر batch اور expiry track کریں۔ end-of-day حساب کتاب ختم کریں۔ ایک شاپ ہو یا تین، profit by medicine اور dead stock by category دیکھیں۔ پاکستانی دوائیں pre-loaded، PKR by default، WhatsApp-first سپورٹ۔",
+      "cta": "فارمیسی صفحہ دیکھیں"
     },
     "otherIndustries": {
-      "heading": "Other industries — coming soon",
-      "lead": "We are focused on pharmacies first. Tap any industry below to leave your name on the early-access list.",
-      "comingSoon": "Coming soon",
+      "heading": "دوسری industries — جلد آرہی ہیں",
+      "lead": "ہم پہلے فارمیسیز پر focused ہیں۔ کسی بھی industry پر tap کریں اور early-access list میں اپنا نام چھوڑیں۔",
+      "comingSoon": "جلد آرہا ہے",
       "items": {
-        "retail": "Retail",
-        "restaurant": "Restaurants",
-        "wholesale": "Wholesale",
-        "departmentalStore": "Departmental stores",
-        "distribution": "Distribution"
+        "retail": "ریٹیل",
+        "restaurant": "ریسٹورنٹس",
+        "wholesale": "ہول سیل",
+        "departmentalStore": "ڈیپارٹمنٹل سٹورز",
+        "distribution": "ڈسٹری بیوشن"
       }
     }
   },
   "solutionSlug": {
-    "backToSolutions": "Back to solutions",
+    "backToSolutions": "Solutions پر واپس",
     "pharmacy": {
-      "badge": "For pharmacies",
-      "heroH1": "The pharmacy software, built for Pakistan.",
-      "heroLead": "Track every batch and expiry. Replace the end-of-day hisaab. See which medicines actually make profit and which are dead stock — across one shop or three. Pakistani medicines pre-loaded, PKR by default, WhatsApp-first support.",
-      "pillarsHeading": "What it does for a pharmacy",
-      "pillarsLead": "Three things, done properly. The capability list is longer — these three are what you will notice first.",
-      "extrasHeading": "The Pakistan-specific bits",
-      "extrasLead": "International POS software gets these wrong. Local desktop software never bothered to add them.",
-      "ctaHeading": "Be one of our first 50 pharmacies.",
-      "ctaBody": "Free for 30 days. No credit card. We set it up for you and pre-load your medicines. Message us on WhatsApp — we reply within an hour during business hours.",
+      "badge": "فارمیسیز کے لیے",
+      "heroH1": "فارمیسی software، پاکستان کے لیے بنایا گیا۔",
+      "heroLead": "ہر batch اور expiry track کریں۔ end-of-day حساب کتاب ختم کریں۔ دیکھیں کون سی دوائیں اصل میں profit دیتی ہیں اور کون سی dead stock ہیں — ایک شاپ ہو یا تین۔ پاکستانی دوائیں pre-loaded، PKR by default، WhatsApp-first سپورٹ۔",
+      "pillarsHeading": "فارمیسی کے لیے یہ کیا کرتا ہے",
+      "pillarsLead": "تین چیزیں، صحیح طریقے سے۔ Capability list لمبی ہے — ان تین کو آپ پہلے notice کریں گے۔",
+      "extrasHeading": "پاکستان-specific باتیں",
+      "extrasLead": "International POS software ان میں غلطی کرتا ہے۔ مقامی desktop software نے انہیں شامل کرنے کی کبھی زحمت نہیں کی۔",
+      "ctaHeading": "ہماری پہلی 50 فارمیسیز میں سے ایک بنیں۔",
+      "ctaBody": "30 دن مفت۔ کوئی credit card نہیں۔ ہم آپ کے لیے setup کرتے ہیں اور آپ کی دوائیں pre-load کر دیتے ہیں۔ WhatsApp پر message کریں — business hours میں ایک گھنٹے کے اندر reply ملے گا۔",
       "pillars": [
         {
-          "title": "Track every batch and expiry",
-          "body": "Every medicine that comes into your shop is logged with its batch number, supplier, and expiry date. Zapeera alerts you 90, 60, and 30 days before expiry — enough runway to return to the supplier on time. End-of-month report tells you exactly how much each supplier cost you in returns vs write-offs."
+          "title": "ہر batch اور expiry track کریں",
+          "body": "آپ کی شاپ میں آنے والی ہر دوائی اپنے batch number، supplier، اور expiry date کے ساتھ log ہوتی ہے۔ Zapeera expiry سے 90، 60، اور 30 دن پہلے alert کرتا ہے — supplier کو وقت پر return کرنے کے لیے کافی runway۔ End-of-month report بتاتی ہے کہ ہر supplier نے returns vs write-offs میں کتنا cost کیا۔"
         },
         {
-          "title": "Stock that matches the shelf",
-          "body": "Barcode scan when stock comes in, scan again at the till. The till and the inventory book are the same world. Multi-branch transfers keep batch and expiry intact, so a medicine moved from one shop to another does not lose its history."
+          "title": "Stock جو shelf سے میل کھائے",
+          "body": "Stock آنے پر barcode scan، till پر دوبارہ scan۔ Till اور inventory book ایک ہی دنیا ہیں۔ Multi-branch transfers میں batch اور expiry برقرار رہتی ہے، تو ایک شاپ سے دوسری شاپ منتقل ہونے والی دوائی اپنی history نہیں کھوتی۔"
         },
         {
-          "title": "Profit by medicine, not just by day",
-          "body": "See which medicines actually make profit and which are dead stock. Repeat-customer reports tell you who comes back and what they buy. End-of-day takes 5 seconds. End-of-month gives you the answers you used to spend a Sunday afternoon on."
+          "title": "Profit by medicine، صرف by day نہیں",
+          "body": "دیکھیں کون سی دوائیں اصل میں profit دیتی ہیں اور کون سی dead stock ہیں۔ Repeat-customer reports بتاتے ہیں کون واپس آتا ہے اور کیا خریدتا ہے۔ End-of-day 5 سیکنڈ میں۔ End-of-month وہ جواب دیتا ہے جس پر آپ پہلے Sunday کی دوپہر گزارتے تھے۔"
         }
       ],
       "extras": [
-        "Pakistani medicines pre-loaded — start with a real database, not an empty one",
-        "Prices and reports in PKR by default",
-        "Works on slow internet — sales keep ringing when the line drops",
-        "WhatsApp-first support — message us, we reply within an hour during business hours",
-        "Single-shop or up to 3 branches on the same dashboard",
-        "Cashier till is simple enough that a new staff member can ring sales within 10 minutes"
+        "پاکستانی دوائیں pre-loaded — ایک اصلی database سے start کریں، خالی نہیں",
+        "Prices اور reports PKR میں by default",
+        "سست internet پر کام کرتا ہے — line گرنے پر بھی sales چلتی رہتی ہیں",
+        "WhatsApp-first سپورٹ — message کریں، ہم business hours میں ایک گھنٹے کے اندر reply کرتے ہیں",
+        "ایک شاپ ہو یا 3 branches، ایک ہی dashboard پر",
+        "Cashier till اتنی سادہ ہے کہ نیا staff member 10 منٹ میں sales ring کر سکے"
       ]
     },
     "notYet": {
-      "badge": "Coming soon",
-      "headlineFn": "Zapeera for {industry} — coming soon.",
-      "body": "We are focused on Pakistani pharmacies first. Message us for early access when we open this up.",
+      "badge": "جلد آرہا ہے",
+      "headlineFn": "{industry} کے لیے Zapeera — جلد آرہا ہے۔",
+      "body": "ہم پہلے پاکستانی فارمیسیز پر focused ہیں۔ جب یہ open کریں تو early access کے لیے ہمیں message کریں۔",
       "industries": {
-        "retail": "retail",
-        "restaurant": "restaurants",
-        "wholesale": "wholesale",
-        "departmentalStore": "departmental stores",
-        "distribution": "distribution"
+        "retail": "ریٹیل",
+        "restaurant": "ریسٹورنٹس",
+        "wholesale": "ہول سیل",
+        "departmentalStore": "ڈیپارٹمنٹل سٹورز",
+        "distribution": "ڈسٹری بیوشن"
       }
     }
   },
   "contact": {
-    "heroH1": "Get in Touch",
-    "heroLead": "Running a pharmacy and want to see Zapeera? WhatsApp us — we reply within an hour during business hours.",
-    "infoHeading": "Contact Information",
-    "infoLead": "WhatsApp is the fastest. We reply within an hour during business hours.",
+    "heroH1": "رابطہ کریں",
+    "heroLead": "فارمیسی چلا رہے ہیں اور Zapeera دیکھنا چاہتے ہیں؟ WhatsApp کریں — business hours میں ایک گھنٹے کے اندر reply ملے گا۔",
+    "infoHeading": "رابطے کی معلومات",
+    "infoLead": "WhatsApp سب سے تیز ہے۔ ہم business hours میں ایک گھنٹے کے اندر reply کرتے ہیں۔",
     "cards": {
       "email": {
         "title": "Email",
-        "body": "Our team is here to help"
+        "body": "ہماری ٹیم مدد کے لیے حاضر ہے"
       },
       "phone": {
-        "title": "Phone",
-        "body": "Mon-Fri from 8am to 5pm"
+        "title": "فون",
+        "body": "پیر-جمعہ صبح 8 سے شام 5 تک"
       },
       "whatsapp": {
         "title": "WhatsApp",
-        "body": "We reply within an hour during business hours.",
-        "link": "Message us on WhatsApp"
+        "body": "ہم business hours میں ایک گھنٹے کے اندر reply کرتے ہیں۔",
+        "link": "WhatsApp پر message کریں"
       },
       "office": {
         "title": "Office",
         "addressLine1": "Ayan Center",
-        "addressLine2": "Eden City, DHA Phase 8",
-        "addressLine3": "Lahore, Pakistan"
+        "addressLine2": "Eden City، DHA Phase 8",
+        "addressLine3": "لاہور، پاکستان"
       }
     },
     "form": {
-      "heading": "Send us a message",
-      "lead": "Or fill the form below — we will reply via WhatsApp.",
+      "heading": "ہمیں message بھیجیں",
+      "lead": "یا نیچے form بھریں — ہم WhatsApp پر reply کریں گے۔",
       "fields": {
-        "name": "Full name",
+        "name": "پورا نام",
         "email": "Email",
-        "company": "Pharmacy / company",
-        "phone": "Phone",
-        "subject": "Subject",
-        "message": "Message"
+        "company": "فارمیسی / کمپنی",
+        "phone": "فون",
+        "subject": "موضوع",
+        "message": "پیغام"
       },
       "placeholders": {
-        "name": "Your name",
+        "name": "آپ کا نام",
         "email": "you@example.com",
-        "company": "Your pharmacy name",
+        "company": "آپ کی فارمیسی کا نام",
         "phone": "+92 XXX XXXXXXX",
-        "subject": "How can we help?",
-        "message": "Tell us a bit about your pharmacy..."
+        "subject": "ہم کیسے مدد کر سکتے ہیں؟",
+        "message": "اپنی فارمیسی کے بارے میں کچھ بتائیں..."
       },
-      "submit": "Send message",
-      "submitting": "Sending...",
-      "successTitle": "Message sent",
-      "successBody": "We will reply on WhatsApp within an hour during business hours.",
-      "errorTitle": "Could not send",
-      "errorBody": "Please try again, or message us directly on WhatsApp."
+      "submit": "Message بھیجیں",
+      "submitting": "بھیجا جا رہا ہے...",
+      "successTitle": "Message بھیج دیا گیا",
+      "successBody": "ہم business hours میں ایک گھنٹے کے اندر WhatsApp پر reply کریں گے۔",
+      "errorTitle": "بھیجا نہیں جا سکا",
+      "errorBody": "براہ کرم دوبارہ کوشش کریں، یا WhatsApp پر سیدھا message کریں۔"
     }
   },
   "careers": {
     "heroH1": "Careers",
-    "heroLead": "A small Pakistani team building cloud POS and inventory software for pharmacies. We are not actively hiring right now.",
-    "bodyHeading": "If you want to help, message us.",
-    "bodyP1": "We are not running a public hiring round. But if you want to help build the best pharmacy software in Pakistan, message us on WhatsApp and tell us what you do. We read every message and reply within an hour during business hours.",
-    "bodyP2": "Useful background: software engineering, design, customer support in Urdu/English, or experience working inside a Pakistani pharmacy. None of these are required — being curious about the problem is enough."
+    "heroLead": "ایک چھوٹی پاکستانی ٹیم جو فارمیسیز کے لیے cloud POS اور inventory software بنا رہی ہے۔ ابھی ہم actively hire نہیں کر رہے۔",
+    "bodyHeading": "اگر آپ مدد کرنا چاہتے ہیں، ہمیں message کریں۔",
+    "bodyP1": "ہم public hiring round نہیں چلا رہے۔ لیکن اگر آپ پاکستان کا بہترین فارمیسی software بنانے میں مدد کرنا چاہتے ہیں، WhatsApp پر message کریں اور بتائیں آپ کیا کرتے ہیں۔ ہم ہر message پڑھتے ہیں اور business hours میں ایک گھنٹے کے اندر reply کرتے ہیں۔",
+    "bodyP2": "Useful background: software engineering، design، اردو/English میں customer support، یا پاکستانی فارمیسی کے اندر کام کرنے کا تجربہ۔ ان میں سے کوئی بھی required نہیں — مسئلے کے بارے میں curious ہونا کافی ہے۔"
   },
   "updates": {
     "heroH1": "Updates",
-    "heroLead": "What we are building right now. We post in small honest steps and we tell you when something is actually ready, not before.",
-    "inProgressHeading": "In progress",
-    "shippedHeading": "Recently shipped",
-    "shippedLead": "We ship updates often, but we have not started a public changelog yet. The first proper one goes up the moment we have something worth showing every pharmacy on the platform. Until then, message us on WhatsApp — we will tell you what is new.",
+    "heroLead": "ہم ابھی کیا بنا رہے ہیں۔ ہم چھوٹے ایماندار قدموں میں post کرتے ہیں اور بتاتے ہیں جب کوئی چیز واقعی ready ہو، اس سے پہلے نہیں۔",
+    "inProgressHeading": "جاری ہے",
+    "shippedHeading": "حال ہی میں شپ ہوا",
+    "shippedLead": "ہم اکثر updates ship کرتے ہیں، لیکن ابھی ہم نے public changelog شروع نہیں کیا۔ پہلا proper changelog اس وقت لگے گا جب ہمارے پاس پلیٹ فارم پر ہر فارمیسی کو دکھانے لائق کچھ ہو گا۔ تب تک، WhatsApp پر message کریں — ہم بتائیں گے کیا نیا ہے۔",
     "inProgress": [
       {
-        "title": "Roman Urdu and Urdu interface",
-        "body": "Translating the till screen, inventory, and reports. Roman Urdu first, full Nastaliq Urdu after. Shipping in stages."
+        "title": "Roman Urdu اور اردو interface",
+        "body": "Till screen، inventory، اور reports translate ہو رہے ہیں۔ پہلے Roman Urdu، پھر مکمل Nastaliq اردو۔ مراحل میں شپ ہو رہا ہے۔"
       },
       {
-        "title": "Better expiry analytics",
-        "body": "Per-supplier waste reports and a return-window dashboard, so you know which suppliers actually take their expired stock back."
+        "title": "بہتر expiry analytics",
+        "body": "Per-supplier waste reports اور return-window dashboard، تو آپ کو پتا چلے کون سے suppliers اپنا expired stock واقعی واپس لیتے ہیں۔"
       },
       {
-        "title": "WhatsApp ordering for repeat customers",
-        "body": "A small extension that lets your regulars message a number to repeat their last prescription, with the cashier confirming on the till."
+        "title": "Repeat customers کے لیے WhatsApp ordering",
+        "body": "ایک چھوٹا extension جس سے آپ کے regulars ایک number پر message کر کے اپنی پچھلی prescription repeat کر سکیں — cashier till پر confirm کر دے گا۔"
       }
     ]
   },
   "notFound": {
     "title": "404",
-    "message": "Oops! Page not found",
-    "linkHome": "Return to Home"
+    "message": "صفحہ نہیں ملا",
+    "linkHome": "ہوم پر واپس"
   },
   "whatsappMessages": {
-    "heroTrial": "Assalam-o-Alaikum, I want to start the Zapeera free trial for my pharmacy.",
-    "demo": "Assalam-o-Alaikum, I want a Zapeera demo for my pharmacy.",
-    "pricingSolo": "Assalam-o-Alaikum, I want to start the Zapeera free trial — Solo plan.",
-    "pricingTeam": "Assalam-o-Alaikum, I want to start the Zapeera free trial — Team plan.",
-    "pricingBusiness": "Assalam-o-Alaikum, I want to start the Zapeera free trial — Business plan.",
-    "pricingEnterprise": "Assalam-o-Alaikum, I want to discuss Zapeera Enterprise pricing for my pharmacy chain.",
-    "floating": "Assalam-o-Alaikum, I have a question about Zapeera.",
-    "contact": "Assalam-o-Alaikum, I want to talk to the Zapeera team.",
-    "pharmacy": "Assalam-o-Alaikum, I want to know more about Zapeera for pharmacies.",
-    "careers": "Assalam-o-Alaikum, I want to join the Zapeera team.",
-    "earlyAccess": "Assalam-o-Alaikum, I want early access to Zapeera for {industry}."
+    "heroTrial": "السلام علیکم، میں اپنی فارمیسی کے لیے Zapeera کا free trial شروع کرنا چاہتا ہوں۔",
+    "demo": "السلام علیکم، میں اپنی فارمیسی کے لیے Zapeera کا ڈیمو چاہتا ہوں۔",
+    "pricingSolo": "السلام علیکم، میں Zapeera کا free trial شروع کرنا چاہتا ہوں — Solo plan۔",
+    "pricingTeam": "السلام علیکم، میں Zapeera کا free trial شروع کرنا چاہتا ہوں — Team plan۔",
+    "pricingBusiness": "السلام علیکم، میں Zapeera کا free trial شروع کرنا چاہتا ہوں — Business plan۔",
+    "pricingEnterprise": "السلام علیکم، میں اپنی فارمیسی chain کے لیے Zapeera Enterprise pricing پر بات کرنا چاہتا ہوں۔",
+    "floating": "السلام علیکم، میرا Zapeera کے بارے میں سوال ہے۔",
+    "contact": "السلام علیکم، میں Zapeera ٹیم سے بات کرنا چاہتا ہوں۔",
+    "pharmacy": "السلام علیکم، میں فارمیسیز کے لیے Zapeera کے بارے میں مزید جاننا چاہتا ہوں۔",
+    "careers": "السلام علیکم، میں Zapeera ٹیم میں شامل ہونا چاہتا ہوں۔",
+    "earlyAccess": "السلام علیکم، میں {industry} کے لیے Zapeera کا early access چاہتا ہوں۔"
   },
   "meta": {
     "default": {
-      "title": "Zapeera — Pharmacy software, built for Pakistan",
-      "description": "Cloud POS and inventory software for Pakistani pharmacies. Track every batch and expiry, replace the end-of-day hisaab, and see which medicines actually make profit. Free for 30 days, no credit card."
+      "title": "Zapeera — پاکستان کے لیے فارمیسی software",
+      "description": "پاکستانی فارمیسیز کے لیے cloud POS اور inventory software۔ ہر batch اور expiry track کریں، end-of-day حساب کتاب ختم کریں، اور دیکھیں کون سی دوائیں اصل میں profit دیتی ہیں۔ 30 دن مفت، کوئی credit card نہیں۔"
     },
     "home": {
-      "title": "Zapeera — Pharmacy software, built for Pakistan",
-      "description": "Cloud POS and inventory software for Pakistani pharmacies. Track every batch and expiry, replace the end-of-day hisaab, and see which medicines actually make profit. Free for 30 days, no credit card."
+      "title": "Zapeera — پاکستان کے لیے فارمیسی software",
+      "description": "پاکستانی فارمیسیز کے لیے cloud POS اور inventory software۔ ہر batch اور expiry track کریں، end-of-day حساب کتاب ختم کریں۔ 30 دن مفت، کوئی credit card نہیں۔"
     },
     "features": {
       "title": "Features | Zapeera",
-      "description": "Three things Zapeera does well for Pakistani pharmacies — expiry tracking, inventory you can trust, and reports that tell you what to do next."
+      "description": "پاکستانی فارمیسیز کے لیے Zapeera تین چیزیں اچھی طرح کرتا ہے — expiry tracking، inventory جس پر بھروسہ ہو، اور reports جو بتاتی ہیں آگے کیا کرنا ہے۔"
     },
     "pricing": {
       "title": "Pricing | Zapeera",
-      "description": "In PKR. Built for the way Pakistani pharmacies actually buy software. Free for 30 days, no credit card."
+      "description": "PKR میں۔ پاکستانی فارمیسیز جس طرح software خریدتی ہیں، اسی کے لیے۔ 30 دن مفت، کوئی credit card نہیں۔"
     },
     "solutions": {
       "title": "Solutions | Zapeera",
-      "description": "Zapeera is built for Pakistani pharmacies first. Other retail industries are not currently supported — message us if you would like to be in the first non-pharmacy cohort."
+      "description": "Zapeera پہلے پاکستانی فارمیسیز کے لیے بنایا گیا ہے۔ دیگر retail industries ابھی support نہیں کی جاتیں — اگر آپ پہلے non-pharmacy cohort میں شامل ہونا چاہتے ہیں تو ہمیں message کریں۔"
     },
     "solutionsPharmacy": {
-      "title": "Pharmacy software, built for Pakistan | Zapeera",
-      "description": "Cloud POS and inventory software for Pakistani pharmacies — batch and expiry tracking, multi-branch inventory, profit-per-medicine reporting, WhatsApp-first support. Free for 30 days, no credit card."
+      "title": "فارمیسی software، پاکستان کے لیے بنایا گیا | Zapeera",
+      "description": "پاکستانی فارمیسیز کے لیے cloud POS اور inventory software — batch اور expiry tracking، multi-branch inventory، profit-per-medicine reporting، WhatsApp-first سپورٹ۔ 30 دن مفت، کوئی credit card نہیں۔"
     },
     "solutionsNotYet": {
-      "titleFn": "{industry} — coming soon | Zapeera",
-      "descriptionFn": "Zapeera for {industry} is coming soon. We are focused on Pakistani pharmacies first. Message us on WhatsApp for early access."
+      "titleFn": "{industry} — جلد آرہا ہے | Zapeera",
+      "descriptionFn": "{industry} کے لیے Zapeera جلد آرہا ہے۔ ہم پہلے پاکستانی فارمیسیز پر focused ہیں۔ Early access کے لیے WhatsApp پر message کریں۔"
     },
     "about": {
-      "title": "About — Zapeera",
-      "description": "A small Pakistani team building cloud POS and inventory software for Pakistani pharmacies. Honest about what we have shipped and what is still coming."
+      "title": "ہمارے بارے میں — Zapeera",
+      "description": "ایک چھوٹی پاکستانی ٹیم جو پاکستانی فارمیسیز کے لیے cloud POS اور inventory software بنا رہی ہے۔ جو شپ ہو چکا اور جو ابھی آنا ہے، دونوں کے بارے میں ایماندار۔"
     },
     "contact": {
-      "title": "Contact — Zapeera",
-      "description": "Running a pharmacy in Pakistan and want to try Zapeera? Message us on WhatsApp — we reply within an hour during business hours."
+      "title": "رابطہ — Zapeera",
+      "description": "پاکستان میں فارمیسی چلا رہے ہیں اور Zapeera آزمانا چاہتے ہیں؟ WhatsApp پر ہمیں message کریں — business hours میں ایک گھنٹے کے اندر reply ملے گا۔"
     },
     "careers": {
       "title": "Careers | Zapeera",
-      "description": "A small Pakistani team building cloud POS for pharmacies. We are not actively hiring yet — message us on WhatsApp if you want to help."
+      "description": "ایک چھوٹی پاکستانی ٹیم جو فارمیسیز کے لیے cloud POS بنا رہی ہے۔ ابھی actively hire نہیں کر رہے — اگر مدد کرنا چاہتے ہیں تو WhatsApp پر message کریں۔"
     },
     "updates": {
       "title": "Updates | Zapeera",
-      "description": "What we are building right now and what we shipped recently. We post in small honest steps."
+      "description": "ہم ابھی کیا بنا رہے ہیں اور حال ہی میں کیا شپ ہوا۔ ہم چھوٹے ایماندار قدموں میں post کرتے ہیں۔"
     }
   }
 }
