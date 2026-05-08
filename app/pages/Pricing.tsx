@@ -11,7 +11,7 @@ import {
 } from "@/app/components/ui/accordion";
 import Loading from "../components/ui/loading";
 import PricingSection from "../components/home/PricingSection";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Container from "../components/ui/container";
 import { waUrl } from "@/app/lib/whatsapp";
 

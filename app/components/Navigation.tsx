@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { Menu, X, ChevronDown, CheckCircle, ShoppingBag, Pill, UtensilsCrossed, Package, Store, Truck } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
 import Container from "./ui/container";

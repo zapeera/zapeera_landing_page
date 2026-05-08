@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowLeft, Calendar, Boxes, BarChart3, Check, Clock } from "lucide-react";
 
 import Navigation from "@/app/components/Navigation";

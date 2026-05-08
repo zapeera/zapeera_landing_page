@@ -1,5 +1,5 @@
 import { Button } from "@/app/components/ui/button";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 const CTASection = () => {
   return (

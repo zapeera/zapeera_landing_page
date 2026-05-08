@@ -1,38 +1,47 @@
-import { NextResponse } from "next/server";
+import createMiddleware from "next-intl/middleware";
 import type { NextRequest } from "next/server";
+import { routing } from "./i18n/routing";
 
 /**
- * Force short Cache-Control on HTML page responses.
+ * Combined middleware:
  *
- * Background: Next.js's Full Route Cache for static pages defaults to
- * `Cache-Control: s-maxage=31536000, stale-while-revalidate` — a one-year
- * shared cache. Combined with hash-named JS/CSS chunks that change on every
- * deploy, that means a deploy lands a new build but caches in front (nginx
- * proxy_cache, CDN, the Next.js full-route cache itself) keep serving the
- * previous build's HTML, which references chunks that no longer exist on
- * disk. Result: 400s on /_next/static/css/<old-hash>.css and the
- * MIME-type errors users see in the browser console.
+ *  1. next-intl locale routing — redirects /pricing -> /ur/pricing,
+ *     handles the Accept-Language header, persists the user's locale
+ *     in a cookie. Configured via i18n/routing.ts.
  *
- * Fix: HTML pages are short-cached (60s shared, 120s stale-while-revalidate).
- * Hash-named static chunks remain immutable for a year — they're keyed by
- * content hash, so caching them forever is correct.
- *
- * The matcher excludes /_next/*, /api/*, and any path with a file extension
- * (favicon, og-image, etc.), so this only fires on HTML routes.
+ *  2. Cache-Control on HTML — keeps the year-long stale-HTML problem
+ *     from recurring. Without this, Next.js's Full Route Cache defaults
+ *     a one-year s-maxage on static pages, and any cache layer in front
+ *     (nginx proxy_cache, CDN) holds onto HTML referencing chunk hashes
+ *     from earlier deploys long after those chunks are gone — which is
+ *     what was breaking zapeera.com with 400s on /_next/static/* and
+ *     deleted images. Short s-maxage (60s) means future deploys are
+ *     visible at the cache layer within a minute.
  */
-export function middleware(_request: NextRequest) {
-  const response = NextResponse.next();
-  response.headers.set(
-    "Cache-Control",
-    "public, max-age=0, s-maxage=60, stale-while-revalidate=120",
-  );
+const intlMiddleware = createMiddleware(routing);
+
+export default function middleware(request: NextRequest) {
+  const response = intlMiddleware(request);
+  const url = request.nextUrl.pathname;
+
+  // Static assets and API routes keep their own cache strategy. Don't
+  // touch their headers; just return the next-intl response untouched.
+  const isStaticOrApi =
+    url.startsWith("/_next/") || url.startsWith("/api/") || /\.[a-zA-Z0-9]+$/.test(url);
+
+  if (!isStaticOrApi) {
+    response.headers.set(
+      "Cache-Control",
+      "public, max-age=0, s-maxage=60, stale-while-revalidate=120",
+    );
+  }
+
   return response;
 }
 
 export const config = {
-  matcher: [
-    // All routes except: _next/* (Next internals), api/*, anything with a
-    // file extension. This leaves only HTML page routes.
-    "/((?!api|_next|.*\\..*).*)",
-  ],
+  // Match all routes except: /api/*, /_next/*, anything with a file extension
+  // (favicon.ico, og-image.jpg, robots.txt, sitemap.xml, etc.). next-intl runs
+  // on the rest and applies locale routing.
+  matcher: ["/((?!api|_next|.*\\..*).*)"],
 };

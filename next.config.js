@@ -1,3 +1,8 @@
+import createNextIntlPlugin from 'next-intl/plugin';
+
+// Tell next-intl where the per-request config lives.
+const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Performance optimizations
@@ -12,10 +17,10 @@ const nextConfig = {
       },
     },
   },
-  
+
   // Optimize bundle size
   swcMinify: true,
-  
+
   // Image optimization
   images: {
     remotePatterns: [
@@ -37,13 +42,12 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-  
+
   // Compression
   compress: true,
-  
+
   // Bundle optimization
   webpack: (config, { dev, isServer }) => {
-    // Production optimizations
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
@@ -62,10 +66,10 @@ const nextConfig = {
         },
       };
     }
-    
+
     return config;
   },
-  
+
   // Headers
   async headers() {
     return [
@@ -80,7 +84,6 @@ const nextConfig = {
         ],
       },
       // Hash-named JS/CSS chunks — safe to cache forever (changes invalidate via filename hash).
-      // The previous rule was at /static/(.*), which was a no-op — Next.js serves under /_next/static.
       {
         source: '/_next/static/(.*)',
         headers: [
@@ -91,4 +94,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

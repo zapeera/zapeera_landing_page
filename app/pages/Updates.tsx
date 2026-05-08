@@ -2,7 +2,7 @@
 
 import { Wrench, Sparkles } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Container from "../components/ui/container";
 import Loading from "../components/ui/loading";
 

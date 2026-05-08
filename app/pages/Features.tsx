@@ -1,6 +1,6 @@
 'use client'
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Calendar, Boxes, BarChart3, Check } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
 import Container from "../components/ui/container";
