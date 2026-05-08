@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Montserrat } from "next/font/google";
+import { Montserrat, Noto_Nastaliq_Urdu } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 
@@ -15,16 +15,26 @@ import GoogleVerification from "../components/GoogleVerification";
 import GoogleAnalytics from "../components/GoogleAnalytics";
 import { routing, type Locale } from "@/i18n/routing";
 
-// Single typeface for the Latin/English content. Weights trimmed to the four
-// actually used in JSX (font-normal/medium/semibold/bold). Italic kept for the
-// hero headline emphasis. font-display: swap is the next/font default.
-// Phase 3 will load Noto Nastaliq Urdu for the Urdu locale.
+// English / Latin script — Montserrat. Weights trimmed to those in active use
+// (font-normal/medium/semibold/bold) plus italic for the hero emphasis.
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
   variable: "--font-montserrat",
+});
+
+// Urdu Nastaliq script. Loaded only for the Urdu locale. Subset includes
+// arabic + latin so Pakistanis-mixed sentences (e.g. "30 din free trial
+// shuru karein") and any English technical terms inside Urdu copy
+// (POS / WhatsApp / dashboard) render in a consistent typeface.
+// Weight 400 only — Nastaliq's expressive shape carries weight on its own.
+const nastaliq = Noto_Nastaliq_Urdu({
+  subsets: ["arabic"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-nastaliq",
 });
 
 export const metadata: Metadata = {
@@ -131,11 +141,15 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   setRequestLocale(locale as Locale);
 
   const dir = locale === "ur" ? "rtl" : "ltr";
+  // For Urdu, the body font defaults to Nastaliq; English copy embedded inside
+  // Urdu sentences (POS, WhatsApp, etc.) gets the Latin font via .lang-en
+  // (defined in globals.css). Western Arabic numerals stay default.
+  const bodyFont = locale === "ur" ? "font-nastaliq" : "font-montserrat";
 
   return (
     <html lang={locale} dir={dir} suppressHydrationWarning>
       <body
-        className={`${montserrat.variable} font-montserrat bg-white`}
+        className={`${montserrat.variable} ${nastaliq.variable} ${bodyFont} bg-white`}
         suppressHydrationWarning
       >
         <GoogleAnalytics />

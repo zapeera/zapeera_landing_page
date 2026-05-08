@@ -237,7 +237,7 @@ const Navigation = () => {
             </div>
 
             {/* Contact Us and Login Buttons - Right side */}
-            <div className="hidden lg:flex items-center gap-3 z-10 flex-shrink-0 ml-auto">
+            <div className="hidden lg:flex items-center gap-3 z-10 flex-shrink-0 ms-auto">
 
               <Button
                 size="sm"
@@ -264,7 +264,7 @@ const Navigation = () => {
             {/* Mobile Menu Button */}
             <button
               type="button"
-              className={`lg:hidden p-2 -mr-2 flex-shrink-0 z-10 ml-auto ${
+              className={`lg:hidden p-2 -me-2 flex-shrink-0 z-10 ms-auto ${
                 isAboutPage && !isScrolled ? "text-white" : "text-gray-700"
               }`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

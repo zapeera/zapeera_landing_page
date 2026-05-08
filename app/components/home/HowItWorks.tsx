@@ -20,7 +20,7 @@ const HowItWorks = () => {
             {steps.map((step, index) => (
               <div
                 key={step.title}
-                className="flex flex-row md:flex-col items-start md:items-center gap-3 md:gap-4 text-left md:text-center"
+                className="flex flex-row md:flex-col items-start md:items-center gap-3 md:gap-4 text-start md:text-center"
               >
                 <div className="flex-shrink-0">
                   <div className="w-16 h-16 rounded-full hidden md:flex items-center justify-center mx-auto mb-4 bg-accent-50 border-2 border-primary-600/30">

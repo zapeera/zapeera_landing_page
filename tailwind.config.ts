@@ -20,6 +20,10 @@ export default {
       fontFamily: {
         sans: ["var(--font-montserrat)", "system-ui", "-apple-system", "sans-serif"],
         montserrat: ["var(--font-montserrat)", "system-ui", "-apple-system", "sans-serif"],
+        // Nastaliq applies on the <body> when locale === 'ur' (set in [locale]/layout.tsx).
+        // Embedded English (POS / WhatsApp / dashboard) inside Urdu copy can opt back into
+        // Latin via the .lang-en utility class (globals.css).
+        nastaliq: ["var(--font-nastaliq)", "var(--font-montserrat)", "system-ui", "sans-serif"],
       },
 
       // Type scale — semantic names with paired line-height + weight.

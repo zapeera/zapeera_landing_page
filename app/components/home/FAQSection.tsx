@@ -31,7 +31,7 @@ const FAQSection = () => {
                   value={`item-${index}`}
                   className="group border border-gray-200 rounded-xl shadow-sm transition-all duration-300"
                 >
-                  <AccordionTrigger className="p-6 text-left hover:no-underline">
+                  <AccordionTrigger className="p-6 text-start hover:no-underline">
                     <div className="flex items-start gap-4 w-full">
                       <div className="w-3 h-3 rounded-full bg-primary-600 mt-2 flex-shrink-0" />
                       <div className="flex-1">

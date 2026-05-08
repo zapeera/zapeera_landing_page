@@ -107,8 +107,55 @@
   }
 
   body {
-    @apply bg-background text-foreground font-montserrat antialiased;
+    @apply bg-background text-foreground antialiased;
+    /* font-family is set per-locale by app/[locale]/layout.tsx via the
+       body className (font-montserrat for English, font-nastaliq for Urdu). */
   }
+
+  /* ============================================================
+     RTL / Nastaliq adjustments — applied automatically when html[lang="ur"].
+     Western Arabic numerals stay (Pakistani business owners read prices in
+     1500-form, not ١٥٠٠).
+     ============================================================ */
+
+  /* Nastaliq sits taller than Latin — needs more line-height to breathe. */
+  html[lang="ur"] {
+    line-height: 1.9;
+  }
+  html[lang="ur"] body,
+  html[lang="ur"] p,
+  html[lang="ur"] li {
+    line-height: 1.9;
+  }
+
+  /* Headings in Nastaliq need slightly more vertical space too. */
+  html[lang="ur"] h1,
+  html[lang="ur"] h2,
+  html[lang="ur"] h3 {
+    line-height: 1.5;
+  }
+}
+
+@layer utilities {
+  /* Opt-out of Nastaliq for embedded English fragments inside Urdu copy.
+     Use this on <span> wrappers around technical terms (POS, WhatsApp,
+     dashboard, login, etc.) so they render in Montserrat rather than
+     Nastaliq for legibility. */
+  .lang-en {
+    font-family: var(--font-montserrat), system-ui, -apple-system, sans-serif;
+    font-style: normal;
+  }
+
+  /* Numbers always render in Latin — Pakistani business owners read prices
+     in Western Arabic numerals (1500, not ١٥٠٠). Apply this via .num-en if
+     needed; numbers in JSX literals already render that way by default. */
+  .num-en {
+    font-family: var(--font-montserrat), system-ui, sans-serif;
+    font-feature-settings: "tnum";
+  }
+}
+
+@layer base {
 
   /* Default heading rhythm so any raw <h1>..<h4> across the codebase
      picks up consistent type and breathing room without per-page overrides.
