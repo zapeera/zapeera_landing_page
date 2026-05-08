@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Montserrat, Noto_Nastaliq_Urdu } from "next/font/google";
+import { Montserrat, Gulzar } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 
@@ -25,14 +25,14 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-// Urdu Nastaliq script. Loaded only for the Urdu locale. Subset includes
-// arabic + latin so Pakistanis-mixed sentences (e.g. "30 din free trial
-// shuru karein") and any English technical terms inside Urdu copy
-// (POS / WhatsApp / dashboard) render in a consistent typeface.
-// Weight 400 only — Nastaliq's expressive shape carries weight on its own.
-const nastaliq = Noto_Nastaliq_Urdu({
+// Urdu — Gulzar is a modern Nastaliq-style font on Google Fonts. Cleaner and
+// faster to render than Noto Nastaliq Urdu (which we tried first), with better
+// readability at body sizes. Weight 400 only is what Gulzar ships with; we
+// reuse Montserrat for embedded English fragments inside Urdu copy via the
+// .lang-en utility class (globals.css).
+const nastaliq = Gulzar({
   subsets: ["arabic"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400"],
   display: "swap",
   variable: "--font-nastaliq",
 });
