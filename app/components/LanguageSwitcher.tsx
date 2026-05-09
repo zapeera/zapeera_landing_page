@@ -30,16 +30,38 @@ const LanguageSwitcher = ({ variant = "desktop", onSelect }: LanguageSwitcherPro
         : "text-neutral-700 hover:text-primary-700 font-semibold",
     );
 
+  // Flag glyphs render as emoji on macOS / iOS / Android / modern Chromium on
+  // Linux. Windows Chromium falls back to two-letter region indicators (GB,
+  // PK) which is acceptable. Wrapped in a span pinned to Latin font so the
+  // emoji stays readable inside the Nastaliq body font.
+  const flag = (locale: "en" | "ur") => (
+    <span className="font-montserrat text-base leading-none" aria-hidden="true">
+      {locale === "en" ? "🇬🇧" : "🇵🇰"}
+    </span>
+  );
+
   if (variant === "mobile") {
     return (
       <div className="flex items-center justify-between w-full px-2 sm:px-4 py-3 border-t border-neutral-200">
         <span className="text-sm text-neutral-500">{t("ariaLabel")}</span>
         <div className="flex items-center gap-3 text-sm">
-          <Link href={pathname} locale="en" onClick={onSelect} className={linkClass("en")}>
+          <Link
+            href={pathname}
+            locale="en"
+            onClick={onSelect}
+            className={cn(linkClass("en"), "inline-flex items-center gap-1.5")}
+          >
+            {flag("en")}
             {t("english")}
           </Link>
           <span className="text-neutral-300" aria-hidden="true">|</span>
-          <Link href={pathname} locale="ur" onClick={onSelect} className={linkClass("ur")}>
+          <Link
+            href={pathname}
+            locale="ur"
+            onClick={onSelect}
+            className={cn(linkClass("ur"), "inline-flex items-center gap-1.5")}
+          >
+            {flag("ur")}
             {t("urdu")}
           </Link>
         </div>
@@ -53,11 +75,21 @@ const LanguageSwitcher = ({ variant = "desktop", onSelect }: LanguageSwitcherPro
       className="hidden lg:flex items-center gap-2 text-sm whitespace-nowrap"
       aria-label={t("ariaLabel")}
     >
-      <Link href={pathname} locale="en" className={linkClass("en")}>
+      <Link
+        href={pathname}
+        locale="en"
+        className={cn(linkClass("en"), "inline-flex items-center gap-1.5")}
+      >
+        {flag("en")}
         {t("english")}
       </Link>
       <span className="text-neutral-300" aria-hidden="true">|</span>
-      <Link href={pathname} locale="ur" className={linkClass("ur")}>
+      <Link
+        href={pathname}
+        locale="ur"
+        className={cn(linkClass("ur"), "inline-flex items-center gap-1.5")}
+      >
+        {flag("ur")}
         {t("urdu")}
       </Link>
     </div>
